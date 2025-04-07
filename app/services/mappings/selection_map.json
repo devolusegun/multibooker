@@ -1,0 +1,27 @@
+{
+  "Over 2": {
+    "bet9ja": "O2",
+    "sportybet": "Over 2",
+    "football.com.ng": "Over 2 Goals"
+  },
+  "Under 20.5": {
+    "bet9ja": "U20.5",
+    "sportybet": "Under 20.5",
+    "football.com.ng": "Under 20.5 Games"
+  },
+  "Under 21.5": {
+    "bet9ja": "U21.5",
+    "sportybet": "Under 21.5",
+    "football.com.ng": "Under 21.5 Games"
+  },
+  "Over 118.5": {
+    "bet9ja": "O118.5",
+    "sportybet": "Over 118.5",
+    "football.com.ng": "Over 118.5 Points"
+  },
+  "Golden State Warriors": {
+    "bet9ja": "GS Warriors",
+    "sportybet": "Golden State",
+    "football.com.ng": "Golden State Warriors"
+  }
+}
