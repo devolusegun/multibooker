@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ImageUploader from '../components/ImageUploader';
 import axios from 'axios';
 
-const API_URL = "https://multibooker-backend.onrender.com/upload-bet";
+const API_URL = "https://multibooker.onrender.com/upload-bet";
 
 function Home() {
   const [bookie, setBookie] = useState("bet9ja");
