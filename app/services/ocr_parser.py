@@ -1,7 +1,5 @@
-import pytesseract
-import cv2
-import numpy as np
-from PIL import Image
+from google.cloud import vision
+import io
 import os
 import re
 from app.services.normalizer import normalize_match, normalize_market, normalize_selection
@@ -9,25 +7,20 @@ from app.services.normalizer import normalize_match, normalize_market, normalize
 # Set this if you're on Windows and installed Tesseract manually
 #pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-def preprocess_image(path: str) -> np.ndarray:
-    img = cv2.imread(path)
+def extract_text_from_image(image_path: str) -> str:
+    # Google Vision Client (auto-auth with GOOGLE_APPLICATION_CREDENTIALS env var)
+    client = vision.ImageAnnotatorClient()
 
-    # Convert to grayscale
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    with io.open(image_path, 'rb') as image_file:
+        content = image_file.read()
 
-    # Resize for better OCR accuracy
-    resized = cv2.resize(gray, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_LINEAR)
+    image = vision.Image(content=content)
+    response = client.text_detection(image=image)
 
-    # Apply thresholding
-    _, thresh = cv2.threshold(resized, 150, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    if response.error.message:
+        raise Exception(f"Google Vision API Error: {response.error.message}")
 
-    return thresh
-
-def extract_text_from_image(path: str) -> str:
-    preprocessed = preprocess_image(path)
-    pil_image = Image.fromarray(preprocessed)
-    text = pytesseract.image_to_string(pil_image)
-    return text
+    return response.text_annotations[0].description if response.text_annotations else ""
 
 def parse_bet_text(raw_text: str) -> list:
     lines = raw_text.split('\n')
