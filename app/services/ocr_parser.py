@@ -4,9 +4,6 @@ import os
 import re
 from app.services.normalizer import normalize_match, normalize_market, normalize_selection
 
-# Set this if you're on Windows and installed Tesseract manually
-#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-
 def extract_text_from_image(image_path: str) -> str:
     # Google Vision Client (auto-auth with GOOGLE_APPLICATION_CREDENTIALS env var)
     client = vision.ImageAnnotatorClient()
