@@ -78,8 +78,13 @@ def parse_bet_text(raw_text: str) -> list:
         elif re.match(r"^(Over|Under|Yes|No|[a-zA-Z0-9\s\.\-]+)\s(\d+\.\d{1,2})$", line, re.IGNORECASE):
             match = re.match(r"(.+?)\s(\d+\.\d{1,2})$", line)
             if match:
-                current_bet["selection"] = normalize_selection(match.group(0).strip())  # Use full string as selection
-                current_bet["odd"] = None  # No separate odd
+                current_bet["selection"] = normalize_selection(match.group(0).strip())
+                # Mark that next line might contain the odd
+                awaiting_odd = True
+                if 'awaiting_odd' in locals() and awaiting_odd:
+                    if re.match(r"^\d+\.\d{1,2}$", line):
+                        current_bet["odd"] = float(line)
+                        awaiting_odd = False  # reset    
         else:
             # Fallback if odds are on a separate line
             if re.match(r"^\d+\.\d{1,2}$", line):
@@ -107,5 +112,10 @@ def parse_bet_text(raw_text: str) -> list:
             filtered_bets.append(bet)
         else:
             bet["excluded"] = True  # internal use only
+
+    # Remove internal keys before returning
+    for bet in filtered_bets:
+        for internal_key in ["is_upcoming", "is_live", "is_finished", "excluded"]:
+            bet.pop(internal_key, None)
 
     return filtered_bets
