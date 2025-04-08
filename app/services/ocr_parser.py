@@ -74,19 +74,17 @@ def parse_bet_text(raw_text: str) -> list:
             current_bet["market"] = normalize_market(line)
 
         # Selection + odds
-        elif re.search(r"\d+\.\d{1,2}$", line):
+        # Check if line contains selection + odds like "Under 20.5"
+        elif re.match(r"^(Over|Under|Yes|No|[a-zA-Z0-9\s\.\-]+)\s(\d+\.\d{1,2})$", line, re.IGNORECASE):
             match = re.match(r"(.+?)\s(\d+\.\d{1,2})$", line)
             if match:
-                # Normal case: selection and odd on the same line
-                current_bet["selection"] = normalize_selection(match.group(1).strip())
-                current_bet["odd"] = float(match.group(2))
-            elif "selection" in current_bet:
-                # Already have selection, this is just the odds
-                current_bet["odd"] = float(line)
-            else:
-                # Handle case where selection is probably on the last line
-                current_bet["selection"] = normalize_selection(last_line.strip())
-                current_bet["odd"] = float(line)
+                current_bet["selection"] = normalize_selection(match.group(0).strip())  # Use full string as selection
+                current_bet["odd"] = None  # No separate odd
+        else:
+            # Fallback if odds are on a separate line
+            if re.match(r"^\d+\.\d{1,2}$", line):
+                if "selection" in current_bet and "odd" not in current_bet:
+                    current_bet["odd"] = float(line)
 
         # Track last two lines for symbol detection
         second_last_line = last_line
