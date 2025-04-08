@@ -7,7 +7,7 @@ import re
 from app.services.normalizer import normalize_match, normalize_market, normalize_selection
 
 # Set this if you're on Windows and installed Tesseract manually
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def preprocess_image(path: str) -> np.ndarray:
     img = cv2.imread(path)
