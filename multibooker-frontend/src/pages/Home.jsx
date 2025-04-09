@@ -1,50 +1,70 @@
-import React, { useState } from 'react';
-import ImageUploader from '../components/ImageUploader';
+import React from 'react';
+import { useState } from 'react';
+import UploadZone from '../components/UploadZone';
+import BookieSelector from '../components/BookieSelector';
+import Spinner from '../components/Spinner';
+import ResultDisplay from '../components/ResultDisplay';
+import AdBanner from '../components/AdBanner';
 import axios from 'axios';
 
-const API_URL = "https://multibooker.onrender.com/upload-bet";
+export default function Home() {
+  const [screenshot, setScreenshot] = useState(null);
+  const [bookie, setBookie] = useState('sportybet');
+  const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-function Home() {
-  const [bookie, setBookie] = useState("bet9ja");
-  const [response, setResponse] = useState(null);
+  const handleConvert = async () => {
+    if (!screenshot) return;
 
-  const handleSubmit = async (file) => {
     const formData = new FormData();
-    formData.append("screenshot", file);
-    formData.append("bookie", bookie);
-    formData.append("betUrl", "");
+    formData.append('screenshot', screenshot);
+    formData.append('betUrl', ''); // Placeholder for optional URL
+    formData.append('bookie', bookie);
+
+    setLoading(true);
+    setError('');
+    setResult(null);
 
     try {
-      const res = await axios.post(API_URL, formData);
-      setResponse(res.data);
+      const res = await axios.post('https://multibooker.onrender.com/upload-bet', formData);
+      setResult(res.data);
     } catch (err) {
+      setError('Something went wrong. Try again.');
       console.error(err);
-      alert("Error uploading or processing slip.");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="p-6 max-w-3xl mx-auto space-y-6">
-      <h1 className="text-2xl font-bold">🎯 Multibooker MVP</h1>
-      <div>
-        <label className="block mb-2 font-medium">Choose Bookie:</label>
-        <select
-          className="border rounded p-2"
-          value={bookie}
-          onChange={(e) => setBookie(e.target.value)}
-        >
-          <option value="bet9ja">Bet9ja</option>
-          <option value="sportybet">SportyBet</option>
-        </select>
+    <div className="max-w-3xl mx-auto py-10 px-4">
+      <h1 className="text-2xl font-bold text-center mb-6">🎯 Multibooker – Convert Stake Tickets</h1>
+
+      <UploadZone onFileAccepted={setScreenshot} />
+
+      <div className="mt-4">
+        <BookieSelector selected={bookie} onChange={setBookie} />
       </div>
-      <ImageUploader onSubmit={handleSubmit} />
-      {response && (
-        <pre className="bg-white p-4 rounded shadow overflow-x-auto text-sm">
-          {JSON.stringify(response, null, 2)}
-        </pre>
+
+      <button
+        onClick={handleConvert}
+        className="mt-4 w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700"
+        disabled={loading}
+      >
+        {loading ? 'Processing...' : 'Convert Bet Slip'}
+      </button>
+
+      {loading && <Spinner />}
+
+      {error && <div className="mt-4 text-red-500">{error}</div>}
+
+      {result && (
+        <>
+          <AdBanner />
+          <ResultDisplay bets={result.parsed_bets || []} mapped={result.mapped_bets || []} />
+        </>
       )}
     </div>
   );
 }
-
-export default Home;
