@@ -166,3 +166,18 @@ Monetize via usage limits or account tiers
 Log and display past conversion history
 
 Personalize ad experiences
+
+
+UI:
+🧱 Enhancements We Planned:
+🔐 User Authentication (Login/Register)
+
+📤 Support for Multi-image Uploads
+
+📦 Session & History Tracking
+
+💵 Ad Integration Placement
+
+🧪 Improve Parsing Accuracy + More Market Types
+
+📊 (Optional) Admin Panel or Analytics
