@@ -43,6 +43,10 @@ export default function Home() {
 
       <UploadZone onFileAccepted={setScreenshot} />
 
+      <div className="w-full bg-gray-200 border border-gray-300 rounded-md p-4 text-center mb-4">
+        <span className="text-sm text-gray-700">Ad Banner Placeholder</span>
+      </div>
+
       <div className="mt-4">
         <BookieSelector selected={bookie} onChange={setBookie} />
       </div>
