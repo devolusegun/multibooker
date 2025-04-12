@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes.routes import router
+from app.routes import uploadbet, auth # Import your routers
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -11,4 +11,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.include_router(router)
+
+# Include your routers
+app.include_router(uploadbet.router)
+app.include_router(auth.router)
