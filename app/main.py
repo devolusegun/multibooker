@@ -1,9 +1,13 @@
+# main.py
 from fastapi import FastAPI
-from app.routes import uploadbet, auth # Import your routers
 from fastapi.middleware.cors import CORSMiddleware
+
+# Bring in your new route modules
+from app.routes import uploadbet, auth
 
 app = FastAPI()
 
+# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://multibooker.vercel.app"],
@@ -12,6 +16,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include your routers
-app.include_router(uploadbet.router)
-app.include_router(auth.router)
+# Include each router
+app.include_router(uploadbet.router)  # the upload bet endpoint
+app.include_router(auth.router)       # your auth endpoints
