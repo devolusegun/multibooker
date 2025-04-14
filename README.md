@@ -181,3 +181,13 @@ UI:
 🧪 Improve Parsing Accuracy + More Market Types
 
 📊 (Optional) Admin Panel or Analytics
+
+
+{
+  "full_name": "John Doe",
+  "email": "jd@multibooker.com",
+  "username": "jondo",
+  "phone": "08001568987766",
+  "dob": "2025-04-13",
+  "password": "1qaz2wsx"
+}
