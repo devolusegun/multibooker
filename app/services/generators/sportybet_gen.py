@@ -8,7 +8,7 @@ SPORTYBET_SHARE_API = "https://www.sportybet.com/ng/sporty-api/ng/betslip/share"
 # NOTE: This structure is inferred from how SportyBet share betslip requests look in browser.
 # You'll need to verify exact payload keys/structure via browser DevTools.
 
-async def generate_sportybet_bet_code(event_id: str, market: str, selection: str) -> str:
+async def generate_sportybet_code(event_id: str, market: str, selection: str) -> str:
     """
     Generate a playable SportyBet betslip code for a given event, market, and selection.
 
