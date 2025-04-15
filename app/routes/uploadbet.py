@@ -1,40 +1,30 @@
-from fastapi import APIRouter, UploadFile, Form, HTTPException
+from fastapi import APIRouter, UploadFile, Form
 from fastapi.responses import JSONResponse
 from app.services.ocr_parser import extract_text_from_image, parse_bet_text
 from app.services.mapper import map_to_bookie
 from app.services.generators.sportybet_gen import generate_sportybet_code
 from app.services.generators.bet9ja_gen import generate_bet9ja_bet_code
 import shutil
-
-from pydantic import BaseModel
-from typing import List, Optional
+import os
 
 router = APIRouter()
-
-
-class OCRBet(BaseModel):
-    match: str
-    market: str
-    selection: str
-    odd: Optional[float] = None
-
 
 @router.post("/upload-bet")
 async def upload_bet(
     screenshot: UploadFile,
     betUrl: str = Form(None),
-    bookie: str = Form("bet9ja")
+    bookie: str = Form("bet9ja")  # default to bet9ja, but accept sportybet or football.com
 ):
-    # 1. Save uploaded screenshot
     file_path = f"static/{screenshot.filename}"
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(screenshot.file, buffer)
 
-    # 2. Run OCR + parsing
+    # Extract text and parse bets
     raw_text = extract_text_from_image(file_path)
     parsed_bets = parse_bet_text(raw_text)
 
-    # 3. Map parsed bets into bookie-specific format
+    # Prepare mapped and mapped_selections for code generation
     mapped_bets = []
     mapped_selections = []
 
@@ -44,11 +34,12 @@ async def upload_bet(
 
         if "error" not in mapped:
             mapped_selections.append({
-                "event_id": mapped.get("event_id", mapped.get("match")),  # fallback
+                "event_id": mapped.get("event_id", mapped.get("match")),
                 "market_id": mapped["market"],
                 "outcome_id": mapped["selection"]
             })
 
+    # Generate bet code
     code = ""
     if bookie.lower() == "sportybet":
         code = await generate_sportybet_code(mapped_selections)
@@ -62,4 +53,3 @@ async def upload_bet(
         "code": code,
         "copiable": code
     }
-
