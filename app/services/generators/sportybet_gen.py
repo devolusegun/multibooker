@@ -23,6 +23,7 @@ async def generate_sportybet_code(selections: List[Dict[str, str]]) -> str:
                 for sel in selections
             ]
         }
+        print("Sending to SportyBet API:", json.dumps(payload, indent=2))  # log payload
 
         headers = {
             "Content-Type": "application/json",
