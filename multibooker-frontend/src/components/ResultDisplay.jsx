@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ResultDisplay({ bets, mapped }) {
+export default function ResultDisplay({ bets, mapped, copy_text }) {
   return (
     <div className="mt-6 space-y-6">
       <div>
@@ -18,9 +18,10 @@ export default function ResultDisplay({ bets, mapped }) {
             <pre className="text-sm">{JSON.stringify(bet, null, 2)}</pre>
           </div>
         ))}
-        {props.copy_text && (
+
+        {copy_text && (
           <div className="mt-4 p-4 bg-green-100 text-green-800 rounded-md">
-            ✅ Bet Code Generated: <strong>{props.copy_text}</strong>
+            ✅ Bet Code Generated: <strong>{copy_text}</strong>
           </div>
         )}
       </div>
