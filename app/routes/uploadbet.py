@@ -35,38 +35,31 @@ async def upload_bet(
     parsed_bets = parse_bet_text(raw_text)
 
     # 3. Map parsed bets into bookie-specific format
-    mapped_selections = []
     mapped_bets = []
+    mapped_selections = []
 
     for bet in parsed_bets:
         mapped = map_to_bookie(bet, bookie=bookie.lower())
-        if "error" in mapped:
-            return {
-                "error": f"Mapping failed for bet: {mapped['error']}",
-                "failed_bet": bet
-            }
-
         mapped_bets.append(mapped)
-        mapped_selections.append({
-            "event_id": mapped.get("event_id", mapped.get("match")),
-            "market_id": mapped["market"],
-            "outcome_id": mapped["selection"]
-        })
 
-    # 4. Generate betslip code
+        if "error" not in mapped:
+            mapped_selections.append({
+                "event_id": mapped.get("event_id", mapped.get("match")),  # fallback
+                "market_id": mapped["market"],
+                "outcome_id": mapped["selection"]
+            })
+
+    code = ""
     if bookie.lower() == "sportybet":
         code = await generate_sportybet_code(mapped_selections)
     elif bookie.lower() == "bet9ja":
         code = generate_bet9ja_bet_code("multi", "accumulator", "combo")
-    else:
-        raise HTTPException(status_code=400, detail="Unsupported bookie")
 
-    # 5. Return all results
     return {
-        "bookie": bookie,
         "bet_url": betUrl,
         "parsed_bets": parsed_bets,
         "mapped_bets": mapped_bets,
         "code": code,
-        "copy_text": code
+        "copiable": code
     }
+
