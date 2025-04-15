@@ -6,6 +6,7 @@ from app.services.fetchers import fetch_odds
 from app.services.normalizer import normalize_match, normalize_market, normalize_selection
 from app.services.generators.sportybet_gen import generate_sportybet_code
 from app.services.generators.bet9ja_gen import generate_bet9ja_bet_code
+from app.services.generators.sportybet_gen import generate_sportybet_code_from_browser
 
 from app.services.mapper import map_to_bookie
 from pydantic import BaseModel
@@ -91,7 +92,8 @@ async def convert_to_sportybet(request: ConvertRequest):
             for sel in request.selections
         ]
 
-        code = await generate_sportybet_code(selections)
+        #code = await generate_sportybet_code(selections)
+        code = await generate_sportybet_code_from_browser(mapped_selections)
         return {
             "bookie": "sportybet",
             "code": code
