@@ -1,33 +1,26 @@
 import httpx
 import logging
+from typing import List, Dict
 
 logger = logging.getLogger(__name__)
 
 SPORTYBET_SHARE_API = "https://www.sportybet.com/ng/sporty-api/ng/betslip/share"
 
-# NOTE: This structure is inferred from how SportyBet share betslip requests look in browser.
-# You'll need to verify exact payload keys/structure via browser DevTools.
-
-async def generate_sportybet_code(event_id: str, market: str, selection: str) -> str:
+async def generate_sportybet_code(selections: List[Dict[str, str]]) -> str:
     """
-    Generate a playable SportyBet betslip code for a given event, market, and selection.
+    Generate a playable SportyBet betslip code for multiple selections.
 
-    Args:
-        event_id (str): SportyBet's internal event ID.
-        market (str): Normalized market name (e.g., 'Match Result').
-        selection (str): Normalized selection name (e.g., 'Home').
-
-    Returns:
-        str: A betslip code the user can play on SportyBet.
+    Each selection should be a dict with 'event_id', 'market_id', 'outcome_id' keys.
     """
     try:
         payload = {
             "bets": [
                 {
-                    "eventId": event_id,
-                    "market": market,       # You might need the market ID instead of string
-                    "selection": selection  # You might need selection ID (e.g., 1=home, 2=draw)
+                    "eventId": sel["event_id"],
+                    "market": sel["market_id"],
+                    "selection": sel["outcome_id"]
                 }
+                for sel in selections
             ]
         }
 
@@ -40,7 +33,6 @@ async def generate_sportybet_code(event_id: str, market: str, selection: str) ->
             response = await client.post(SPORTYBET_SHARE_API, json=payload, headers=headers)
             response.raise_for_status()
             data = response.json()
-
             return data.get("betCode") or data.get("code") or "UNKNOWN"
 
     except Exception as e:
