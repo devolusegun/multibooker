@@ -191,3 +191,13 @@ UI:
   "dob": "2025-04-13",
   "password": "1qaz2wsx"
 }
+
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb25kbyIsImV4cCI6MTc0NDU3MjkzOH0.B7Bs6f0q-9NxiXfWSaObMZi2fcseTpkwm4y8cA3UhTk",
+  "token_type": "bearer",
+  "user": {
+    "id": 1,
+    "username": "jondo",
+    "email": "jd@multibooker.com"
+  }
+}

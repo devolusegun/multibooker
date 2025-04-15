@@ -16,19 +16,36 @@ export default function Home() {
 
   const handleConvert = async () => {
     if (!screenshot) return;
-
+  
     const formData = new FormData();
     formData.append('screenshot', screenshot);
-    formData.append('betUrl', ''); // Placeholder for optional URL
+    formData.append('betUrl', '');
     formData.append('bookie', bookie);
-
+  
     setLoading(true);
     setError('');
     setResult(null);
-
+  
     try {
       const res = await axios.post('https://multibooker.onrender.com/upload-bet', formData);
-      setResult(res.data);
+  
+      const parsed = res.data.parsed_bets || [];
+      const mapped = res.data.mapped_bets || [];
+  
+      // Now send mapped to /convert/from-ocr
+      const convertRes = await axios.post('https://multibooker.onrender.com/convert/from-ocr', {
+        bookie,
+        bets: parsed
+      });
+  
+      // Merge results
+      setResult({
+        parsed_bets: parsed,
+        mapped_bets: mapped,
+        bet_code: convertRes.data.code,
+        copy_text: convertRes.data.copiable
+      });
+  
     } catch (err) {
       setError('Something went wrong. Try again.');
       console.error(err);
@@ -66,7 +83,7 @@ export default function Home() {
       {result && (
         <>
           <AdBanner />
-          <ResultDisplay bets={result.parsed_bets || []} mapped={result.mapped_bets || []} />
+          <ResultDisplay bets={result.parsed_bets || []} mapped={result.mapped_bets || []} copy_text={result.copy_text} />
         </>
       )}
     </div>

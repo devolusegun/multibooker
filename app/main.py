@@ -3,10 +3,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Bring in your new route modules
-from app.routes import uploadbet, auth
+from app.routes import convert, uploadbet, auth
 
 # Import your engine, Base from database.py
 from app.database import engine, Base
+
 
 app = FastAPI()
 
@@ -25,3 +26,4 @@ Base.metadata.create_all(bind=engine)
 # Include each router
 app.include_router(uploadbet.router)  # the upload bet endpoint
 app.include_router(auth.router)       # your auth endpoints
+app.include_router(convert.router)
