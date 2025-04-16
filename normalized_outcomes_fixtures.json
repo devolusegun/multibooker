@@ -1,0 +1,1677 @@
+[
+  {
+    "event_id": "sr:match:56096459",
+    "match": "FK Dinamo Moscow vs CSKA Moscow",
+    "start_time": 1744824600000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.90",
+        "Draw": "2.25",
+        "Away": "3.50"
+      },
+      "Over/Under": {
+        "Over 2.5": "9.80",
+        "Under 2.5": "1.04"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.38",
+        "Home Or Away": "1.30",
+        "Draw Or Away": "1.55"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "4.50",
+        "Draw (0:1)": "4.25",
+        "Away (0:1)": "1.58"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "10.00",
+        "Draw (0:2)": "6.60",
+        "Away (0:2)": "1.19"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "23.00",
+        "Draw (0:3)": "11.00",
+        "Away (0:3)": "1.05"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.40",
+        "Draw (1:0)": "4.75",
+        "Away (1:0)": "6.10"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.12",
+        "Draw (2:0)": "7.90",
+        "Away (2:0)": "14.50"
+      },
+      "Fk Dinamo Moscow Over/Under": {
+        "Over 2.5": "13.50",
+        "Under 2.5": "1.01"
+      },
+      "Cska Moscow Over/Under": {
+        "Over 2.5": "14.00",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.64",
+        "No": "2.15"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.69",
+        "No": "2.18"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "4.44",
+        "No": "1.21"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "5.90",
+        "Under 2.5": "1.11"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50850551",
+    "match": "Newcastle vs Crystal Palace",
+    "start_time": 1744828200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.15",
+        "Draw": "2.50",
+        "Away": "5.20"
+      },
+      "Over/Under": {
+        "Over 2.5": "8.90",
+        "Under 2.5": "1.08"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.19",
+        "Home Or Away": "1.25",
+        "Draw Or Away": "2.15"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "2.65",
+        "Draw (0:1)": "4.10",
+        "Away (0:1)": "2.30"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "5.10",
+        "Draw (0:2)": "5.10",
+        "Away (0:2)": "1.49"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "11.50",
+        "Draw (0:3)": "8.10",
+        "Away (0:3)": "1.18"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "26.00",
+        "Draw (0:4)": "14.00",
+        "Away (0:4)": "1.05"
+      },
+      "Handicap 0:5": {
+        "Home (0:5)": "47.00",
+        "Draw (0:5)": "21.00",
+        "Away (0:5)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.19",
+        "Draw (1:0)": "7.20",
+        "Away (1:0)": "12.50"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.05",
+        "Draw (2:0)": "13.50",
+        "Away (2:0)": "34.00"
+      },
+      "Newcastle Over/Under": {
+        "Over 2.5": "12.00",
+        "Under 2.5": "1.04"
+      },
+      "Crystal Palace Over/Under": {
+        "Over 2.5": "17.50",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.69",
+        "No": "2.20"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.52",
+        "No": "2.55"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.39",
+        "No": "1.32"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "5.50",
+        "Under 2.5": "1.16"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "3.20",
+        "Under 2.5": "1.34"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:58265379",
+    "match": "Inter vs Bayern Munich",
+    "start_time": 1744830000000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "3.25",
+        "Draw": "2.35",
+        "Away": "3.00"
+      },
+      "Over/Under": {
+        "Over 2.5": "9.10",
+        "Under 2.5": "1.07"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.53",
+        "Home Or Away": "1.30",
+        "Draw Or Away": "1.46"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "5.40",
+        "Draw (0:1)": "4.90",
+        "Away (0:1)": "1.49"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "13.00",
+        "Draw (0:2)": "8.00",
+        "Away (0:2)": "1.16"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "32.00",
+        "Draw (0:3)": "14.50",
+        "Away (0:3)": "1.04"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "44.00",
+        "Draw (0:4)": "25.00",
+        "Away (0:4)": "1.00"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.56",
+        "Draw (1:0)": "4.70",
+        "Away (1:0)": "4.80"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.19",
+        "Draw (2:0)": "7.40",
+        "Away (2:0)": "11.50"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.05",
+        "Draw (3:0)": "13.50",
+        "Away (3:0)": "27.00"
+      },
+      "Handicap 4:0": {
+        "Home (4:0)": "1.01",
+        "Draw (4:0)": "20.00",
+        "Away (4:0)": "50.00"
+      },
+      "Inter Over/Under": {
+        "Over 2.5": "18.50",
+        "Under 2.5": "1.01"
+      },
+      "Bayern Munich Over/Under": {
+        "Over 2.5": "17.50",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.57",
+        "No": "2.40"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.58",
+        "No": "2.39"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.99",
+        "No": "1.25"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "3.50",
+        "Under 2.5": "1.29"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:58265377",
+    "match": "Real Madrid vs Arsenal",
+    "start_time": 1744830000000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.30",
+        "Draw": "2.50",
+        "Away": "4.50"
+      },
+      "Over/Under": {
+        "Over 2.5": "8.50",
+        "Under 2.5": "1.08"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.24",
+        "Home Or Away": "1.26",
+        "Draw Or Away": "1.97"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "3.00",
+        "Draw (0:1)": "4.10",
+        "Away (0:1)": "2.05"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "6.00",
+        "Draw (0:2)": "5.50",
+        "Away (0:2)": "1.40"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "13.50",
+        "Draw (0:3)": "9.10",
+        "Away (0:3)": "1.14"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "31.00",
+        "Draw (0:4)": "15.50",
+        "Away (0:4)": "1.04"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.25",
+        "Draw (1:0)": "6.40",
+        "Away (1:0)": "9.80"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.07",
+        "Draw (2:0)": "12.00",
+        "Away (2:0)": "26.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.01",
+        "Draw (3:0)": "19.00",
+        "Away (3:0)": "55.00"
+      },
+      "Real Madrid Over/Under": {
+        "Over 2.5": "13.00",
+        "Under 2.5": "1.03"
+      },
+      "Arsenal Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.61",
+        "No": "2.35"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.52",
+        "No": "2.55"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.51",
+        "No": "1.31"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "3.33",
+        "Under 2.5": "1.31"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50955883",
+    "match": "Rennes vs Nantes",
+    "start_time": 1745001900000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.40",
+        "Draw": "2.25",
+        "Away": "4.90"
+      },
+      "Over/Under": {
+        "Over 2.5": "12.00",
+        "Under 2.5": "1.04"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.22",
+        "Home Or Away": "1.28",
+        "Draw Or Away": "1.91"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "3.25",
+        "Draw (0:1)": "3.90",
+        "Away (0:1)": "2.00"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "7.00",
+        "Draw (0:2)": "5.40",
+        "Away (0:2)": "1.35"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "16.50",
+        "Draw (0:3)": "9.40",
+        "Away (0:3)": "1.11"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "36.00",
+        "Draw (0:4)": "15.50",
+        "Away (0:4)": "1.02"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.23",
+        "Draw (1:0)": "6.10",
+        "Away (1:0)": "11.00"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.05",
+        "Draw (2:0)": "11.50",
+        "Away (2:0)": "31.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.01",
+        "Draw (3:0)": "21.00",
+        "Away (3:0)": "45.00"
+      },
+      "Rennes Over/Under": {
+        "Over 2.5": "14.00",
+        "Under 2.5": "1.01"
+      },
+      "Nantes Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.86",
+        "No": "1.95"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.73",
+        "No": "2.12"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "4.33",
+        "No": "1.22"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.55",
+        "Under 2.5": "1.45"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50852705",
+    "match": "Espanyol vs Getafe",
+    "start_time": 1745002800000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "3.70",
+        "Draw": "1.86",
+        "Away": "3.90"
+      },
+      "Over/Under": {
+        "Over 2.5": "12.50",
+        "Under 2.5": "1.03"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.38",
+        "Home Or Away": "1.44",
+        "Draw Or Away": "1.42"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "6.90",
+        "Draw (0:1)": "4.30",
+        "Away (0:1)": "1.45"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "20.00",
+        "Draw (0:2)": "8.30",
+        "Away (0:2)": "1.11"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "50.00",
+        "Draw (0:3)": "15.00",
+        "Away (0:3)": "1.02"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.40",
+        "Draw (1:0)": "4.50",
+        "Away (1:0)": "7.60"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.09",
+        "Draw (2:0)": "8.90",
+        "Away (2:0)": "23.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.01",
+        "Draw (3:0)": "16.00",
+        "Away (3:0)": "54.00"
+      },
+      "Espanyol Over/Under": {
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.01"
+      },
+      "Getafe Over/Under": {
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "2.35",
+        "No": "1.61"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "2.42",
+        "No": "1.57"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "7.70",
+        "No": "1.09"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "12.50",
+        "Under 2.5": "1.04"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.35",
+        "Under 2.5": "1.52"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50852703",
+    "match": "Rayo Vallecano vs Valencia",
+    "start_time": 1745064000000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "3.10",
+        "Draw": "2.00",
+        "Away": "4.20"
+      },
+      "Over/Under": {
+        "Over 2.5": "16.00",
+        "Under 2.5": "1.01"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.32",
+        "Home Or Away": "1.37",
+        "Draw Or Away": "1.58"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "4.90",
+        "Draw (0:1)": "4.00",
+        "Away (0:1)": "1.62"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "12.50",
+        "Draw (0:2)": "6.80",
+        "Away (0:2)": "1.18"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "32.00",
+        "Draw (0:3)": "13.00",
+        "Away (0:3)": "1.04"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "45.00",
+        "Draw (0:4)": "26.00",
+        "Away (0:4)": "1.00"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.33",
+        "Draw (1:0)": "5.00",
+        "Away (1:0)": "8.40"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.08",
+        "Draw (2:0)": "9.70",
+        "Away (2:0)": "24.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.01",
+        "Draw (3:0)": "16.00",
+        "Away (3:0)": "54.00"
+      },
+      "Rayo Vallecano Over/Under": {
+        "Over 2.5": "16.50",
+        "Under 2.5": "1.01"
+      },
+      "Valencia Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "2.05",
+        "No": "1.78"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "2.05",
+        "No": "1.78"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "6.00",
+        "No": "1.13"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.65",
+        "Under 2.5": "1.43"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51273459",
+    "match": "US Lecce vs Como 1907",
+    "start_time": 1745067600000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "4.40",
+        "Draw": "2.15",
+        "Away": "2.75"
+      },
+      "Over/Under": {
+        "Over 2.5": "13.50",
+        "Under 2.5": "1.02"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.71",
+        "Home Or Away": "1.32",
+        "Draw Or Away": "1.29"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "9.00",
+        "Draw (0:1)": "5.40",
+        "Away (0:1)": "1.29"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "25.00",
+        "Draw (0:2)": "10.50",
+        "Away (0:2)": "1.07"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "54.00",
+        "Draw (0:3)": "16.50",
+        "Away (0:3)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.77",
+        "Draw (1:0)": "4.00",
+        "Away (1:0)": "4.00"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.25",
+        "Draw (2:0)": "6.10",
+        "Away (2:0)": "9.30"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.07",
+        "Draw (3:0)": "11.00",
+        "Away (3:0)": "23.00"
+      },
+      "Handicap 4:0": {
+        "Home (4:0)": "1.01",
+        "Draw (4:0)": "17.00",
+        "Away (4:0)": "45.00"
+      },
+      "Lecce Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Como 1907 Over/Under": {
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.90",
+        "No": "1.91"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.85",
+        "No": "1.96"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "5.02",
+        "No": "1.18"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51269541",
+    "match": "Freiburg vs Hoffenheim",
+    "start_time": 1745069400000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.50",
+        "Draw": "2.35",
+        "Away": "4.25"
+      },
+      "Over/Under": {
+        "Over 2.5": "9.60",
+        "Under 2.5": "1.06"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.28",
+        "Home Or Away": "1.28",
+        "Draw Or Away": "1.80"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "3.40",
+        "Draw (0:1)": "4.10",
+        "Away (0:1)": "1.87"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "7.30",
+        "Draw (0:2)": "5.80",
+        "Away (0:2)": "1.31"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "17.00",
+        "Draw (0:3)": "9.90",
+        "Away (0:3)": "1.10"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "35.00",
+        "Draw (0:4)": "16.00",
+        "Away (0:4)": "1.02"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.28",
+        "Draw (1:0)": "5.75",
+        "Away (1:0)": "8.60"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.08",
+        "Draw (2:0)": "10.50",
+        "Away (2:0)": "22.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.01",
+        "Draw (3:0)": "16.50",
+        "Away (3:0)": "47.00"
+      },
+      "Freiburg Over/Under": {
+        "Over 2.5": "13.50",
+        "Under 2.5": "1.01"
+      },
+      "Hoffenheim Over/Under": {
+        "Over 2.5": "13.50",
+        "Under 2.5": "1.01"
+      },
+      "Away Team Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.67",
+        "No": "2.20"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.62",
+        "No": "2.32"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.99",
+        "No": "1.25"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51269537",
+    "match": "Heidenheim vs Bayern Munich",
+    "start_time": 1745069400000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "7.90",
+        "Draw": "3.10",
+        "Away": "1.65"
+      },
+      "Over/Under": {
+        "Over 2.5": "5.75",
+        "Under 2.5": "1.14"
+      },
+      "Double Chance": {
+        "Home Or Draw": "3.30",
+        "Home Or Away": "1.13",
+        "Draw Or Away": "1.08"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "24.00",
+        "Draw (0:1)": "10.50",
+        "Away (0:1)": "1.07"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "54.00",
+        "Draw (0:2)": "16.50",
+        "Away (0:2)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "3.80",
+        "Draw (1:0)": "4.40",
+        "Away (1:0)": "1.73"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "2.10",
+        "Draw (2:0)": "4.40",
+        "Away (2:0)": "2.75"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.44",
+        "Draw (3:0)": "5.60",
+        "Away (3:0)": "5.00"
+      },
+      "Handicap 4:0": {
+        "Home (4:0)": "1.17",
+        "Draw (4:0)": "8.40",
+        "Away (4:0)": "10.00"
+      },
+      "Handicap 5:0": {
+        "Home (5:0)": "1.06",
+        "Draw (5:0)": "13.50",
+        "Away (5:0)": "21.00"
+      },
+      "Handicap 6:0": {
+        "Home (6:0)": "1.01",
+        "Draw (6:0)": "24.00",
+        "Away (6:0)": "37.00"
+      },
+      "Heidenheim Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Bayern Munich Over/Under": {
+        "Over 2.5": "6.00",
+        "Under 2.5": "1.12"
+      },
+      "Gg/Ng": {
+        "Yes": "1.78",
+        "No": "2.05"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.31",
+        "No": "3.47"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "2.31",
+        "No": "1.62"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "21.00",
+        "Under 2.5": "1.01"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51269533",
+    "match": "Leipzig vs Holstein Kiel",
+    "start_time": 1745069400000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "1.73",
+        "Draw": "2.95",
+        "Away": "7.00"
+      },
+      "Over/Under": {
+        "Over 2.5": "5.90",
+        "Under 2.5": "1.13"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.10",
+        "Home Or Away": "1.14",
+        "Draw Or Away": "3.00"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "1.86",
+        "Draw (0:1)": "4.25",
+        "Away (0:1)": "3.33"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "3.10",
+        "Draw (0:2)": "4.40",
+        "Away (0:2)": "1.93"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "5.80",
+        "Draw (0:3)": "5.90",
+        "Away (0:3)": "1.37"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "12.00",
+        "Draw (0:4)": "9.20",
+        "Away (0:4)": "1.14"
+      },
+      "Handicap 0:5": {
+        "Home (0:5)": "24.00",
+        "Draw (0:5)": "14.50",
+        "Away (0:5)": "1.04"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.09",
+        "Draw (1:0)": "9.50",
+        "Away (1:0)": "20.00"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.02",
+        "Draw (2:0)": "16.00",
+        "Away (2:0)": "47.00"
+      },
+      "Rb Leipzig Over/Under": {
+        "Over 2.5": "6.60",
+        "Under 2.5": "1.10"
+      },
+      "Holstein Kiel Over/Under": {
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.01"
+      },
+      "Away Team Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.72",
+        "No": "2.15"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.34",
+        "No": "3.30"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "2.46",
+        "No": "1.55"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51269545",
+    "match": "Mainz vs Wolfsburg",
+    "start_time": 1745069400000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.65",
+        "Draw": "2.30",
+        "Away": "4.00"
+      },
+      "Over/Under": {
+        "Over 2.5": "10.00",
+        "Under 2.5": "1.05"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.31",
+        "Home Or Away": "1.30",
+        "Draw Or Away": "1.71"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "3.75",
+        "Draw (0:1)": "4.20",
+        "Away (0:1)": "1.77"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "8.30",
+        "Draw (0:2)": "6.10",
+        "Away (0:2)": "1.27"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "20.00",
+        "Draw (0:3)": "10.50",
+        "Away (0:3)": "1.08"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "40.00",
+        "Draw (0:4)": "17.00",
+        "Away (0:4)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.32",
+        "Draw (1:0)": "5.40",
+        "Away (1:0)": "7.75"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.09",
+        "Draw (2:0)": "9.70",
+        "Away (2:0)": "20.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.02",
+        "Draw (3:0)": "16.00",
+        "Away (3:0)": "44.00"
+      },
+      "Mainz Over/Under": {
+        "Over 2.5": "14.50",
+        "Under 2.5": "1.01"
+      },
+      "Wolfsburg Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.68",
+        "No": "2.20"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.65",
+        "No": "2.25"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "4.19",
+        "No": "1.23"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51269539",
+    "match": "Werder vs Bochum",
+    "start_time": 1745069400000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.25",
+        "Draw": "2.50",
+        "Away": "4.50"
+      },
+      "Over/Under": {
+        "Over 2.5": "7.80",
+        "Under 2.5": "1.09"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.23",
+        "Home Or Away": "1.25",
+        "Draw Or Away": "1.97"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "2.90",
+        "Draw (0:1)": "4.10",
+        "Away (0:1)": "2.05"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "5.70",
+        "Draw (0:2)": "5.40",
+        "Away (0:2)": "1.41"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "12.50",
+        "Draw (0:3)": "8.60",
+        "Away (0:3)": "1.14"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "27.00",
+        "Draw (0:4)": "14.50",
+        "Away (0:4)": "1.04"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.24",
+        "Draw (1:0)": "6.30",
+        "Away (1:0)": "9.70"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.06",
+        "Draw (2:0)": "11.50",
+        "Away (2:0)": "25.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.01",
+        "Draw (3:0)": "15.00",
+        "Away (3:0)": "41.00"
+      },
+      "Werder Bremen Over/Under": {
+        "Over 2.5": "11.50",
+        "Under 2.5": "1.03"
+      },
+      "Bochum Over/Under": {
+        "Over 2.5": "13.50",
+        "Under 2.5": "1.01"
+      },
+      "Away Team Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.60",
+        "No": "2.35"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.50",
+        "No": "2.60"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.43",
+        "No": "1.32"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50850617",
+    "match": "Brentford FC vs Brighton",
+    "start_time": 1745071200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.95",
+        "Draw": "2.45",
+        "Away": "3.25"
+      },
+      "Over/Under": {
+        "Over 2.5": "7.75",
+        "Under 2.5": "1.09"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.44",
+        "Home Or Away": "1.29",
+        "Draw Or Away": "1.53"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "4.60",
+        "Draw (0:1)": "4.70",
+        "Away (0:1)": "1.57"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "10.00",
+        "Draw (0:2)": "7.20",
+        "Away (0:2)": "1.20"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "24.00",
+        "Draw (0:3)": "12.50",
+        "Away (0:3)": "1.06"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "41.00",
+        "Draw (0:4)": "17.50",
+        "Away (0:4)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.47",
+        "Draw (1:0)": "5.00",
+        "Away (1:0)": "5.40"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.16",
+        "Draw (2:0)": "7.90",
+        "Away (2:0)": "12.50"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.04",
+        "Draw (3:0)": "13.50",
+        "Away (3:0)": "28.00"
+      },
+      "Brentford Over/Under": {
+        "Over 2.5": "14.50",
+        "Under 2.5": "1.01"
+      },
+      "Brighton Over/Under": {
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.51",
+        "No": "2.55"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.53",
+        "No": "2.53"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.75",
+        "No": "1.28"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.55",
+        "Under 2.5": "1.46"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50850619",
+    "match": "Crystal Palace vs Bournemouth",
+    "start_time": 1745071200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "3.00",
+        "Draw": "2.30",
+        "Away": "3.40"
+      },
+      "Over/Under": {
+        "Over 2.5": "10.00",
+        "Under 2.5": "1.05"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.43",
+        "Home Or Away": "1.30",
+        "Draw Or Away": "1.53"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "4.80",
+        "Draw (0:1)": "4.50",
+        "Away (0:1)": "1.56"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "11.50",
+        "Draw (0:2)": "7.20",
+        "Away (0:2)": "1.19"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "27.00",
+        "Draw (0:3)": "12.50",
+        "Away (0:3)": "1.05"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "44.00",
+        "Draw (0:4)": "21.00",
+        "Away (0:4)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.45",
+        "Draw (1:0)": "4.80",
+        "Away (1:0)": "5.75"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.14",
+        "Draw (2:0)": "8.10",
+        "Away (2:0)": "14.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.03",
+        "Draw (3:0)": "14.00",
+        "Away (3:0)": "33.00"
+      },
+      "Crystal Palace Over/Under": {
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.01"
+      },
+      "Bournemouth Over/Under": {
+        "Over 2.5": "16.00",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.65",
+        "No": "2.25"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.66",
+        "No": "2.23"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "4.33",
+        "No": "1.22"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.30",
+        "Under 2.5": "1.55"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50850621",
+    "match": "Everton vs Man City",
+    "start_time": 1745071200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "4.30",
+        "Draw": "2.30",
+        "Away": "2.55"
+      },
+      "Over/Under": {
+        "Over 2.5": "10.50",
+        "Under 2.5": "1.05"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.79",
+        "Home Or Away": "1.29",
+        "Draw Or Away": "1.27"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "8.90",
+        "Draw (0:1)": "5.70",
+        "Away (0:1)": "1.28"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "24.00",
+        "Draw (0:2)": "10.50",
+        "Away (0:2)": "1.07"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "50.00",
+        "Draw (0:3)": "16.50",
+        "Away (0:3)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.86",
+        "Draw (1:0)": "4.00",
+        "Away (1:0)": "3.50"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.31",
+        "Draw (2:0)": "5.80",
+        "Away (2:0)": "7.60"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.09",
+        "Draw (3:0)": "10.00",
+        "Away (3:0)": "18.00"
+      },
+      "Handicap 4:0": {
+        "Home (4:0)": "1.02",
+        "Draw (4:0)": "16.50",
+        "Away (4:0)": "37.00"
+      },
+      "Everton Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Man City Over/Under": {
+        "Over 2.5": "14.00",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.73",
+        "No": "2.10"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.67",
+        "No": "2.22"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "4.20",
+        "No": "1.23"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.55",
+        "Under 2.5": "1.46"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50850633",
+    "match": "West Ham vs Southampton",
+    "start_time": 1745071200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.00",
+        "Draw": "2.55",
+        "Away": "6.10"
+      },
+      "Over/Under": {
+        "Over 2.5": "9.30",
+        "Under 2.5": "1.06"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.14",
+        "Home Or Away": "1.21",
+        "Draw Or Away": "2.40"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "2.35",
+        "Draw (0:1)": "3.90",
+        "Away (0:1)": "2.60"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "4.40",
+        "Draw (0:2)": "4.70",
+        "Away (0:2)": "1.59"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "9.60",
+        "Draw (0:3)": "7.20",
+        "Away (0:3)": "1.21"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "21.00",
+        "Draw (0:4)": "12.00",
+        "Away (0:4)": "1.06"
+      },
+      "Handicap 0:5": {
+        "Home (0:5)": "39.00",
+        "Draw (0:5)": "18.00",
+        "Away (0:5)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.14",
+        "Draw (1:0)": "7.70",
+        "Away (1:0)": "16.00"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.03",
+        "Draw (2:0)": "14.00",
+        "Away (2:0)": "41.00"
+      },
+      "West Ham Over/Under": {
+        "Over 2.5": "10.50",
+        "Under 2.5": "1.04"
+      },
+      "Southampton Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.85",
+        "No": "1.96"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.54",
+        "No": "2.50"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.30",
+        "No": "1.34"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.25",
+        "Under 2.5": "1.57"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50852701",
+    "match": "Barcelona vs Celta",
+    "start_time": 1745072100000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "1.69",
+        "Draw": "3.10",
+        "Away": "7.00"
+      },
+      "Over/Under": {
+        "Over 2.5": "5.10",
+        "Under 2.5": "1.17"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.09",
+        "Home Or Away": "1.14",
+        "Draw Or Away": "3.10"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "1.80",
+        "Draw (0:1)": "4.40",
+        "Away (0:1)": "3.50"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "2.85",
+        "Draw (0:2)": "4.50",
+        "Away (0:2)": "2.00"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "5.25",
+        "Draw (0:3)": "5.75",
+        "Away (0:3)": "1.42"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "10.50",
+        "Draw (0:4)": "8.75",
+        "Away (0:4)": "1.16"
+      },
+      "Handicap 0:5": {
+        "Home (0:5)": "21.00",
+        "Draw (0:5)": "14.00",
+        "Away (0:5)": "1.05"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.09",
+        "Draw (1:0)": "9.75",
+        "Away (1:0)": "20.00"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.02",
+        "Draw (2:0)": "16.00",
+        "Away (2:0)": "45.00"
+      },
+      "Barcelona Over/Under": {
+        "Over 2.5": "9.20",
+        "Under 2.5": "1.04"
+      },
+      "Celta Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.65",
+        "No": "2.25"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.30",
+        "No": "3.59"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "2.32",
+        "No": "1.62"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "21.00",
+        "Under 2.5": "1.01"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.15",
+        "Under 2.5": "1.64"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50955875",
+    "match": "PSG vs Le Havre AC",
+    "start_time": 1745074800000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "1.44",
+        "Draw": "3.70",
+        "Away": "11.00"
+      },
+      "Over/Under": {
+        "Over 2.5": "7.00",
+        "Under 2.5": "1.10"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.04",
+        "Home Or Away": "1.07",
+        "Draw Or Away": "4.50"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "1.41",
+        "Draw (0:1)": "5.30",
+        "Away (0:1)": "5.80"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "1.99",
+        "Draw (0:2)": "4.50",
+        "Away (0:2)": "2.90"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "3.20",
+        "Draw (0:3)": "4.90",
+        "Away (0:3)": "1.81"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "5.70",
+        "Draw (0:4)": "6.50",
+        "Away (0:4)": "1.35"
+      },
+      "Handicap 0:5": {
+        "Home (0:5)": "11.00",
+        "Draw (0:5)": "9.70",
+        "Away (0:5)": "1.14"
+      },
+      "Handicap 0:6": {
+        "Home (0:6)": "21.00",
+        "Draw (0:6)": "15.00",
+        "Away (0:6)": "1.05"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.03",
+        "Draw (1:0)": "13.50",
+        "Away (1:0)": "37.00"
+      },
+      "Psg Over/Under": {
+        "Over 2.5": "6.80",
+        "Under 2.5": "1.09"
+      },
+      "Le Havre Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "1.84",
+        "No": "1.97"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.19",
+        "No": "4.75"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "1.80",
+        "No": "2.02"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "21.00",
+        "Under 2.5": "1.01"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.55",
+        "Under 2.5": "1.45"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51273463",
+    "match": "AC Monza vs Napoli",
+    "start_time": 1745078400000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "10.00",
+        "Draw": "2.65",
+        "Away": "1.71"
+      },
+      "Over/Under": {
+        "Over 2.5": "10.50",
+        "Under 2.5": "1.05"
+      },
+      "Double Chance": {
+        "Home Or Draw": "3.25",
+        "Home Or Away": "1.15",
+        "Draw Or Away": "1.06"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "37.00",
+        "Draw (0:1)": "10.50",
+        "Away (0:1)": "1.05"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "47.00",
+        "Draw (0:2)": "21.00",
+        "Away (0:2)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "3.75",
+        "Draw (1:0)": "3.80",
+        "Away (1:0)": "1.85"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.95",
+        "Draw (2:0)": "4.10",
+        "Away (2:0)": "3.25"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.34",
+        "Draw (3:0)": "5.75",
+        "Away (3:0)": "6.60"
+      },
+      "Handicap 4:0": {
+        "Home (4:0)": "1.11",
+        "Draw (4:0)": "9.60",
+        "Away (4:0)": "14.50"
+      },
+      "Handicap 5:0": {
+        "Home (5:0)": "1.03",
+        "Draw (5:0)": "15.50",
+        "Away (5:0)": "30.00"
+      },
+      "Monza Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Napoli Over/Under": {
+        "Over 2.5": "9.00",
+        "Under 2.5": "1.05"
+      },
+      "Gg/Ng": {
+        "Yes": "2.45",
+        "No": "1.55"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.51",
+        "No": "2.59"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "2.84",
+        "No": "1.43"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      }
+    }
+  }
+]
