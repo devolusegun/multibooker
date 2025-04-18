@@ -1,332 +1,86 @@
 [
   {
-    "event_id": "sr:match:56096459",
-    "match": "FK Dinamo Moscow vs CSKA Moscow",
-    "start_time": 1744824600000,
+    "event_id": "sr:match:51472381",
+    "match": "Galatasaray Istanbul vs BB Bodrumspor",
+    "start_time": 1744995600000,
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "2.90",
-        "Draw": "2.25",
-        "Away": "3.50"
+        "Home": "1.69",
+        "Draw": "2.85",
+        "Away": "8.50"
       },
       "Over/Under": {
-        "Over 2.5": "9.80",
-        "Under 2.5": "1.04"
+        "Over 2.5": "8.10",
+        "Under 2.5": "1.09"
       },
       "Double Chance": {
-        "Home Or Draw": "1.38",
-        "Home Or Away": "1.30",
-        "Draw Or Away": "1.55"
+        "Home Or Draw": "1.08",
+        "Home Or Away": "1.14",
+        "Draw Or Away": "3.25"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "4.50",
-        "Draw (0:1)": "4.25",
-        "Away (0:1)": "1.58"
+        "Home (0:1)": "1.81",
+        "Draw (0:1)": "4.10",
+        "Away (0:1)": "3.70"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "10.00",
-        "Draw (0:2)": "6.60",
-        "Away (0:2)": "1.19"
+        "Home (0:2)": "3.00",
+        "Draw (0:2)": "4.25",
+        "Away (0:2)": "1.99"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "23.00",
-        "Draw (0:3)": "11.00",
-        "Away (0:3)": "1.05"
+        "Home (0:3)": "5.90",
+        "Draw (0:3)": "5.70",
+        "Away (0:3)": "1.38"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "12.50",
+        "Draw (0:4)": "9.10",
+        "Away (0:4)": "1.14"
+      },
+      "Handicap 0:5": {
+        "Home (0:5)": "25.00",
+        "Draw (0:5)": "14.50",
+        "Away (0:5)": "1.04"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "1.40",
-        "Draw (1:0)": "4.75",
-        "Away (1:0)": "6.10"
+        "Home (1:0)": "1.07",
+        "Draw (1:0)": "10.50",
+        "Away (1:0)": "28.00"
       },
       "Handicap 2:0": {
-        "Home (2:0)": "1.12",
-        "Draw (2:0)": "7.90",
-        "Away (2:0)": "14.50"
+        "Home (2:0)": "1.01",
+        "Draw (2:0)": "16.00",
+        "Away (2:0)": "57.00"
       },
-      "Fk Dinamo Moscow Over/Under": {
-        "Over 2.5": "13.50",
-        "Under 2.5": "1.01"
+      "Galatasaray Istanbul Over/Under": {
+        "Over 2.5": "7.80",
+        "Under 2.5": "1.08"
       },
-      "Cska Moscow Over/Under": {
+      "Bb Bodrumspor Over/Under": {
         "Over 2.5": "14.00",
         "Under 2.5": "1.01"
       },
       "Gg/Ng": {
-        "Yes": "1.64",
-        "No": "2.15"
+        "Yes": "2.00",
+        "No": "1.81"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.69",
-        "No": "2.18"
+        "Yes": "1.40",
+        "No": "2.97"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "4.44",
-        "No": "1.21"
+        "Yes": "2.57",
+        "No": "1.51"
       },
       "1St Half - Over/Under": {
-        "Over 2.5": "5.90",
-        "Under 2.5": "1.11"
-      }
-    }
-  },
-  {
-    "event_id": "sr:match:50850551",
-    "match": "Newcastle vs Crystal Palace",
-    "start_time": 1744828200000,
-    "source": "SportyBet",
-    "markets": {
-      "Match Result": {
-        "Home": "2.15",
-        "Draw": "2.50",
-        "Away": "5.20"
-      },
-      "Over/Under": {
-        "Over 2.5": "8.90",
-        "Under 2.5": "1.08"
-      },
-      "Double Chance": {
-        "Home Or Draw": "1.19",
-        "Home Or Away": "1.25",
-        "Draw Or Away": "2.15"
-      },
-      "Handicap 0:1": {
-        "Home (0:1)": "2.65",
-        "Draw (0:1)": "4.10",
-        "Away (0:1)": "2.30"
-      },
-      "Handicap 0:2": {
-        "Home (0:2)": "5.10",
-        "Draw (0:2)": "5.10",
-        "Away (0:2)": "1.49"
-      },
-      "Handicap 0:3": {
-        "Home (0:3)": "11.50",
-        "Draw (0:3)": "8.10",
-        "Away (0:3)": "1.18"
-      },
-      "Handicap 0:4": {
-        "Home (0:4)": "26.00",
-        "Draw (0:4)": "14.00",
-        "Away (0:4)": "1.05"
-      },
-      "Handicap 0:5": {
-        "Home (0:5)": "47.00",
-        "Draw (0:5)": "21.00",
-        "Away (0:5)": "1.01"
-      },
-      "Handicap 1:0": {
-        "Home (1:0)": "1.19",
-        "Draw (1:0)": "7.20",
-        "Away (1:0)": "12.50"
-      },
-      "Handicap 2:0": {
-        "Home (2:0)": "1.05",
-        "Draw (2:0)": "13.50",
-        "Away (2:0)": "34.00"
-      },
-      "Newcastle Over/Under": {
-        "Over 2.5": "12.00",
-        "Under 2.5": "1.04"
-      },
-      "Crystal Palace Over/Under": {
-        "Over 2.5": "17.50",
-        "Under 2.5": "1.01"
-      },
-      "Gg/Ng": {
-        "Yes": "1.69",
-        "No": "2.20"
-      },
-      "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.52",
-        "No": "2.55"
-      },
-      "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "3.39",
-        "No": "1.32"
-      },
-      "1St Half - Over/Under": {
-        "Over 2.5": "5.50",
-        "Under 2.5": "1.16"
+        "Over 2.5": "5.00",
+        "Under 2.5": "1.18"
       },
       "Corners - Over/Under": {
-        "Over 2.5": "3.20",
-        "Under 2.5": "1.34"
-      }
-    }
-  },
-  {
-    "event_id": "sr:match:58265379",
-    "match": "Inter vs Bayern Munich",
-    "start_time": 1744830000000,
-    "source": "SportyBet",
-    "markets": {
-      "Match Result": {
-        "Home": "3.25",
-        "Draw": "2.35",
-        "Away": "3.00"
-      },
-      "Over/Under": {
-        "Over 2.5": "9.10",
-        "Under 2.5": "1.07"
-      },
-      "Double Chance": {
-        "Home Or Draw": "1.53",
-        "Home Or Away": "1.30",
-        "Draw Or Away": "1.46"
-      },
-      "Handicap 0:1": {
-        "Home (0:1)": "5.40",
-        "Draw (0:1)": "4.90",
-        "Away (0:1)": "1.49"
-      },
-      "Handicap 0:2": {
-        "Home (0:2)": "13.00",
-        "Draw (0:2)": "8.00",
-        "Away (0:2)": "1.16"
-      },
-      "Handicap 0:3": {
-        "Home (0:3)": "32.00",
-        "Draw (0:3)": "14.50",
-        "Away (0:3)": "1.04"
-      },
-      "Handicap 0:4": {
-        "Home (0:4)": "44.00",
-        "Draw (0:4)": "25.00",
-        "Away (0:4)": "1.00"
-      },
-      "Handicap 1:0": {
-        "Home (1:0)": "1.56",
-        "Draw (1:0)": "4.70",
-        "Away (1:0)": "4.80"
-      },
-      "Handicap 2:0": {
-        "Home (2:0)": "1.19",
-        "Draw (2:0)": "7.40",
-        "Away (2:0)": "11.50"
-      },
-      "Handicap 3:0": {
-        "Home (3:0)": "1.05",
-        "Draw (3:0)": "13.50",
-        "Away (3:0)": "27.00"
-      },
-      "Handicap 4:0": {
-        "Home (4:0)": "1.01",
-        "Draw (4:0)": "20.00",
-        "Away (4:0)": "50.00"
-      },
-      "Inter Over/Under": {
-        "Over 2.5": "18.50",
-        "Under 2.5": "1.01"
-      },
-      "Bayern Munich Over/Under": {
-        "Over 2.5": "17.50",
-        "Under 2.5": "1.01"
-      },
-      "Gg/Ng": {
-        "Yes": "1.57",
-        "No": "2.40"
-      },
-      "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.58",
-        "No": "2.39"
-      },
-      "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "3.99",
-        "No": "1.25"
-      },
-      "1St Half - Over/Under": {
-        "Over 2.5": "23.00",
-        "Under 2.5": "1.00"
-      },
-      "Corners - Over/Under": {
-        "Over 2.5": "3.50",
-        "Under 2.5": "1.29"
-      }
-    }
-  },
-  {
-    "event_id": "sr:match:58265377",
-    "match": "Real Madrid vs Arsenal",
-    "start_time": 1744830000000,
-    "source": "SportyBet",
-    "markets": {
-      "Match Result": {
-        "Home": "2.30",
-        "Draw": "2.50",
-        "Away": "4.50"
-      },
-      "Over/Under": {
-        "Over 2.5": "8.50",
-        "Under 2.5": "1.08"
-      },
-      "Double Chance": {
-        "Home Or Draw": "1.24",
-        "Home Or Away": "1.26",
-        "Draw Or Away": "1.97"
-      },
-      "Handicap 0:1": {
-        "Home (0:1)": "3.00",
-        "Draw (0:1)": "4.10",
-        "Away (0:1)": "2.05"
-      },
-      "Handicap 0:2": {
-        "Home (0:2)": "6.00",
-        "Draw (0:2)": "5.50",
-        "Away (0:2)": "1.40"
-      },
-      "Handicap 0:3": {
-        "Home (0:3)": "13.50",
-        "Draw (0:3)": "9.10",
-        "Away (0:3)": "1.14"
-      },
-      "Handicap 0:4": {
-        "Home (0:4)": "31.00",
-        "Draw (0:4)": "15.50",
-        "Away (0:4)": "1.04"
-      },
-      "Handicap 1:0": {
-        "Home (1:0)": "1.25",
-        "Draw (1:0)": "6.40",
-        "Away (1:0)": "9.80"
-      },
-      "Handicap 2:0": {
-        "Home (2:0)": "1.07",
-        "Draw (2:0)": "12.00",
-        "Away (2:0)": "26.00"
-      },
-      "Handicap 3:0": {
-        "Home (3:0)": "1.01",
-        "Draw (3:0)": "19.00",
-        "Away (3:0)": "55.00"
-      },
-      "Real Madrid Over/Under": {
-        "Over 2.5": "13.00",
-        "Under 2.5": "1.03"
-      },
-      "Arsenal Over/Under": {
-        "Over 2.5": "19.00",
-        "Under 2.5": "1.00"
-      },
-      "Gg/Ng": {
-        "Yes": "1.61",
-        "No": "2.35"
-      },
-      "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.52",
-        "No": "2.55"
-      },
-      "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "3.51",
-        "No": "1.31"
-      },
-      "1St Half - Over/Under": {
-        "Over 2.5": "23.00",
-        "Under 2.5": "1.00"
-      },
-      "Corners - Over/Under": {
-        "Over 2.5": "3.33",
-        "Under 2.5": "1.31"
+        "Over 2.5": "3.00",
+        "Under 2.5": "1.33"
       }
     }
   },
@@ -342,13 +96,13 @@
         "Away": "4.90"
       },
       "Over/Under": {
-        "Over 2.5": "12.00",
+        "Over 2.5": "13.00",
         "Under 2.5": "1.04"
       },
       "Double Chance": {
         "Home Or Draw": "1.22",
-        "Home Or Away": "1.28",
-        "Draw Or Away": "1.91"
+        "Home Or Away": "1.29",
+        "Draw Or Away": "1.93"
       },
       "Handicap 0:1": {
         "Home (0:1)": "3.25",
@@ -357,28 +111,28 @@
       },
       "Handicap 0:2": {
         "Home (0:2)": "7.00",
-        "Draw (0:2)": "5.40",
-        "Away (0:2)": "1.35"
+        "Draw (0:2)": "5.50",
+        "Away (0:2)": "1.36"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "16.50",
-        "Draw (0:3)": "9.40",
+        "Home (0:3)": "17.00",
+        "Draw (0:3)": "9.75",
         "Away (0:3)": "1.11"
       },
       "Handicap 0:4": {
-        "Home (0:4)": "36.00",
-        "Draw (0:4)": "15.50",
+        "Home (0:4)": "39.00",
+        "Draw (0:4)": "17.00",
         "Away (0:4)": "1.02"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.23",
-        "Draw (1:0)": "6.10",
-        "Away (1:0)": "11.00"
+        "Draw (1:0)": "6.25",
+        "Away (1:0)": "11.50"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.05",
-        "Draw (2:0)": "11.50",
-        "Away (2:0)": "31.00"
+        "Draw (2:0)": "12.50",
+        "Away (2:0)": "33.00"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.01",
@@ -386,7 +140,7 @@
         "Away (3:0)": "45.00"
       },
       "Rennes Over/Under": {
-        "Over 2.5": "14.00",
+        "Over 2.5": "16.00",
         "Under 2.5": "1.01"
       },
       "Nantes Over/Under": {
@@ -394,8 +148,8 @@
         "Under 2.5": "1.00"
       },
       "Gg/Ng": {
-        "Yes": "1.86",
-        "No": "1.95"
+        "Yes": "1.87",
+        "No": "1.94"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
         "Yes": "1.73",
@@ -410,8 +164,8 @@
         "Under 2.5": "1.00"
       },
       "Corners - Over/Under": {
-        "Over 2.5": "2.55",
-        "Under 2.5": "1.45"
+        "Over 2.5": "3.50",
+        "Under 2.5": "1.29"
       }
     }
   },
@@ -423,75 +177,75 @@
     "markets": {
       "Match Result": {
         "Home": "3.70",
-        "Draw": "1.86",
-        "Away": "3.90"
+        "Draw": "1.87",
+        "Away": "4.00"
       },
       "Over/Under": {
-        "Over 2.5": "12.50",
-        "Under 2.5": "1.03"
+        "Over 2.5": "13.50",
+        "Under 2.5": "1.04"
       },
       "Double Chance": {
         "Home Or Draw": "1.38",
         "Home Or Away": "1.44",
-        "Draw Or Away": "1.42"
+        "Draw Or Away": "1.44"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "6.90",
+        "Home (0:1)": "6.80",
         "Draw (0:1)": "4.30",
-        "Away (0:1)": "1.45"
+        "Away (0:1)": "1.46"
       },
       "Handicap 0:2": {
         "Home (0:2)": "20.00",
-        "Draw (0:2)": "8.30",
-        "Away (0:2)": "1.11"
+        "Draw (0:2)": "8.50",
+        "Away (0:2)": "1.12"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "50.00",
-        "Draw (0:3)": "15.00",
+        "Home (0:3)": "54.00",
+        "Draw (0:3)": "16.50",
         "Away (0:3)": "1.02"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.40",
-        "Draw (1:0)": "4.50",
-        "Away (1:0)": "7.60"
+        "Draw (1:0)": "4.60",
+        "Away (1:0)": "7.80"
       },
       "Handicap 2:0": {
-        "Home (2:0)": "1.09",
-        "Draw (2:0)": "8.90",
-        "Away (2:0)": "23.00"
+        "Home (2:0)": "1.10",
+        "Draw (2:0)": "9.30",
+        "Away (2:0)": "24.00"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.01",
-        "Draw (3:0)": "16.00",
-        "Away (3:0)": "54.00"
+        "Draw (3:0)": "17.50",
+        "Away (3:0)": "61.00"
       },
       "Espanyol Over/Under": {
-        "Over 2.5": "15.50",
+        "Over 2.5": "18.00",
         "Under 2.5": "1.01"
       },
       "Getafe Over/Under": {
-        "Over 2.5": "15.50",
+        "Over 2.5": "18.50",
         "Under 2.5": "1.01"
       },
       "Gg/Ng": {
-        "Yes": "2.35",
+        "Yes": "2.30",
         "No": "1.61"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "2.42",
-        "No": "1.57"
+        "Yes": "2.39",
+        "No": "1.58"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "7.70",
+        "Yes": "7.60",
         "No": "1.09"
       },
       "1St Half - Over/Under": {
-        "Over 2.5": "12.50",
+        "Over 2.5": "12.00",
         "Under 2.5": "1.04"
       },
       "Corners - Over/Under": {
-        "Over 2.5": "2.35",
-        "Under 2.5": "1.52"
+        "Over 2.5": "3.60",
+        "Under 2.5": "1.27"
       }
     }
   },
@@ -503,31 +257,31 @@
     "markets": {
       "Match Result": {
         "Home": "3.10",
-        "Draw": "2.00",
+        "Draw": "2.05",
         "Away": "4.20"
       },
       "Over/Under": {
-        "Over 2.5": "16.00",
-        "Under 2.5": "1.01"
+        "Over 2.5": "18.00",
+        "Under 2.5": "1.02"
       },
       "Double Chance": {
-        "Home Or Draw": "1.32",
+        "Home Or Draw": "1.33",
         "Home Or Away": "1.37",
-        "Draw Or Away": "1.58"
+        "Draw Or Away": "1.59"
       },
       "Handicap 0:1": {
         "Home (0:1)": "4.90",
-        "Draw (0:1)": "4.00",
-        "Away (0:1)": "1.62"
+        "Draw (0:1)": "4.10",
+        "Away (0:1)": "1.63"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "12.50",
-        "Draw (0:2)": "6.80",
-        "Away (0:2)": "1.18"
+        "Home (0:2)": "13.00",
+        "Draw (0:2)": "7.10",
+        "Away (0:2)": "1.19"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "32.00",
-        "Draw (0:3)": "13.00",
+        "Home (0:3)": "34.00",
+        "Draw (0:3)": "14.00",
         "Away (0:3)": "1.04"
       },
       "Handicap 0:4": {
@@ -536,22 +290,22 @@
         "Away (0:4)": "1.00"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "1.33",
-        "Draw (1:0)": "5.00",
-        "Away (1:0)": "8.40"
+        "Home (1:0)": "1.34",
+        "Draw (1:0)": "5.10",
+        "Away (1:0)": "8.50"
       },
       "Handicap 2:0": {
-        "Home (2:0)": "1.08",
-        "Draw (2:0)": "9.70",
-        "Away (2:0)": "24.00"
+        "Home (2:0)": "1.09",
+        "Draw (2:0)": "10.00",
+        "Away (2:0)": "25.00"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.01",
-        "Draw (3:0)": "16.00",
-        "Away (3:0)": "54.00"
+        "Draw (3:0)": "18.00",
+        "Away (3:0)": "60.00"
       },
       "Rayo Vallecano Over/Under": {
-        "Over 2.5": "16.50",
+        "Over 2.5": "19.50",
         "Under 2.5": "1.01"
       },
       "Valencia Over/Under": {
@@ -560,14 +314,14 @@
       },
       "Gg/Ng": {
         "Yes": "2.05",
-        "No": "1.78"
+        "No": "1.79"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "2.05",
-        "No": "1.78"
+        "Yes": "2.04",
+        "No": "1.79"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "6.00",
+        "Yes": "5.94",
         "No": "1.13"
       },
       "1St Half - Over/Under": {
@@ -592,55 +346,55 @@
         "Away": "2.75"
       },
       "Over/Under": {
-        "Over 2.5": "13.50",
-        "Under 2.5": "1.02"
+        "Over 2.5": "15.00",
+        "Under 2.5": "1.03"
       },
       "Double Chance": {
-        "Home Or Draw": "1.71",
-        "Home Or Away": "1.32",
+        "Home Or Draw": "1.72",
+        "Home Or Away": "1.33",
         "Draw Or Away": "1.29"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "9.00",
-        "Draw (0:1)": "5.40",
-        "Away (0:1)": "1.29"
+        "Home (0:1)": "9.30",
+        "Draw (0:1)": "5.50",
+        "Away (0:1)": "1.30"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "25.00",
-        "Draw (0:2)": "10.50",
+        "Home (0:2)": "27.00",
+        "Draw (0:2)": "11.00",
         "Away (0:2)": "1.07"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "54.00",
-        "Draw (0:3)": "16.50",
+        "Home (0:3)": "61.00",
+        "Draw (0:3)": "18.50",
         "Away (0:3)": "1.01"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "1.77",
+        "Home (1:0)": "1.78",
         "Draw (1:0)": "4.00",
         "Away (1:0)": "4.00"
       },
       "Handicap 2:0": {
-        "Home (2:0)": "1.25",
-        "Draw (2:0)": "6.10",
-        "Away (2:0)": "9.30"
+        "Home (2:0)": "1.26",
+        "Draw (2:0)": "6.25",
+        "Away (2:0)": "9.60"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.07",
-        "Draw (3:0)": "11.00",
-        "Away (3:0)": "23.00"
+        "Draw (3:0)": "11.50",
+        "Away (3:0)": "25.00"
       },
       "Handicap 4:0": {
         "Home (4:0)": "1.01",
-        "Draw (4:0)": "17.00",
-        "Away (4:0)": "45.00"
+        "Draw (4:0)": "19.00",
+        "Away (4:0)": "51.00"
       },
       "Lecce Over/Under": {
         "Over 2.5": "19.00",
         "Under 2.5": "1.00"
       },
       "Como 1907 Over/Under": {
-        "Over 2.5": "15.50",
+        "Over 2.5": "18.50",
         "Under 2.5": "1.01"
       },
       "Gg/Ng": {
@@ -658,6 +412,10 @@
       "1St Half - Over/Under": {
         "Over 2.5": "23.00",
         "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.10",
+        "Under 2.5": "1.66"
       }
     }
   },
@@ -673,56 +431,56 @@
         "Away": "4.25"
       },
       "Over/Under": {
-        "Over 2.5": "9.60",
+        "Over 2.5": "10.00",
         "Under 2.5": "1.06"
       },
       "Double Chance": {
         "Home Or Draw": "1.28",
-        "Home Or Away": "1.28",
-        "Draw Or Away": "1.80"
+        "Home Or Away": "1.29",
+        "Draw Or Away": "1.81"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "3.40",
-        "Draw (0:1)": "4.10",
-        "Away (0:1)": "1.87"
+        "Home (0:1)": "3.50",
+        "Draw (0:1)": "4.20",
+        "Away (0:1)": "1.88"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "7.30",
-        "Draw (0:2)": "5.80",
-        "Away (0:2)": "1.31"
+        "Home (0:2)": "7.50",
+        "Draw (0:2)": "5.90",
+        "Away (0:2)": "1.32"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "17.00",
-        "Draw (0:3)": "9.90",
+        "Home (0:3)": "18.00",
+        "Draw (0:3)": "10.50",
         "Away (0:3)": "1.10"
       },
       "Handicap 0:4": {
-        "Home (0:4)": "35.00",
-        "Draw (0:4)": "16.00",
+        "Home (0:4)": "39.00",
+        "Draw (0:4)": "17.50",
         "Away (0:4)": "1.02"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "1.28",
-        "Draw (1:0)": "5.75",
-        "Away (1:0)": "8.60"
+        "Home (1:0)": "1.29",
+        "Draw (1:0)": "5.80",
+        "Away (1:0)": "8.75"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.08",
-        "Draw (2:0)": "10.50",
-        "Away (2:0)": "22.00"
+        "Draw (2:0)": "11.00",
+        "Away (2:0)": "23.00"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.01",
-        "Draw (3:0)": "16.50",
-        "Away (3:0)": "47.00"
+        "Draw (3:0)": "18.50",
+        "Away (3:0)": "54.00"
       },
       "Freiburg Over/Under": {
-        "Over 2.5": "13.50",
-        "Under 2.5": "1.01"
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.02"
       },
       "Hoffenheim Over/Under": {
-        "Over 2.5": "13.50",
-        "Under 2.5": "1.01"
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.02"
       },
       "Away Team Over/Under": {
         "Over 2.5": "19.00",
@@ -743,6 +501,10 @@
       "1St Half - Over/Under": {
         "Over 2.5": "23.00",
         "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.25",
+        "Under 2.5": "1.57"
       }
     }
   },
@@ -753,82 +515,86 @@
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "7.90",
-        "Draw": "3.10",
-        "Away": "1.65"
+        "Home": "7.60",
+        "Draw": "3.00",
+        "Away": "1.67"
       },
       "Over/Under": {
-        "Over 2.5": "5.75",
-        "Under 2.5": "1.14"
+        "Over 2.5": "5.90",
+        "Under 2.5": "1.15"
       },
       "Double Chance": {
-        "Home Or Draw": "3.30",
+        "Home Or Draw": "3.25",
         "Home Or Away": "1.13",
         "Draw Or Away": "1.08"
       },
       "Handicap 0:1": {
         "Home (0:1)": "24.00",
         "Draw (0:1)": "10.50",
-        "Away (0:1)": "1.07"
+        "Away (0:1)": "1.08"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "54.00",
-        "Draw (0:2)": "16.50",
+        "Home (0:2)": "57.00",
+        "Draw (0:2)": "18.00",
         "Away (0:2)": "1.01"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "3.80",
+        "Home (1:0)": "3.70",
         "Draw (1:0)": "4.40",
-        "Away (1:0)": "1.73"
+        "Away (1:0)": "1.78"
       },
       "Handicap 2:0": {
-        "Home (2:0)": "2.10",
+        "Home (2:0)": "2.05",
         "Draw (2:0)": "4.40",
-        "Away (2:0)": "2.75"
+        "Away (2:0)": "2.85"
       },
       "Handicap 3:0": {
-        "Home (3:0)": "1.44",
-        "Draw (3:0)": "5.60",
-        "Away (3:0)": "5.00"
+        "Home (3:0)": "1.43",
+        "Draw (3:0)": "5.75",
+        "Away (3:0)": "5.30"
       },
       "Handicap 4:0": {
         "Home (4:0)": "1.17",
-        "Draw (4:0)": "8.40",
-        "Away (4:0)": "10.00"
+        "Draw (4:0)": "8.90",
+        "Away (4:0)": "11.00"
       },
       "Handicap 5:0": {
         "Home (5:0)": "1.06",
-        "Draw (5:0)": "13.50",
-        "Away (5:0)": "21.00"
+        "Draw (5:0)": "14.50",
+        "Away (5:0)": "23.00"
       },
       "Handicap 6:0": {
         "Home (6:0)": "1.01",
-        "Draw (6:0)": "24.00",
-        "Away (6:0)": "37.00"
+        "Draw (6:0)": "21.00",
+        "Away (6:0)": "40.00"
       },
       "Heidenheim Over/Under": {
         "Over 2.5": "19.00",
         "Under 2.5": "1.00"
       },
       "Bayern Munich Over/Under": {
-        "Over 2.5": "6.00",
+        "Over 2.5": "6.30",
         "Under 2.5": "1.12"
       },
       "Gg/Ng": {
-        "Yes": "1.78",
-        "No": "2.05"
+        "Yes": "1.75",
+        "No": "2.10"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.31",
-        "No": "3.47"
+        "Yes": "1.32",
+        "No": "3.44"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "2.31",
-        "No": "1.62"
+        "Yes": "2.34",
+        "No": "1.60"
       },
       "1St Half - Over/Under": {
         "Over 2.5": "21.00",
         "Under 2.5": "1.01"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.25",
+        "Under 2.5": "1.57"
       }
     }
   },
@@ -839,60 +605,65 @@
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "1.73",
-        "Draw": "2.95",
-        "Away": "7.00"
+        "Home": "1.71",
+        "Draw": "3.00",
+        "Away": "7.20"
       },
       "Over/Under": {
-        "Over 2.5": "5.90",
-        "Under 2.5": "1.13"
+        "Over 2.5": "6.10",
+        "Under 2.5": "1.14"
       },
       "Double Chance": {
         "Home Or Draw": "1.10",
-        "Home Or Away": "1.14",
-        "Draw Or Away": "3.00"
+        "Home Or Away": "1.15",
+        "Draw Or Away": "3.10"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "1.86",
-        "Draw (0:1)": "4.25",
-        "Away (0:1)": "3.33"
+        "Home (0:1)": "1.85",
+        "Draw (0:1)": "4.30",
+        "Away (0:1)": "3.50"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "3.10",
-        "Draw (0:2)": "4.40",
-        "Away (0:2)": "1.93"
+        "Home (0:2)": "3.00",
+        "Draw (0:2)": "4.50",
+        "Away (0:2)": "1.97"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "5.80",
+        "Home (0:3)": "5.75",
         "Draw (0:3)": "5.90",
-        "Away (0:3)": "1.37"
+        "Away (0:3)": "1.39"
       },
       "Handicap 0:4": {
         "Home (0:4)": "12.00",
-        "Draw (0:4)": "9.20",
-        "Away (0:4)": "1.14"
+        "Draw (0:4)": "9.30",
+        "Away (0:4)": "1.15"
       },
       "Handicap 0:5": {
-        "Home (0:5)": "24.00",
-        "Draw (0:5)": "14.50",
-        "Away (0:5)": "1.04"
+        "Home (0:5)": "25.00",
+        "Draw (0:5)": "15.50",
+        "Away (0:5)": "1.05"
+      },
+      "Handicap 0:6": {
+        "Home (0:6)": "41.00",
+        "Draw (0:6)": "22.00",
+        "Away (0:6)": "1.01"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.09",
-        "Draw (1:0)": "9.50",
-        "Away (1:0)": "20.00"
+        "Draw (1:0)": "10.00",
+        "Away (1:0)": "22.00"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.02",
-        "Draw (2:0)": "16.00",
-        "Away (2:0)": "47.00"
+        "Draw (2:0)": "17.50",
+        "Away (2:0)": "54.00"
       },
       "Rb Leipzig Over/Under": {
-        "Over 2.5": "6.60",
-        "Under 2.5": "1.10"
+        "Over 2.5": "6.80",
+        "Under 2.5": "1.11"
       },
       "Holstein Kiel Over/Under": {
-        "Over 2.5": "15.50",
+        "Over 2.5": "19.00",
         "Under 2.5": "1.01"
       },
       "Away Team Over/Under": {
@@ -900,20 +671,24 @@
         "Under 2.5": "1.00"
       },
       "Gg/Ng": {
-        "Yes": "1.72",
-        "No": "2.15"
+        "Yes": "1.73",
+        "No": "2.10"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.34",
-        "No": "3.30"
+        "Yes": "1.33",
+        "No": "3.33"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "2.46",
-        "No": "1.55"
+        "Yes": "2.44",
+        "No": "1.56"
       },
       "1St Half - Over/Under": {
         "Over 2.5": "23.00",
         "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.55",
+        "Under 2.5": "1.46"
       }
     }
   },
@@ -929,51 +704,51 @@
         "Away": "4.00"
       },
       "Over/Under": {
-        "Over 2.5": "10.00",
+        "Over 2.5": "11.00",
         "Under 2.5": "1.05"
       },
       "Double Chance": {
         "Home Or Draw": "1.31",
         "Home Or Away": "1.30",
-        "Draw Or Away": "1.71"
+        "Draw Or Away": "1.73"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "3.75",
+        "Home (0:1)": "3.80",
         "Draw (0:1)": "4.20",
-        "Away (0:1)": "1.77"
+        "Away (0:1)": "1.79"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "8.30",
-        "Draw (0:2)": "6.10",
-        "Away (0:2)": "1.27"
+        "Home (0:2)": "8.40",
+        "Draw (0:2)": "6.20",
+        "Away (0:2)": "1.28"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "20.00",
-        "Draw (0:3)": "10.50",
-        "Away (0:3)": "1.08"
+        "Home (0:3)": "21.00",
+        "Draw (0:3)": "11.00",
+        "Away (0:3)": "1.09"
       },
       "Handicap 0:4": {
-        "Home (0:4)": "40.00",
-        "Draw (0:4)": "17.00",
-        "Away (0:4)": "1.01"
+        "Home (0:4)": "44.00",
+        "Draw (0:4)": "18.50",
+        "Away (0:4)": "1.02"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.32",
-        "Draw (1:0)": "5.40",
-        "Away (1:0)": "7.75"
+        "Draw (1:0)": "5.60",
+        "Away (1:0)": "8.00"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.09",
-        "Draw (2:0)": "9.70",
-        "Away (2:0)": "20.00"
+        "Draw (2:0)": "10.00",
+        "Away (2:0)": "21.00"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.02",
-        "Draw (3:0)": "16.00",
-        "Away (3:0)": "44.00"
+        "Draw (3:0)": "18.00",
+        "Away (3:0)": "50.00"
       },
       "Mainz Over/Under": {
-        "Over 2.5": "14.50",
+        "Over 2.5": "16.50",
         "Under 2.5": "1.01"
       },
       "Wolfsburg Over/Under": {
@@ -981,20 +756,24 @@
         "Under 2.5": "1.00"
       },
       "Gg/Ng": {
-        "Yes": "1.68",
+        "Yes": "1.69",
         "No": "2.20"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.65",
-        "No": "2.25"
+        "Yes": "1.66",
+        "No": "2.24"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "4.19",
+        "Yes": "4.21",
         "No": "1.23"
       },
       "1St Half - Over/Under": {
         "Over 2.5": "23.00",
         "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.25",
+        "Under 2.5": "1.57"
       }
     }
   },
@@ -1006,60 +785,60 @@
     "markets": {
       "Match Result": {
         "Home": "2.25",
-        "Draw": "2.50",
-        "Away": "4.50"
+        "Draw": "2.55",
+        "Away": "4.60"
       },
       "Over/Under": {
-        "Over 2.5": "7.80",
+        "Over 2.5": "8.10",
         "Under 2.5": "1.09"
       },
       "Double Chance": {
         "Home Or Draw": "1.23",
         "Home Or Away": "1.25",
-        "Draw Or Away": "1.97"
+        "Draw Or Away": "2.00"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "2.90",
-        "Draw (0:1)": "4.10",
-        "Away (0:1)": "2.05"
+        "Home (0:1)": "2.85",
+        "Draw (0:1)": "4.20",
+        "Away (0:1)": "2.15"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "5.70",
+        "Home (0:2)": "5.60",
         "Draw (0:2)": "5.40",
-        "Away (0:2)": "1.41"
+        "Away (0:2)": "1.43"
       },
       "Handicap 0:3": {
         "Home (0:3)": "12.50",
-        "Draw (0:3)": "8.60",
-        "Away (0:3)": "1.14"
+        "Draw (0:3)": "8.70",
+        "Away (0:3)": "1.16"
       },
       "Handicap 0:4": {
-        "Home (0:4)": "27.00",
-        "Draw (0:4)": "14.50",
+        "Home (0:4)": "28.00",
+        "Draw (0:4)": "15.00",
         "Away (0:4)": "1.04"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "1.24",
-        "Draw (1:0)": "6.30",
-        "Away (1:0)": "9.70"
+        "Home (1:0)": "1.23",
+        "Draw (1:0)": "6.60",
+        "Away (1:0)": "10.00"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.06",
-        "Draw (2:0)": "11.50",
-        "Away (2:0)": "25.00"
+        "Draw (2:0)": "12.00",
+        "Away (2:0)": "27.00"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.01",
-        "Draw (3:0)": "15.00",
-        "Away (3:0)": "41.00"
+        "Draw (3:0)": "19.00",
+        "Away (3:0)": "55.00"
       },
       "Werder Bremen Over/Under": {
-        "Over 2.5": "11.50",
+        "Over 2.5": "12.00",
         "Under 2.5": "1.03"
       },
       "Bochum Over/Under": {
-        "Over 2.5": "13.50",
-        "Under 2.5": "1.01"
+        "Over 2.5": "15.50",
+        "Under 2.5": "1.02"
       },
       "Away Team Over/Under": {
         "Over 2.5": "19.00",
@@ -1071,15 +850,19 @@
       },
       "Any Team To Score 2 Or More Goals In A Row": {
         "Yes": "1.50",
-        "No": "2.60"
+        "No": "2.62"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "3.43",
+        "Yes": "3.39",
         "No": "1.32"
       },
       "1St Half - Over/Under": {
         "Over 2.5": "23.00",
         "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.15",
+        "Under 2.5": "1.64"
       }
     }
   },
@@ -1092,70 +875,70 @@
       "Match Result": {
         "Home": "2.95",
         "Draw": "2.45",
-        "Away": "3.25"
+        "Away": "3.20"
       },
       "Over/Under": {
-        "Over 2.5": "7.75",
+        "Over 2.5": "8.10",
         "Under 2.5": "1.09"
       },
       "Double Chance": {
-        "Home Or Draw": "1.44",
-        "Home Or Away": "1.29",
+        "Home Or Draw": "1.45",
+        "Home Or Away": "1.30",
         "Draw Or Away": "1.53"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "4.60",
-        "Draw (0:1)": "4.70",
+        "Home (0:1)": "4.70",
+        "Draw (0:1)": "4.80",
         "Away (0:1)": "1.57"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "10.00",
-        "Draw (0:2)": "7.20",
+        "Home (0:2)": "10.50",
+        "Draw (0:2)": "7.40",
         "Away (0:2)": "1.20"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "24.00",
-        "Draw (0:3)": "12.50",
+        "Home (0:3)": "25.00",
+        "Draw (0:3)": "13.00",
         "Away (0:3)": "1.06"
       },
       "Handicap 0:4": {
-        "Home (0:4)": "41.00",
-        "Draw (0:4)": "17.50",
+        "Home (0:4)": "49.00",
+        "Draw (0:4)": "20.00",
         "Away (0:4)": "1.01"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.47",
-        "Draw (1:0)": "5.00",
+        "Draw (1:0)": "5.10",
         "Away (1:0)": "5.40"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.16",
-        "Draw (2:0)": "7.90",
+        "Draw (2:0)": "8.20",
         "Away (2:0)": "12.50"
       },
       "Handicap 3:0": {
         "Home (3:0)": "1.04",
-        "Draw (3:0)": "13.50",
-        "Away (3:0)": "28.00"
+        "Draw (3:0)": "14.50",
+        "Away (3:0)": "30.00"
       },
       "Brentford Over/Under": {
-        "Over 2.5": "14.50",
+        "Over 2.5": "16.50",
         "Under 2.5": "1.01"
       },
       "Brighton Over/Under": {
-        "Over 2.5": "15.50",
+        "Over 2.5": "18.00",
         "Under 2.5": "1.01"
       },
       "Gg/Ng": {
         "Yes": "1.51",
-        "No": "2.55"
+        "No": "2.60"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.53",
-        "No": "2.53"
+        "Yes": "1.52",
+        "No": "2.54"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "3.75",
+        "Yes": "3.74",
         "No": "1.28"
       },
       "1St Half - Over/Under": {
@@ -1175,33 +958,33 @@
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "3.00",
+        "Home": "3.20",
         "Draw": "2.30",
-        "Away": "3.40"
+        "Away": "3.20"
       },
       "Over/Under": {
-        "Over 2.5": "10.00",
-        "Under 2.5": "1.05"
+        "Over 2.5": "10.50",
+        "Under 2.5": "1.06"
       },
       "Double Chance": {
-        "Home Or Draw": "1.43",
-        "Home Or Away": "1.30",
-        "Draw Or Away": "1.53"
+        "Home Or Draw": "1.48",
+        "Home Or Away": "1.32",
+        "Draw Or Away": "1.48"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "4.80",
-        "Draw (0:1)": "4.50",
-        "Away (0:1)": "1.56"
+        "Home (0:1)": "5.30",
+        "Draw (0:1)": "4.75",
+        "Away (0:1)": "1.51"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "11.50",
-        "Draw (0:2)": "7.20",
-        "Away (0:2)": "1.19"
+        "Home (0:2)": "13.00",
+        "Draw (0:2)": "7.80",
+        "Away (0:2)": "1.17"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "27.00",
-        "Draw (0:3)": "12.50",
-        "Away (0:3)": "1.05"
+        "Home (0:3)": "32.00",
+        "Draw (0:3)": "14.50",
+        "Away (0:3)": "1.04"
       },
       "Handicap 0:4": {
         "Home (0:4)": "44.00",
@@ -1209,38 +992,38 @@
         "Away (0:4)": "1.01"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "1.45",
-        "Draw (1:0)": "4.80",
-        "Away (1:0)": "5.75"
+        "Home (1:0)": "1.51",
+        "Draw (1:0)": "4.75",
+        "Away (1:0)": "5.40"
       },
       "Handicap 2:0": {
-        "Home (2:0)": "1.14",
-        "Draw (2:0)": "8.10",
-        "Away (2:0)": "14.00"
+        "Home (2:0)": "1.17",
+        "Draw (2:0)": "7.90",
+        "Away (2:0)": "13.00"
       },
       "Handicap 3:0": {
-        "Home (3:0)": "1.03",
-        "Draw (3:0)": "14.00",
-        "Away (3:0)": "33.00"
+        "Home (3:0)": "1.04",
+        "Draw (3:0)": "14.50",
+        "Away (3:0)": "32.00"
       },
       "Crystal Palace Over/Under": {
-        "Over 2.5": "15.50",
+        "Over 2.5": "18.50",
         "Under 2.5": "1.01"
       },
       "Bournemouth Over/Under": {
-        "Over 2.5": "16.00",
+        "Over 2.5": "18.50",
         "Under 2.5": "1.01"
       },
       "Gg/Ng": {
-        "Yes": "1.65",
-        "No": "2.25"
+        "Yes": "1.64",
+        "No": "2.30"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
         "Yes": "1.66",
-        "No": "2.23"
+        "No": "2.24"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "4.33",
+        "Yes": "4.31",
         "No": "1.22"
       },
       "1St Half - Over/Under": {
@@ -1262,70 +1045,70 @@
       "Match Result": {
         "Home": "4.30",
         "Draw": "2.30",
-        "Away": "2.55"
+        "Away": "2.50"
       },
       "Over/Under": {
-        "Over 2.5": "10.50",
+        "Over 2.5": "11.00",
         "Under 2.5": "1.05"
       },
       "Double Chance": {
-        "Home Or Draw": "1.79",
+        "Home Or Draw": "1.81",
         "Home Or Away": "1.29",
         "Draw Or Away": "1.27"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "8.90",
-        "Draw (0:1)": "5.70",
+        "Home (0:1)": "9.10",
+        "Draw (0:1)": "5.80",
         "Away (0:1)": "1.28"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "24.00",
-        "Draw (0:2)": "10.50",
-        "Away (0:2)": "1.07"
+        "Home (0:2)": "25.00",
+        "Draw (0:2)": "11.00",
+        "Away (0:2)": "1.08"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "50.00",
-        "Draw (0:3)": "16.50",
+        "Home (0:3)": "55.00",
+        "Draw (0:3)": "18.50",
         "Away (0:3)": "1.01"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "1.86",
-        "Draw (1:0)": "4.00",
+        "Home (1:0)": "1.88",
+        "Draw (1:0)": "4.10",
         "Away (1:0)": "3.50"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.31",
-        "Draw (2:0)": "5.80",
-        "Away (2:0)": "7.60"
+        "Draw (2:0)": "5.90",
+        "Away (2:0)": "7.70"
       },
       "Handicap 3:0": {
-        "Home (3:0)": "1.09",
-        "Draw (3:0)": "10.00",
-        "Away (3:0)": "18.00"
+        "Home (3:0)": "1.10",
+        "Draw (3:0)": "10.50",
+        "Away (3:0)": "18.50"
       },
       "Handicap 4:0": {
         "Home (4:0)": "1.02",
-        "Draw (4:0)": "16.50",
-        "Away (4:0)": "37.00"
+        "Draw (4:0)": "17.50",
+        "Away (4:0)": "40.00"
       },
       "Everton Over/Under": {
         "Over 2.5": "19.00",
         "Under 2.5": "1.00"
       },
       "Man City Over/Under": {
-        "Over 2.5": "14.00",
+        "Over 2.5": "16.00",
         "Under 2.5": "1.01"
       },
       "Gg/Ng": {
-        "Yes": "1.73",
-        "No": "2.10"
+        "Yes": "1.72",
+        "No": "2.15"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.67",
-        "No": "2.22"
+        "Yes": "1.66",
+        "No": "2.23"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "4.20",
+        "Yes": "4.17",
         "No": "1.23"
       },
       "1St Half - Over/Under": {
@@ -1345,56 +1128,56 @@
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "2.00",
+        "Home": "1.97",
         "Draw": "2.55",
-        "Away": "6.10"
+        "Away": "6.25"
       },
       "Over/Under": {
-        "Over 2.5": "9.30",
-        "Under 2.5": "1.06"
+        "Over 2.5": "9.90",
+        "Under 2.5": "1.07"
       },
       "Double Chance": {
         "Home Or Draw": "1.14",
         "Home Or Away": "1.21",
-        "Draw Or Away": "2.40"
+        "Draw Or Away": "2.50"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "2.35",
+        "Home (0:1)": "2.30",
         "Draw (0:1)": "3.90",
-        "Away (0:1)": "2.60"
+        "Away (0:1)": "2.70"
       },
       "Handicap 0:2": {
         "Home (0:2)": "4.40",
         "Draw (0:2)": "4.70",
-        "Away (0:2)": "1.59"
+        "Away (0:2)": "1.62"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "9.60",
+        "Home (0:3)": "9.50",
         "Draw (0:3)": "7.20",
-        "Away (0:3)": "1.21"
+        "Away (0:3)": "1.23"
       },
       "Handicap 0:4": {
-        "Home (0:4)": "21.00",
-        "Draw (0:4)": "12.00",
-        "Away (0:4)": "1.06"
+        "Home (0:4)": "22.00",
+        "Draw (0:4)": "12.50",
+        "Away (0:4)": "1.07"
       },
       "Handicap 0:5": {
-        "Home (0:5)": "39.00",
-        "Draw (0:5)": "18.00",
+        "Home (0:5)": "41.00",
+        "Draw (0:5)": "19.50",
         "Away (0:5)": "1.01"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.14",
-        "Draw (1:0)": "7.70",
-        "Away (1:0)": "16.00"
+        "Draw (1:0)": "8.10",
+        "Away (1:0)": "17.50"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.03",
-        "Draw (2:0)": "14.00",
-        "Away (2:0)": "41.00"
+        "Draw (2:0)": "15.50",
+        "Away (2:0)": "48.00"
       },
       "West Ham Over/Under": {
-        "Over 2.5": "10.50",
+        "Over 2.5": "11.00",
         "Under 2.5": "1.04"
       },
       "Southampton Over/Under": {
@@ -1402,16 +1185,16 @@
         "Under 2.5": "1.00"
       },
       "Gg/Ng": {
-        "Yes": "1.85",
-        "No": "1.96"
+        "Yes": "1.87",
+        "No": "1.94"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.54",
-        "No": "2.50"
+        "Yes": "1.53",
+        "No": "2.52"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "3.30",
-        "No": "1.34"
+        "Yes": "3.26",
+        "No": "1.35"
       },
       "1St Half - Over/Under": {
         "Over 2.5": "23.00",
@@ -1430,53 +1213,58 @@
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "1.69",
+        "Home": "1.68",
         "Draw": "3.10",
-        "Away": "7.00"
+        "Away": "7.10"
       },
       "Over/Under": {
-        "Over 2.5": "5.10",
-        "Under 2.5": "1.17"
+        "Over 2.5": "5.30",
+        "Under 2.5": "1.18"
       },
       "Double Chance": {
         "Home Or Draw": "1.09",
         "Home Or Away": "1.14",
-        "Draw Or Away": "3.10"
+        "Draw Or Away": "3.20"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "1.80",
-        "Draw (0:1)": "4.40",
-        "Away (0:1)": "3.50"
+        "Home (0:1)": "1.79",
+        "Draw (0:1)": "4.50",
+        "Away (0:1)": "3.60"
       },
       "Handicap 0:2": {
         "Home (0:2)": "2.85",
         "Draw (0:2)": "4.50",
-        "Away (0:2)": "2.00"
+        "Away (0:2)": "2.05"
       },
       "Handicap 0:3": {
-        "Home (0:3)": "5.25",
-        "Draw (0:3)": "5.75",
-        "Away (0:3)": "1.42"
+        "Home (0:3)": "5.20",
+        "Draw (0:3)": "5.80",
+        "Away (0:3)": "1.44"
       },
       "Handicap 0:4": {
         "Home (0:4)": "10.50",
-        "Draw (0:4)": "8.75",
-        "Away (0:4)": "1.16"
+        "Draw (0:4)": "8.90",
+        "Away (0:4)": "1.17"
       },
       "Handicap 0:5": {
-        "Home (0:5)": "21.00",
-        "Draw (0:5)": "14.00",
-        "Away (0:5)": "1.05"
+        "Home (0:5)": "22.00",
+        "Draw (0:5)": "14.50",
+        "Away (0:5)": "1.06"
+      },
+      "Handicap 0:6": {
+        "Home (0:6)": "39.00",
+        "Draw (0:6)": "21.00",
+        "Away (0:6)": "1.01"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.09",
-        "Draw (1:0)": "9.75",
-        "Away (1:0)": "20.00"
+        "Draw (1:0)": "10.50",
+        "Away (1:0)": "22.00"
       },
       "Handicap 2:0": {
         "Home (2:0)": "1.02",
-        "Draw (2:0)": "16.00",
-        "Away (2:0)": "45.00"
+        "Draw (2:0)": "18.00",
+        "Away (2:0)": "51.00"
       },
       "Barcelona Over/Under": {
         "Over 2.5": "9.20",
@@ -1487,16 +1275,16 @@
         "Under 2.5": "1.00"
       },
       "Gg/Ng": {
-        "Yes": "1.65",
+        "Yes": "1.66",
         "No": "2.25"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.30",
-        "No": "3.59"
+        "Yes": "1.29",
+        "No": "3.61"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "2.32",
-        "No": "1.62"
+        "Yes": "2.30",
+        "No": "1.63"
       },
       "1St Half - Over/Under": {
         "Over 2.5": "21.00",
@@ -1515,69 +1303,74 @@
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "1.44",
+        "Home": "1.43",
         "Draw": "3.70",
         "Away": "11.00"
       },
       "Over/Under": {
-        "Over 2.5": "7.00",
-        "Under 2.5": "1.10"
+        "Over 2.5": "7.30",
+        "Under 2.5": "1.11"
       },
       "Double Chance": {
         "Home Or Draw": "1.04",
         "Home Or Away": "1.07",
-        "Draw Or Away": "4.50"
+        "Draw Or Away": "4.70"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "1.41",
-        "Draw (0:1)": "5.30",
-        "Away (0:1)": "5.80"
+        "Home (0:1)": "1.42",
+        "Draw (0:1)": "5.40",
+        "Away (0:1)": "5.90"
       },
       "Handicap 0:2": {
-        "Home (0:2)": "1.99",
-        "Draw (0:2)": "4.50",
-        "Away (0:2)": "2.90"
+        "Home (0:2)": "2.00",
+        "Draw (0:2)": "4.60",
+        "Away (0:2)": "2.95"
       },
       "Handicap 0:3": {
         "Home (0:3)": "3.20",
-        "Draw (0:3)": "4.90",
-        "Away (0:3)": "1.81"
+        "Draw (0:3)": "5.00",
+        "Away (0:3)": "1.83"
       },
       "Handicap 0:4": {
-        "Home (0:4)": "5.70",
-        "Draw (0:4)": "6.50",
-        "Away (0:4)": "1.35"
+        "Home (0:4)": "5.75",
+        "Draw (0:4)": "6.60",
+        "Away (0:4)": "1.36"
       },
       "Handicap 0:5": {
         "Home (0:5)": "11.00",
-        "Draw (0:5)": "9.70",
-        "Away (0:5)": "1.14"
+        "Draw (0:5)": "10.00",
+        "Away (0:5)": "1.15"
       },
       "Handicap 0:6": {
-        "Home (0:6)": "21.00",
-        "Draw (0:6)": "15.00",
+        "Home (0:6)": "22.00",
+        "Draw (0:6)": "15.50",
         "Away (0:6)": "1.05"
+      },
+      "Handicap 0:7": {
+        "Home (0:7)": "36.00",
+        "Draw (0:7)": "22.00",
+        "Away (0:7)": "1.01"
       },
       "Handicap 1:0": {
         "Home (1:0)": "1.03",
-        "Draw (1:0)": "13.50",
-        "Away (1:0)": "37.00"
+        "Draw (1:0)": "15.00",
+        "Away (1:0)": "41.00"
       },
       "Psg Over/Under": {
-        "Over 2.5": "6.80",
-        "Under 2.5": "1.09"
+        "Over 2.5": "7.10",
+        "Under 2.5": "1.10"
       },
       "Le Havre Over/Under": {
         "Over 2.5": "19.00",
         "Under 2.5": "1.00"
       },
       "Gg/Ng": {
-        "Yes": "1.84",
+        "Yes": "1.85",
         "No": "1.97"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
         "Yes": "1.19",
-        "No": "4.75"
+        "No": "4.76"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
         "Yes": "1.80",
@@ -1600,22 +1393,22 @@
     "source": "SportyBet",
     "markets": {
       "Match Result": {
-        "Home": "10.00",
-        "Draw": "2.65",
-        "Away": "1.71"
+        "Home": "10.50",
+        "Draw": "2.70",
+        "Away": "1.69"
       },
       "Over/Under": {
-        "Over 2.5": "10.50",
+        "Over 2.5": "11.50",
         "Under 2.5": "1.05"
       },
       "Double Chance": {
-        "Home Or Draw": "3.25",
+        "Home Or Draw": "3.40",
         "Home Or Away": "1.15",
         "Draw Or Away": "1.06"
       },
       "Handicap 0:1": {
-        "Home (0:1)": "37.00",
-        "Draw (0:1)": "10.50",
+        "Home (0:1)": "41.00",
+        "Draw (0:1)": "11.50",
         "Away (0:1)": "1.05"
       },
       "Handicap 0:2": {
@@ -1624,53 +1417,312 @@
         "Away (0:2)": "1.01"
       },
       "Handicap 1:0": {
-        "Home (1:0)": "3.75",
-        "Draw (1:0)": "3.80",
-        "Away (1:0)": "1.85"
+        "Home (1:0)": "3.90",
+        "Draw (1:0)": "3.90",
+        "Away (1:0)": "1.84"
       },
       "Handicap 2:0": {
-        "Home (2:0)": "1.95",
+        "Home (2:0)": "1.99",
         "Draw (2:0)": "4.10",
-        "Away (2:0)": "3.25"
+        "Away (2:0)": "3.20"
       },
       "Handicap 3:0": {
-        "Home (3:0)": "1.34",
+        "Home (3:0)": "1.36",
         "Draw (3:0)": "5.75",
-        "Away (3:0)": "6.60"
+        "Away (3:0)": "6.50"
       },
       "Handicap 4:0": {
-        "Home (4:0)": "1.11",
-        "Draw (4:0)": "9.60",
+        "Home (4:0)": "1.12",
+        "Draw (4:0)": "9.75",
         "Away (4:0)": "14.50"
       },
       "Handicap 5:0": {
         "Home (5:0)": "1.03",
-        "Draw (5:0)": "15.50",
-        "Away (5:0)": "30.00"
+        "Draw (5:0)": "16.50",
+        "Away (5:0)": "31.00"
       },
       "Monza Over/Under": {
         "Over 2.5": "19.00",
         "Under 2.5": "1.00"
       },
       "Napoli Over/Under": {
-        "Over 2.5": "9.00",
-        "Under 2.5": "1.05"
+        "Over 2.5": "9.40",
+        "Under 2.5": "1.06"
       },
       "Gg/Ng": {
-        "Yes": "2.45",
-        "No": "1.55"
+        "Yes": "2.50",
+        "No": "1.54"
       },
       "Any Team To Score 2 Or More Goals In A Row": {
-        "Yes": "1.51",
-        "No": "2.59"
+        "Yes": "1.50",
+        "No": "2.62"
       },
       "Any Team To Score 3 Or More Goals In A Row": {
-        "Yes": "2.84",
-        "No": "1.43"
+        "Yes": "2.79",
+        "No": "1.44"
       },
       "1St Half - Over/Under": {
         "Over 2.5": "23.00",
         "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.10",
+        "Under 2.5": "1.66"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50850615",
+    "match": "Aston Villa vs Newcastle",
+    "start_time": 1745080200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.90",
+        "Draw": "2.40",
+        "Away": "3.33"
+      },
+      "Over/Under": {
+        "Over 2.5": "8.70",
+        "Under 2.5": "1.08"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.43",
+        "Home Or Away": "1.30",
+        "Draw Or Away": "1.56"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "4.60",
+        "Draw (0:1)": "4.70",
+        "Away (0:1)": "1.60"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "10.50",
+        "Draw (0:2)": "7.20",
+        "Away (0:2)": "1.21"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "25.00",
+        "Draw (0:3)": "13.00",
+        "Away (0:3)": "1.06"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "49.00",
+        "Draw (0:4)": "20.00",
+        "Away (0:4)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.45",
+        "Draw (1:0)": "5.10",
+        "Away (1:0)": "5.70"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.15",
+        "Draw (2:0)": "8.40",
+        "Away (2:0)": "13.50"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.04",
+        "Draw (3:0)": "15.00",
+        "Away (3:0)": "33.00"
+      },
+      "Aston Villa Over/Under": {
+        "Over 2.5": "17.00",
+        "Under 2.5": "1.01"
+      },
+      "Newcastle Over/Under": {
+        "Over 2.5": "18.50",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.55",
+        "No": "2.50"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.56",
+        "No": "2.45"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "3.88",
+        "No": "1.26"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.55",
+        "Under 2.5": "1.46"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:50852719",
+    "match": "Mallorca vs Leganes",
+    "start_time": 1745080200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "2.55",
+        "Draw": "2.05",
+        "Away": "5.60"
+      },
+      "Over/Under": {
+        "Over 2.5": "19.50",
+        "Under 2.5": "1.01"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.20",
+        "Home Or Away": "1.34",
+        "Draw Or Away": "1.87"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "3.60",
+        "Draw (0:1)": "3.70",
+        "Away (0:1)": "1.95"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "8.80",
+        "Draw (0:2)": "5.70",
+        "Away (0:2)": "1.30"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "23.00",
+        "Draw (0:3)": "11.00",
+        "Away (0:3)": "1.08"
+      },
+      "Handicap 0:4": {
+        "Home (0:4)": "51.00",
+        "Draw (0:4)": "18.50",
+        "Away (0:4)": "1.01"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.20",
+        "Draw (1:0)": "6.25",
+        "Away (1:0)": "14.50"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.04",
+        "Draw (2:0)": "13.50",
+        "Away (2:0)": "47.00"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.00",
+        "Draw (3:0)": "25.00",
+        "Away (3:0)": "47.00"
+      },
+      "Mallorca Over/Under": {
+        "Over 2.5": "18.50",
+        "Under 2.5": "1.01"
+      },
+      "Leganes Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.00"
+      },
+      "Gg/Ng": {
+        "Yes": "2.30",
+        "No": "1.63"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "2.08",
+        "No": "1.76"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "5.70",
+        "No": "1.14"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.65",
+        "Under 2.5": "1.43"
+      }
+    }
+  },
+  {
+    "event_id": "sr:match:51269547",
+    "match": "Union Berlin vs Stuttgart",
+    "start_time": 1745080200000,
+    "source": "SportyBet",
+    "markets": {
+      "Match Result": {
+        "Home": "3.40",
+        "Draw": "2.30",
+        "Away": "3.00"
+      },
+      "Over/Under": {
+        "Over 2.5": "10.50",
+        "Under 2.5": "1.06"
+      },
+      "Double Chance": {
+        "Home Or Draw": "1.53",
+        "Home Or Away": "1.32",
+        "Draw Or Away": "1.43"
+      },
+      "Handicap 0:1": {
+        "Home (0:1)": "5.90",
+        "Draw (0:1)": "4.90",
+        "Away (0:1)": "1.45"
+      },
+      "Handicap 0:2": {
+        "Home (0:2)": "15.00",
+        "Draw (0:2)": "8.40",
+        "Away (0:2)": "1.14"
+      },
+      "Handicap 0:3": {
+        "Home (0:3)": "36.00",
+        "Draw (0:3)": "15.50",
+        "Away (0:3)": "1.03"
+      },
+      "Handicap 1:0": {
+        "Home (1:0)": "1.57",
+        "Draw (1:0)": "4.60",
+        "Away (1:0)": "4.90"
+      },
+      "Handicap 2:0": {
+        "Home (2:0)": "1.19",
+        "Draw (2:0)": "7.40",
+        "Away (2:0)": "11.50"
+      },
+      "Handicap 3:0": {
+        "Home (3:0)": "1.05",
+        "Draw (3:0)": "13.50",
+        "Away (3:0)": "29.00"
+      },
+      "Handicap 4:0": {
+        "Home (4:0)": "1.01",
+        "Draw (4:0)": "21.00",
+        "Away (4:0)": "41.00"
+      },
+      "Union Berlin Over/Under": {
+        "Over 2.5": "19.00",
+        "Under 2.5": "1.01"
+      },
+      "Stuttgart Over/Under": {
+        "Over 2.5": "18.00",
+        "Under 2.5": "1.01"
+      },
+      "Gg/Ng": {
+        "Yes": "1.64",
+        "No": "2.25"
+      },
+      "Any Team To Score 2 Or More Goals In A Row": {
+        "Yes": "1.66",
+        "No": "2.24"
+      },
+      "Any Team To Score 3 Or More Goals In A Row": {
+        "Yes": "4.31",
+        "No": "1.22"
+      },
+      "1St Half - Over/Under": {
+        "Over 2.5": "23.00",
+        "Under 2.5": "1.00"
+      },
+      "Corners - Over/Under": {
+        "Over 2.5": "2.15",
+        "Under 2.5": "1.64"
       }
     }
   }

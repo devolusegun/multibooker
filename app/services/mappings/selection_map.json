@@ -23,5 +23,35 @@
     "bet9ja": "GS Warriors",
     "sportybet": "Golden State",
     "football.com.ng": "Golden State Warriors"
+  },
+  "Home": {
+    "sportybet": "1",
+    "bet9ja": "1"
+  },
+  "Draw": {
+    "sportybet": "X",
+    "bet9ja": "X"
+  },
+  "Away": {
+    "sportybet": "2",
+    "bet9ja": "2"
+  },
+  "Over 2.5": {
+    "sportybet": "over_2_5",
+    "bet9ja": "O2.5"
+  },
+  "Under 2.5": {
+    "sportybet": "under_2_5",
+    "bet9ja": "U2.5"
+  },
+  "Yes": {
+  "sportybet": "Yes",
+  "bet9ja": "Yes",
+  "football.com.ng": "Yes"
+  },
+  "No": {
+    "sportybet": "No",
+    "bet9ja": "NG",
+    "football.com.ng": "No Goal"
   }
 }

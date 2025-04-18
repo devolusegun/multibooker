@@ -201,3 +201,40 @@ UI:
     "email": "jd@multibooker.com"
   }
 }
+
+
+
+
+🔧 What we’re doing right now:
+We are refining the generate_sportybet_code() scraper in sportybet_gen.py so that it:
+
+Loads https://www.sportybet.com/ng/
+
+[Later] Adds bets programmatically (currently skipped — placeholder)
+
+Waits for and clicks the “Book Bet” button (✅ you just showed the DOM)
+
+Waits for the booking modal
+
+Scrapes the booking code from the input field #copyShareCode
+
+Returns the code to /convert/from-ocr for full integration
+
+SportyBet APIs
+https://www.sportybet.com/api/ng/factsCenter/wapPopularAndSportOption?sportId=sr%3Asport%3A1&productId=3
+
+
+
+
+🔭 Coming Up Next
+For Phase 4+:
+
+🧠 Implement bet slip matcher (Stake vs SportyBet/Bet9ja).
+
+🎯 Improve fuzzy matching + confidence score.
+
+🎫 Generate actual bet codes using your code generator (already started for SportyBet).
+
+📸 Add OCR-powered upload entry point (already solid with Google Vision OCR).
+
+📁 Add cache + retry system to avoid re-fetching identical fixtures daily.

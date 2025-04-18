@@ -4,5 +4,7 @@
   "Match Result": "Match Winner",
   "Both Teams to Score": "BTTS",
   "To Win a Set": "Win a Set",
-  "Handicap": "Handicap"
+  "Handicap": "Handicap",
+  "Over/Under 2.5": "over_under_2_5",
+  "Draw No Bet": "draw_no_bet"
 }
