@@ -6,34 +6,46 @@ import asyncio
 # === Raw OCR-style Stake bets (as seen in screenshot) ===
 sample_bets = [
     {
-        "match": "West Ham vs Southampton",
+    "match": "Real Madrid vs Athletic Bilbao",
+    "market": "Double Chance",
+    "selection": "Real Madrid or draw",
+    "odd": 1.11,
+    "kickoff": 1745181900000
+    },
+    {
+        "match": "Girona FC vs Real Betis Balompie",
+        "market": "Handicap 0:2",
+        "selection": "Real Betis Balompie (0:2)",
+        "odd": 1.12,
+        "kickoff": 1745265600000
+    },
+    {
+        "match": "Valencia CF vs RCD Espanyol Barcelona",
+        "market": "Double Chance",
+        "selection": "Valencia CF or draw",
+        "odd": 1.2,
+        "kickoff": 1745344800000
+    },
+    {
+        "match": "Manchester City FC vs Aston Villa FC",
+        "market": "Handicap 0:3",
+        "selection": "Aston Villa FC (0:3)",
+        "odd": 1.12,
+        "kickoff": 1745352000000
+    },
+    {
+        "match": "FC Barcelona vs RCD Mallorca",
         "market": "Match Result",
-        "selection": "West Ham United FC",
-        "odd": 1.50
+        "selection": "FC Barcelona",
+        "odd": 1.24,
+        "kickoff": 1745353800000
     },
     {
-        "match": "Brentford FC vs Brighton & Hove Albion FC",
-        "market": "Draw No Bet",
-        "selection": "Brighton & Hove Albion FC",
-        "odd": 1.99
-    },
-    {
-        "match": "Crystal Palace vs Bournemouth",
-        "market": "Both Teams to Score",
-        "selection": "Yes",
-        "odd": 1.62
-    },
-    {
-        "match": "Everton FC vs Manchester City FC",
+        "match": "RC Celta de Vigo vs Villarreal CF",
         "market": "Match Result",
-        "selection": "Manchester City FC",
-        "odd": 1.96
-    },
-    {
-        "match": "Aston Villa vs Newcastle",
-        "market": "Both Teams to Score",
-        "selection": "Yes",
-        "odd": 1.53
+        "selection": "RC Celta de Vigo",
+        "odd": 1.0,
+        "kickoff": 1745431200000
     }
 ]
 

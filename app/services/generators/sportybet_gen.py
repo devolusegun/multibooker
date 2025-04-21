@@ -3,42 +3,55 @@ from playwright.async_api import async_playwright
 
 logger = logging.getLogger(__name__)
 
-SPORTYBET_URL = "https://www.sportybet.com/ng/sport/football"
+SPORTYBET_BASE = "https://www.sportybet.com/ng/m"
 
 async def generate_sportybet_code(selections=None) -> str:
     """
-    Uses Playwright to simulate a real bet placement and scrape the booking code.
-    If `selections` is None, it defaults to clicking the first available odds on the football page.
+    Launches SportyBet (mobile site), visits each event URL, clicks the correct market + outcome,
+    and retrieves a real booking code. Skips gracefully if elements fail to load.
     """
+    if not selections or not isinstance(selections, list):
+        return "ERROR: No selections provided"
+
     try:
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
             page = await browser.new_page()
 
-            logger.info("🌐 Navigating to SportyBet football page...")
-            await page.goto(SPORTYBET_URL, timeout=60000)
+            for idx, sel in enumerate(selections, 1):
+                event_id = sel["event_id"].split(":")[-1]
+                market_id = sel["market_id"]
+                outcome_id = sel["outcome_id"]
 
-            logger.info("⏳ Waiting for match odds to load...")
-            await page.wait_for_selector(".m-outcome-odds", timeout=15000)
+                event_url = f"{SPORTYBET_BASE}/event/{event_id}"
+                logger.info(f"➡️ Visiting event: {event_url}")
+                await page.goto(event_url, timeout=60000)
 
-            logger.info("⚽ Clicking the first visible odds button...")
-            await page.click(".m-outcome-odds")
+                try:
+                    await page.wait_for_selector(".m-market", timeout=15000)
+                    market_selector = f"[data-id='{market_id}']"
+                    odds_button = await page.query_selector(market_selector)
 
-            logger.info("📥 Waiting for 'Book Bet' button...")
-            await page.wait_for_selector("span[data-cms-key='book_bet']", timeout=15000)
+                    if odds_button:
+                        await odds_button.click()
+                    else:
+                        logger.warning(f"⚠️ Market not found for event: {event_id}, skipping...")
+                        continue
+
+                except Exception as e:
+                    logger.warning(f"⚠️ Error loading market for event {event_id}: {e}")
+                    continue
+
+            logger.info("✅ All selections clicked. Booking bet...")
+
+            await page.wait_for_selector("span[data-cms-key='book_bet']", timeout=10000)
             await page.click("span[data-cms-key='book_bet']")
 
-            logger.info("🔍 Waiting for booking code modal...")
             await page.wait_for_selector("#copyShareCode", timeout=10000)
             code = await page.input_value("#copyShareCode")
 
             await browser.close()
-
-            if code:
-                logger.info(f"✅ Booking code found: {code.strip()}")
-                return code.strip()
-            else:
-                return "ERROR"
+            return code.strip() if code else "ERROR"
 
     except Exception as e:
         logger.error(f"❌ Failed to generate SportyBet code: {e}")
