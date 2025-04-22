@@ -6,67 +6,59 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 OUTPUT_FILE = Path("sportybet_fixtures.json")
+TARGET_URL = "https://www.sportybet.com/ng/m/sport/football?time=all&source=sport_menu&sort=0"
 TARGET_FRAGMENT = "wapConfigurableEventsByOrder"
-TIME_FILTERS = ["today", "tomorrow", "all"]
-BASE_URL = "https://www.sportybet.com/ng/m/sport/football?time={}&source=sport_menu&sort=0"
-
-async def capture_fixtures(page, filter_type, all_fixtures):
-    captured = False
-
-    async def handle_response(response):
-        nonlocal captured
-        url = response.url
-        if TARGET_FRAGMENT in url and response.status == 200 and not captured:
-            try:
-                data = await response.json()
-                all_fixtures.extend(data.get("events", []))
-                captured = True
-                print(f" ✅ Captured {len(data.get('events', []))} from {filter_type}")
-            except Exception as e:
-                print(f" ❌ Error parsing {filter_type}: {e}")
-
-    page.on("response", handle_response)
-
-    url = BASE_URL.format(filter_type)
-    print(f"\n🌐 Navigating to {url}")
-    await page.goto(url, timeout=60000)
-
-    print(" 🔄 Scrolling to trigger fixture load...")
-    for _ in range(3):
-        await page.mouse.wheel(0, 4000)
-        await page.wait_for_timeout(1500)
-
-    await page.wait_for_timeout(3000)
-    page.off("response", handle_response)
 
 async def run():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Linux; Android 10; Mobile)",
+            user_agent="Mozilla/5.0 (Linux; Android 10; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0",
             viewport={"width": 375, "height": 800},
+            java_script_enabled=True,
+            device_scale_factor=2
         )
         page = await context.new_page()
 
-        all_fixtures = []
+        captured_payloads = []
 
-        for filter_type in TIME_FILTERS:
-            await capture_fixtures(page, filter_type, all_fixtures)
+        async def handle_response(response):
+            url = response.url
+            if TARGET_FRAGMENT in url and response.status == 200:
+                try:
+                    json_data = await response.json()
+                    if "data" in json_data and "tournaments" in json_data["data"]:
+                        captured_payloads.append(json_data)
+                        print(f"📦 Captured fixture page → {url}")
+                except Exception as e:
+                    print(f"❌ Failed parsing response from {url}: {e}")
 
+        page.on("response", handle_response)
+
+        print("🌐 Navigating to SportyBet mobile football fixtures...")
+        await page.goto(TARGET_URL, timeout=60000)
+
+        print("🔄 Scrolling to trigger all fixture pages...")
+        for _ in range(15):
+            await page.mouse.wheel(0, 4000)
+            await page.wait_for_timeout(2000)
+
+        await page.wait_for_timeout(5000)
         await browser.close()
 
-        # Deduplicate based on eventId
-        seen = set()
-        unique_fixtures = []
-        for fixture in all_fixtures:
-            eid = fixture.get("eventId")
-            if eid and eid not in seen:
-                seen.add(eid)
-                unique_fixtures.append(fixture)
+        # Merge all tournaments and events
+        all_events = []
+        for payload in captured_payloads:
+            tournaments = payload.get("data", {}).get("tournaments", [])
+            for t in tournaments:
+                events = t.get("events", [])
+                if events:
+                    for e in events:
+                        all_events.append(e)
 
-        print(f"\n📦 Merging and saving {len(unique_fixtures)} fixtures...")
-        OUTPUT_FILE.write_text(json.dumps(unique_fixtures, indent=2, ensure_ascii=False), encoding="utf-8")
-        print(f"✅ Saved {len(unique_fixtures)} unique fixtures to {OUTPUT_FILE.resolve()}")
+        print(f"\n✅ Captured total {len(all_events)} events")
+        OUTPUT_FILE.write_text(json.dumps(all_events, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"✅ Saved fixtures to {OUTPUT_FILE.resolve()}")
 
 if __name__ == "__main__":
     asyncio.run(run())

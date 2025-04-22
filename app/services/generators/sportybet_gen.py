@@ -1,58 +1,69 @@
+# app/services/generators/sportybet_gen.py
+
 import logging
 from playwright.async_api import async_playwright
 
 logger = logging.getLogger(__name__)
+BASE_URL = "https://www.sportybet.com/ng/m/sport/event/"
 
-SPORTYBET_BASE = "https://www.sportybet.com/ng/m"
-
-async def generate_sportybet_code(selections=None) -> str:
-    """
-    Launches SportyBet (mobile site), visits each event URL, clicks the correct market + outcome,
-    and retrieves a real booking code. Skips gracefully if elements fail to load.
-    """
-    if not selections or not isinstance(selections, list):
+async def generate_sportybet_code(selections) -> str:
+    if not selections:
         return "ERROR: No selections provided"
 
     try:
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
-            page = await browser.new_page()
+            context = await browser.new_context(
+                viewport={"width": 375, "height": 812},
+                user_agent="Mozilla/5.0 (Linux; Android 10; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0",
+                java_script_enabled=True,
+                device_scale_factor=2
+            )
+            page = await context.new_page()
 
-            for idx, sel in enumerate(selections, 1):
-                event_id = sel["event_id"].split(":")[-1]
-                market_id = sel["market_id"]
-                outcome_id = sel["outcome_id"]
+            for selection in selections:
+                event_id = selection["event_id"]
+                outcome_id = selection["outcome_id"]
+                event_url = f"{BASE_URL}{event_id}"
 
-                event_url = f"{SPORTYBET_BASE}/event/{event_id}"
-                logger.info(f"➡️ Visiting event: {event_url}")
+                print(f"\n🌍 Visiting {event_url}")
                 await page.goto(event_url, timeout=60000)
 
                 try:
-                    await page.wait_for_selector(".m-market", timeout=15000)
-                    market_selector = f"[data-id='{market_id}']"
-                    odds_button = await page.query_selector(market_selector)
+                    # Force scroll down so outcome blocks load
+                    await page.mouse.wheel(0, 2000)
+                    await page.wait_for_timeout(1500)
 
-                    if odds_button:
-                        await odds_button.click()
-                    else:
-                        logger.warning(f"⚠️ Market not found for event: {event_id}, skipping...")
-                        continue
+                    selector = f".m-outcome-odds[data-id='{outcome_id}']"
+                    await page.wait_for_selector(selector, timeout=15000)
+                    await page.locator(selector).click()
+                    await page.wait_for_timeout(1000)
 
+                    print(f"✅ Clicked outcome {outcome_id} for event {event_id}")
                 except Exception as e:
-                    logger.warning(f"⚠️ Error loading market for event {event_id}: {e}")
+                    print(f"⚠️ Error loading outcome {outcome_id} for event {event_id}: {e}")
                     continue
 
-            logger.info("✅ All selections clicked. Booking bet...")
+            # Open floating betslip modal
+            try:
+                await page.wait_for_selector("div[data-op='fast-betslip-wrap']", timeout=10000)
+                await page.click("div[data-op='fast-betslip-wrap']")
+                await page.wait_for_timeout(1500)
+            except Exception as e:
+                print(f"⚠️ Failed to activate floating betslip: {e}")
 
-            await page.wait_for_selector("span[data-cms-key='book_bet']", timeout=10000)
-            await page.click("span[data-cms-key='book_bet']")
+            # Grab booking code
+            try:
+                await page.wait_for_selector("span[data-cms-key='book_bet']", timeout=10000)
+                code_span = await page.query_selector("span[data-cms-key='book_bet']")
+                if code_span:
+                    code = await code_span.inner_text()
+                    return code.strip()
+            except Exception as e:
+                print(f"❌ Failed to generate SportyBet code: {e}")
 
-            await page.wait_for_selector("#copyShareCode", timeout=10000)
-            code = await page.input_value("#copyShareCode")
-
-            await browser.close()
-            return code.strip() if code else "ERROR"
+            return "ERROR"
 
     except Exception as e:
-        logger.error(f"❌ Failed to generate SportyBet code: {e}")
+        print(f"Unexpected failure: {e}")
         return "ERROR"

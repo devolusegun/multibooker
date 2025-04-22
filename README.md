@@ -238,3 +238,37 @@ For Phase 4+:
 📸 Add OCR-powered upload entry point (already solid with Google Vision OCR).
 
 📁 Add cache + retry system to avoid re-fetching identical fixtures daily.
+
+
+✅ Phase 4 – Bet Mapping & Conversion
+This is the heart of Multibooker: matching a Stake slip to equivalent fixtures and markets from other bookies (SportyBet, Bet9ja), and generating a playable bet code.
+
+🧠 Step-by-step breakdown:
+Input: A normalized Stake slip (either from OCR or preprocessed JSON).
+
+Fixture Matching:
+
+Fuzzy match the match name (e.g. "Chelsea vs Arsenal") to a SportyBet fixture.
+
+Ensure date/time proximity to reduce mismatches.
+
+Market + Selection Mapping:
+
+Map “Match Result”, “BTTS”, “Over/Under” etc. to SportyBet/Bet9ja internal keys.
+
+Match user selection ("Home", "Over 2.5", etc.).
+
+Generate Playable Code:
+
+Use scraping or simulated form-filling to get the betslip code.
+
+Start with SportyBet.
+
+
+------------------------------------------------
+🚀 2. Phase 5: Event Matching + Search (Real Odds, Real Fixture)
+Goals:
+
+Match incoming Stake slips against normalized_outcomes_fixtures.json by both name and kickoff time.
+
+Ensure the right event_id is used when generating a code — avoiding accidental booking of wrong matches.

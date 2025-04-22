@@ -6,46 +6,39 @@ import asyncio
 # === Raw OCR-style Stake bets (as seen in screenshot) ===
 sample_bets = [
     {
-    "match": "Real Madrid vs Athletic Bilbao",
-    "market": "Double Chance",
-    "selection": "Real Madrid or draw",
-    "odd": 1.11,
-    "kickoff": 1745181900000
-    },
-    {
-        "match": "Girona FC vs Real Betis Balompie",
-        "market": "Handicap 0:2",
-        "selection": "Real Betis Balompie (0:2)",
-        "odd": 1.12,
-        "kickoff": 1745265600000
-    },
-    {
-        "match": "Valencia CF vs RCD Espanyol Barcelona",
-        "market": "Double Chance",
-        "selection": "Valencia CF or draw",
-        "odd": 1.2,
-        "kickoff": 1745344800000
-    },
-    {
-        "match": "Manchester City FC vs Aston Villa FC",
-        "market": "Handicap 0:3",
-        "selection": "Aston Villa FC (0:3)",
-        "odd": 1.12,
-        "kickoff": 1745352000000
-    },
-    {
-        "match": "FC Barcelona vs RCD Mallorca",
+        "match": "Internacional FC De Palmira vs Tigres FC",
         "market": "Match Result",
-        "selection": "FC Barcelona",
-        "odd": 1.24,
-        "kickoff": 1745353800000
+        "selection": "Internacional FC De Palmira",
+        "odd": 1.79,
+        "kickoff": 1745267400000  # April 21, 2025 9:30 PM WAT
     },
     {
-        "match": "RC Celta de Vigo vs Villarreal CF",
+        "match": "CS 2 de Mayo vs Sportivo Ameliano",
         "market": "Match Result",
-        "selection": "RC Celta de Vigo",
-        "odd": 1.0,
-        "kickoff": 1745431200000
+        "selection": "CS 2 de Mayo",
+        "odd": 2.21,
+        "kickoff": 1745269200000  # April 21, 2025 10:00 PM WAT
+    },
+    {
+        "match": "Amazonas FC AM vs Avai FC SC",
+        "market": "Match Result",
+        "selection": "Amazonas FC AM",
+        "odd": 2.39,
+        "kickoff": 1745269200000
+    },
+    {
+        "match": "Gremio Novorizontino SP vs Criciuma EC SC",
+        "market": "Match Result",
+        "selection": "Gremio Novorizontino SP",
+        "odd": 1.95,
+        "kickoff": 1745272800000  # April 21, 2025 11:00 PM WAT
+    },
+    {
+        "match": "Cavaliers FC vs Chapelton Maroons FC",
+        "market": "Match Result",
+        "selection": "Cavaliers FC",
+        "odd": 1.59,
+        "kickoff": 1745272800000
     }
 ]
 
