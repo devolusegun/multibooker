@@ -3,42 +3,41 @@ from app.services.mapper import map_to_bookie
 from app.services.generators.sportybet_gen import generate_sportybet_code
 import asyncio
 
-# === Raw OCR-style Stake bets (as seen in screenshot) ===
 sample_bets = [
     {
-        "match": "Internacional FC De Palmira vs Tigres FC",
-        "market": "Match Result",
-        "selection": "Internacional FC De Palmira",
-        "odd": 1.79,
-        "kickoff": 1745267400000  # April 21, 2025 9:30 PM WAT
+        "match": "SC Telstar vs ADO Den Haag",
+        "market": "Asian Total",
+        "selection": "Over 2.5",
+        "odd": 1.73,
+        "kickoff": 1747155900000  # May 13, 2025 5:45 PM WAT
     },
     {
-        "match": "CS 2 de Mayo vs Sportivo Ameliano",
-        "market": "Match Result",
-        "selection": "CS 2 de Mayo",
-        "odd": 2.21,
-        "kickoff": 1745269200000  # April 21, 2025 10:00 PM WAT
+        "match": "Real Valladolid vs Girona FC",
+        "market": "Asian Total",
+        "selection": "Over 2.5",
+        "odd": 1.77,
+        "kickoff": 1747156800000  # May 13, 2025 6:00 PM WAT
     },
     {
-        "match": "Amazonas FC AM vs Avai FC SC",
-        "market": "Match Result",
-        "selection": "Amazonas FC AM",
-        "odd": 2.39,
-        "kickoff": 1745269200000
+        "match": "Stade Rochelais Basket vs AS Monaco",
+        "market": "1st Half - Asian Handicap",
+        "selection": "AS Monaco (-10.5)",
+        "odd": 1.86,
+        "kickoff": 1747160400000  # May 13, 2025 7:00 PM WAT
     },
     {
-        "match": "Gremio Novorizontino SP vs Criciuma EC SC",
+        "match": "Sunderland AFC vs Coventry City",
         "market": "Match Result",
-        "selection": "Gremio Novorizontino SP",
-        "odd": 1.95,
-        "kickoff": 1745272800000  # April 21, 2025 11:00 PM WAT
+        "selection": "Coventry City",
+        "odd": 2.90,
+        "kickoff": 1747164000000  # May 13, 2025 8:00 PM WAT
     },
     {
-        "match": "Cavaliers FC vs Chapelton Maroons FC",
-        "market": "Match Result",
-        "selection": "Cavaliers FC",
-        "odd": 1.59,
-        "kickoff": 1745272800000
+        "match": "Bologna FC 1909 vs AC Milan",
+        "market": "Which Team Will Win The Final",
+        "selection": "AC Milan",
+        "odd": 1.80,
+        "kickoff": 1747243200000  # May 14, 2025 8:00 PM WAT
     }
 ]
 
@@ -46,7 +45,6 @@ BOOKIE = "sportybet"
 
 async def run():
     print(f"🎯 Converting OCR-style bets to multibet code for {BOOKIE}...\n")
-
     mapped_selections = []
 
     for idx, bet in enumerate(sample_bets, 1):
