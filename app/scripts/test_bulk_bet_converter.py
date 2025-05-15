@@ -5,39 +5,39 @@ import asyncio
 
 sample_bets = [
     {
-        "match": "SC Telstar vs ADO Den Haag",
-        "market": "Asian Total",
-        "selection": "Over 2.5",
-        "odd": 1.73,
-        "kickoff": 1747155900000  # May 13, 2025 5:45 PM WAT
+        "match": "FC Lausanne-Sport vs FC Basel 1893",
+        "market": "Double Chance",
+        "selection": "Draw or FC Basel 1893",
+        "odd": 1.63,
+        "kickoff": 1747246200000  # May 14, 2025 7:30 PM WAT
     },
     {
-        "match": "Real Valladolid vs Girona FC",
-        "market": "Asian Total",
-        "selection": "Over 2.5",
-        "odd": 1.77,
-        "kickoff": 1747156800000  # May 13, 2025 6:00 PM WAT
-    },
-    {
-        "match": "Stade Rochelais Basket vs AS Monaco",
-        "market": "1st Half - Asian Handicap",
-        "selection": "AS Monaco (-10.5)",
-        "odd": 1.86,
-        "kickoff": 1747160400000  # May 13, 2025 7:00 PM WAT
-    },
-    {
-        "match": "Sunderland AFC vs Coventry City",
+        "match": "Glasgow Rangers vs Dundee United",
         "market": "Match Result",
-        "selection": "Coventry City",
-        "odd": 2.90,
-        "kickoff": 1747164000000  # May 13, 2025 8:00 PM WAT
+        "selection": "Glasgow Rangers",
+        "odd": 1.40,
+        "kickoff": 1747247100000  # May 14, 2025 7:45 PM WAT
     },
     {
-        "match": "Bologna FC 1909 vs AC Milan",
+        "match": "Heart of Midlothian FC vs St Johnstone FC",
+        "market": "Double Chance",
+        "selection": "Heart of Midlothian FC or Draw",
+        "odd": 1.18,
+        "kickoff": 1747247100000
+    },
+    {
+        "match": "Bologna FC vs AC Milan",
         "market": "Which Team Will Win The Final",
         "selection": "AC Milan",
-        "odd": 1.80,
-        "kickoff": 1747243200000  # May 14, 2025 8:00 PM WAT
+        "odd": 1.76,
+        "kickoff": 1747248000000  # May 14, 2025 8:00 PM WAT
+    },
+    {
+        "match": "Aberdeen FC vs Celtic Glasgow",
+        "market": "Match Result",
+        "selection": "Celtic Glasgow",
+        "odd": 1.64,
+        "kickoff": 1747248000000
     }
 ]
 

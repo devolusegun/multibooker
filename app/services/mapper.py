@@ -100,19 +100,21 @@ def map_to_bookie(bet, bookie):
     raw_selection = bet.get("selection", "").strip()
     clean_selection = " ".join(raw_selection.split())
 
+    # First check selection map
     selection_entry = selection_map.get(clean_selection)
     if selection_entry:
         mapped_selection = selection_entry.get(bookie)
         if mapped_selection:
             mapped["selection"] = mapped_selection
         else:
-            return {"error": f"Selection not supported by {bookie}"}
+            return {"error": f"Selection '{clean_selection}' not supported by {bookie}"}
     else:
         market_data = matched_fixture.get("markets", {}).get(market, {})
         if not market_data:
             return {"error": f"No outcomes found for market '{market}' in fixture"}
 
-        fallback = fuzzy_match(clean_selection, list(market_data.keys()), threshold=70)
+        # Try fallback fuzzy match on fixture outcomes
+        fallback = fuzzy_match(clean_selection, list(market_data.keys()), threshold=65)
         if fallback:
             mapped["selection"] = fallback
         elif market.lower() == "match result":
@@ -126,6 +128,22 @@ def map_to_bookie(bet, bookie):
                 mapped["selection"] = "X"
             else:
                 return {"error": f"Selection '{clean_selection}' not matched to team name or X"}
+        elif market.lower() == "double chance":
+            home, away = matched_fixture["match"].split(" vs ")
+            norm_sel = normalize_name(clean_selection)
+            if "draw" in norm_sel:
+                if fuzz.partial_ratio(norm_sel, f"{home} or draw") > 65:
+                    mapped["selection"] = "1X"
+                elif fuzz.partial_ratio(norm_sel, f"draw or {home}") > 65:
+                    mapped["selection"] = "1X"
+                elif fuzz.partial_ratio(norm_sel, f"{away} or draw") > 65:
+                    mapped["selection"] = "X2"
+                elif fuzz.partial_ratio(norm_sel, f"draw or {away}") > 65:
+                    mapped["selection"] = "X2"
+            elif fuzz.partial_ratio(norm_sel, f"{home} or {away}") > 65:
+                mapped["selection"] = "12"
+            else:
+                return {"error": f"Double Chance selection '{clean_selection}' not mapped"}
         else:
             return {"error": f"Selection '{clean_selection}' not found in selection map or fixture"}
 
