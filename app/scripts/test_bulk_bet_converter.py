@@ -5,39 +5,32 @@ import asyncio
 
 sample_bets = [
     {
-        "match": "FC Lausanne-Sport vs FC Basel 1893",
-        "market": "Double Chance",
-        "selection": "Draw or FC Basel 1893",
-        "odd": 1.63,
-        "kickoff": 1747246200000  # May 14, 2025 7:30 PM WAT
-    },
-    {
-        "match": "Glasgow Rangers vs Dundee United",
+        "match": "Spain vs France",
         "market": "Match Result",
-        "selection": "Glasgow Rangers",
-        "odd": 1.40,
-        "kickoff": 1747247100000  # May 14, 2025 7:45 PM WAT
+        "selection": "Draw",
+        "odd": 3.30,
+        "kickoff": 1717617600000  # Thu, Jun 5, 2025 8:00 PM WAT
     },
     {
-        "match": "Heart of Midlothian FC vs St Johnstone FC",
-        "market": "Double Chance",
-        "selection": "Heart of Midlothian FC or Draw",
-        "odd": 1.18,
-        "kickoff": 1747247100000
-    },
-    {
-        "match": "Bologna FC vs AC Milan",
-        "market": "Which Team Will Win The Final",
-        "selection": "AC Milan",
-        "odd": 1.76,
-        "kickoff": 1747248000000  # May 14, 2025 8:00 PM WAT
-    },
-    {
-        "match": "Aberdeen FC vs Celtic Glasgow",
+        "match": "ecuador vs brazil",
         "market": "Match Result",
-        "selection": "Celtic Glasgow",
-        "odd": 1.64,
-        "kickoff": 1747248000000
+        "selection": "Brazil",
+        "odd": 2.10,
+        "kickoff": 1749121200000  # Fri, Jun 6, 2025 12:00 AM WAT
+    },
+    {
+        "match": "Chile vs Argentina",
+        "market": "Match Result",
+        "selection": "Argentina",
+        "odd": 1.75,
+        "kickoff": 1717639200000  # Fri, Jun 6, 2025 2:00 AM WAT
+    },
+    {
+        "match": "Poland vs Moldova",
+        "market": "Match Result",
+        "selection": "Poland",
+        "odd": 1.27,
+        "kickoff": 1717688700000  # Fri, Jun 6, 2025 7:45 PM WAT
     }
 ]
 
