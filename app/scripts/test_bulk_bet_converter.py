@@ -6,13 +6,6 @@ import asyncio
 
 sample_bets = [
     {
-        "match": "Al Hikma vs AL Ansar SC",
-        "market": "Match Result",
-        "selection": "AL Ansar SC",
-        "odd": 1.24,
-        "kickoff": int(datetime(2025, 7, 2, 14, 30).timestamp() * 1000)  # Wed, Jul 02 2:30PM
-    },
-    {
         "match": "Vaasan Palloseura vs FC Haka Valkeakoski",
         "market": "Match Result",
         "selection": "Vaasan Palloseura",
@@ -49,12 +42,31 @@ async def run():
             print(f"❌ Error: {mapped['error']}")
         else:
             print("✅ Mapped:", json.dumps(mapped, indent=2))
+
+            # After mapping, before append:
+            home, away = mapped["match"].split(" vs ")
+            sel = mapped["selection"]
+
+            if mapped["market"] == "Match Result":
+                # Use the real team name
+                if sel == "1":
+                    selection_for_site = home
+                elif sel == "2":
+                    selection_for_site = away
+                elif sel.upper() == "X":
+                    selection_for_site = "Draw"
+                else:
+                    selection_for_site = sel
+            else:
+                selection_for_site = sel
+
             mapped_selections.append({
-                "teams": mapped["match"].split(" vs "),
+                "teams": [home, away],
                 "market": bet["market"],
-                "selection": bet["selection"],
+                "selection": selection_for_site,
                 "event_id": mapped["event_id"]
             })
+
         print("-" * 50)
 
     print("DEBUG: mapped_selections =", mapped_selections)  # <-- ADD THIS LINE
