@@ -1,0 +1,188 @@
+{
+  "Away": {
+    "sportybet": "Away"
+  },
+  "Home": {
+    "sportybet": "Home"
+  },
+  "Draw": {
+    "sportybet": "Draw"
+  },
+  "Over 5.5": {
+    "sportybet": "Over 5.5"
+  },
+  "Over 3.5": {
+    "sportybet": "Over 3.5"
+  },
+  "Under 4.5": {
+    "sportybet": "Under 4.5"
+  },
+  "Under 5.5": {
+    "sportybet": "Under 5.5"
+  },
+  "Over 2.5": {
+    "sportybet": "Over 2.5"
+  },
+  "Under 2.5": {
+    "sportybet": "Under 2.5"
+  },
+  "Under 6.5": {
+    "sportybet": "Under 6.5"
+  },
+  "Over 8.5": {
+    "sportybet": "Over 8.5"
+  },
+  "Over 4.5": {
+    "sportybet": "Over 4.5"
+  },
+  "Under 3.5": {
+    "sportybet": "Under 3.5"
+  },
+  "Over 6.5": {
+    "sportybet": "Over 6.5"
+  },
+  "Under 8.5": {
+    "sportybet": "Under 8.5"
+  },
+  "Home Or Draw": {
+    "sportybet": "Home Or Draw"
+  },
+  "Draw Or Away": {
+    "sportybet": "Draw Or Away"
+  },
+  "Home Or Away": {
+    "sportybet": "Home Or Away"
+  },
+  "Draw (0:2)": {
+    "sportybet": "Draw (0:2)"
+  },
+  "Away (6:0)": {
+    "sportybet": "Away (6:0)"
+  },
+  "Home (5:0)": {
+    "sportybet": "Home (5:0)"
+  },
+  "Away (9:0)": {
+    "sportybet": "Away (9:0)"
+  },
+  "Draw (6:0)": {
+    "sportybet": "Draw (6:0)"
+  },
+  "Draw (9:0)": {
+    "sportybet": "Draw (9:0)"
+  },
+  "Home (0:1)": {
+    "sportybet": "Home (0:1)"
+  },
+  "Home (2:0)": {
+    "sportybet": "Home (2:0)"
+  },
+  "Home (4:0)": {
+    "sportybet": "Home (4:0)"
+  },
+  "Away (0:2)": {
+    "sportybet": "Away (0:2)"
+  },
+  "Draw (5:0)": {
+    "sportybet": "Draw (5:0)"
+  },
+  "Draw (3:0)": {
+    "sportybet": "Draw (3:0)"
+  },
+  "Home (7:0)": {
+    "sportybet": "Home (7:0)"
+  },
+  "Home (9:0)": {
+    "sportybet": "Home (9:0)"
+  },
+  "Draw (2:0)": {
+    "sportybet": "Draw (2:0)"
+  },
+  "Home (0:2)": {
+    "sportybet": "Home (0:2)"
+  },
+  "Away (7:0)": {
+    "sportybet": "Away (7:0)"
+  },
+  "Away (2:0)": {
+    "sportybet": "Away (2:0)"
+  },
+  "Draw (4:0)": {
+    "sportybet": "Draw (4:0)"
+  },
+  "Away (3:0)": {
+    "sportybet": "Away (3:0)"
+  },
+  "Away (1:0)": {
+    "sportybet": "Away (1:0)"
+  },
+  "Away (0:1)": {
+    "sportybet": "Away (0:1)"
+  },
+  "Home (3:0)": {
+    "sportybet": "Home (3:0)"
+  },
+  "Home (1:0)": {
+    "sportybet": "Home (1:0)"
+  },
+  "Draw (1:0)": {
+    "sportybet": "Draw (1:0)"
+  },
+  "Draw (7:0)": {
+    "sportybet": "Draw (7:0)"
+  },
+  "Away (4:0)": {
+    "sportybet": "Away (4:0)"
+  },
+  "Home (6:0)": {
+    "sportybet": "Home (6:0)"
+  },
+  "Draw (0:1)": {
+    "sportybet": "Draw (0:1)"
+  },
+  "Away (5:0)": {
+    "sportybet": "Away (5:0)"
+  },
+  "No": {
+    "sportybet": "No"
+  },
+  "Yes": {
+    "sportybet": "Yes"
+  },
+  "Under 0.5": {
+    "sportybet": "Under 0.5"
+  },
+  "Over 1.5": {
+    "sportybet": "Over 1.5"
+  },
+  "Under 1.5": {
+    "sportybet": "Under 1.5"
+  },
+  "Over 0.5": {
+    "sportybet": "Over 0.5"
+  },
+  "Under 9.5": {
+    "sportybet": "Under 9.5"
+  },
+  "Over 10.5": {
+    "sportybet": "Over 10.5"
+  },
+  "Under 10.5": {
+    "sportybet": "Under 10.5"
+  },
+  "Over 9.5": {
+    "sportybet": "Over 9.5"
+  },
+  "Under 11.5": {
+    "sportybet": "Under 11.5"
+  },
+  "Over 11.5": {
+    "sportybet": "Over 11.5"
+  },
+  "Under 7.5": {
+    "sportybet": "Under 7.5"
+  },
+  "Over 7.5": {
+    "sportybet": "Over 7.5"
+  }
+}

@@ -5,32 +5,39 @@ import asyncio
 
 sample_bets = [
     {
-        "match": "Spain vs France",
-        "market": "Match Result",
-        "selection": "Draw",
-        "odd": 3.30,
-        "kickoff": 1717617600000  # Thu, Jun 5, 2025 8:00 PM WAT
+        "match": "Sogndal IL vs Lyn 1896 FK",
+        "market": "Both Teams to Score",
+        "selection": "Yes",
+        "odd": 1.37,
+        "kickoff": 1719076800000  # Sun, Jun 22, 2025 4:00 PM WAT
     },
     {
-        "match": "ecuador vs brazil",
-        "market": "Match Result",
-        "selection": "Brazil",
-        "odd": 2.10,
-        "kickoff": 1749121200000  # Fri, Jun 6, 2025 12:00 AM WAT
+        "match": "Kalmar FF vs Orgryte IS",
+        "market": "Double Chance",
+        "selection": "Kalmar FF or Draw",
+        "odd": 1.14,
+        "kickoff": 1719076800000
     },
     {
-        "match": "Chile vs Argentina",
-        "market": "Match Result",
-        "selection": "Argentina",
-        "odd": 1.75,
-        "kickoff": 1717639200000  # Fri, Jun 6, 2025 2:00 AM WAT
+        "match": "Hamarkameratene vs Tromsoe IL",
+        "market": "Tromsoe IL Total",
+        "selection": "Over 0.5",
+        "odd": 1.20,
+        "kickoff": 1719076800000
     },
     {
-        "match": "Poland vs Moldova",
-        "market": "Match Result",
-        "selection": "Poland",
-        "odd": 1.27,
-        "kickoff": 1717688700000  # Fri, Jun 6, 2025 7:45 PM WAT
+        "match": "Kristiansund BK vs Rosenborg BK",
+        "market": "Both Teams to Score",
+        "selection": "Yes",
+        "odd": 1.53,
+        "kickoff": 1719076800000
+    },
+    {
+        "match": "Denmark vs France",
+        "market": "Both Teams to Score",
+        "selection": "Yes",
+        "odd": 1.53,
+        "kickoff": 1719080400000  # Sun, Jun 22, 2025 5:00 PM WAT
     }
 ]
 

@@ -1,52 +1,90 @@
 {
-  "Over 2": {
-    "bet9ja": "O2",
-    "sportybet": "Over 2",
-    "football.com.ng": "Over 2 Goals"
-  },
-  "Under 20.5": {
-    "bet9ja": "U20.5",
-    "sportybet": "Under 20.5",
-    "football.com.ng": "Under 20.5 Games"
-  },
-  "Under 21.5": {
-    "bet9ja": "U21.5",
-    "sportybet": "Under 21.5",
-    "football.com.ng": "Under 21.5 Games"
-  },
-  "Over 118.5": {
-    "bet9ja": "O118.5",
-    "sportybet": "Over 118.5",
-    "football.com.ng": "Over 118.5 Points"
-  },
-  "Home": {
-    "sportybet": "1",
-    "bet9ja": "1"
-  },
-  "Draw": {
-    "sportybet": "X",
-    "bet9ja": "X"
-  },
-  "Away": {
-    "sportybet": "2",
-    "bet9ja": "2"
-  },
-  "Over 2.5": {
-    "sportybet": "over_2_5",
-    "bet9ja": "O2.5"
-  },
-  "Under 2.5": {
-    "sportybet": "under_2_5",
-    "bet9ja": "U2.5"
-  },
-  "Yes": {
-  "sportybet": "Yes",
-  "bet9ja": "Yes",
-  "football.com.ng": "Yes"
-  },
-  "No": {
-    "sportybet": "No",
-    "bet9ja": "NG",
-    "football.com.ng": "No Goal"
-  }
+  "Asian Handicap|Home (-0.5)": { "sportybet": "Home (-0.5)" },
+  "Asian Handicap|Away (+0.5)": { "sportybet": "Away (+0.5)" },
+  "Asian Handicap|Home (-1.5)": { "sportybet": "Home (-1.5)" },
+  "Asian Handicap|Away (+1.5)": { "sportybet": "Away (+1.5)" },
+  "Asian Handicap|Draw (+0.5)": { "sportybet": "Draw (+0.5)" },
+  "Asian Handicap|Draw (+1.5)": { "sportybet": "Draw (+1.5)" },
+
+  "Both Teams to Score|Yes": { "sportybet": "Yes" },
+  "Both Teams to Score|No": { "sportybet": "No" },
+
+  "Correct Score|0-0": { "sportybet": "0-0" },
+  "Correct Score|1-0": { "sportybet": "1-0" },
+  "Correct Score|1-1": { "sportybet": "1-1" },
+  "Correct Score|2-0": { "sportybet": "2-0" },
+  "Correct Score|2-1": { "sportybet": "2-1" },
+  "Correct Score|2-2": { "sportybet": "2-2" },
+  "Correct Score|3-0": { "sportybet": "3-0" },
+  "Correct Score|3-1": { "sportybet": "3-1" },
+  "Correct Score|3-2": { "sportybet": "3-2" },
+  "Correct Score|3-3": { "sportybet": "3-3" },
+  "Correct Score|4-0": { "sportybet": "4-0" },
+  "Correct Score|4-1": { "sportybet": "4-1" },
+  "Correct Score|4-2": { "sportybet": "4-2" },
+  "Correct Score|4-3": { "sportybet": "4-3" },
+  "Correct Score|4-4": { "sportybet": "4-4" },
+  "Correct Score|5-0": { "sportybet": "5-0" },
+  "Correct Score|5-1": { "sportybet": "5-1" },
+  "Correct Score|5-2": { "sportybet": "5-2" },
+  "Correct Score|5-3": { "sportybet": "5-3" },
+  "Correct Score|5-4": { "sportybet": "5-4" },
+  "Correct Score|6-0": { "sportybet": "6-0" },
+  "Correct Score|6-1": { "sportybet": "6-1" },
+  "Correct Score|6-2": { "sportybet": "6-2" },
+  "Correct Score|6-3": { "sportybet": "6-3" },
+  "Correct Score|6-4": { "sportybet": "6-4" },
+  "Correct Score|7-0": { "sportybet": "7-0" },
+  "Correct Score|7-1": { "sportybet": "7-1" },
+  "Correct Score|7-2": { "sportybet": "7-2" },
+  "Correct Score|7-3": { "sportybet": "7-3" },
+  "Correct Score|7-4": { "sportybet": "7-4" },
+  "Correct Score|8-0": { "sportybet": "8-0" },
+  "Correct Score|8-1": { "sportybet": "8-1" },
+  "Correct Score|8-2": { "sportybet": "8-2" },
+  "Correct Score|8-3": { "sportybet": "8-3" },
+  "Correct Score|8-4": { "sportybet": "8-4" },
+
+  "Double Chance|Home or Draw": { "sportybet": "Home or Draw" },
+  "Double Chance|Draw or Away": { "sportybet": "Draw or Away" },
+  "Double Chance|Home or Away": { "sportybet": "Home or Away" },
+
+  "Draw No Bet|Home": { "sportybet": "Home" },
+  "Draw No Bet|Away": { "sportybet": "Away" },
+
+  "First Half Result|Home": { "sportybet": "Home" },
+  "First Half Result|Draw": { "sportybet": "Draw" },
+  "First Half Result|Away": { "sportybet": "Away" },
+
+  "Match Result|Home": { "sportybet": "Home" },
+  "Match Result|Draw": { "sportybet": "Draw" },
+  "Match Result|Away": { "sportybet": "Away" },
+
+  "Odd/Even|Odd": { "sportybet": "Odd" },
+  "Odd/Even|Even": { "sportybet": "Even" },
+
+  "Over/Under|Over 0.5": { "sportybet": "Over 0.5" },
+  "Over/Under|Under 0.5": { "sportybet": "Under 0.5" },
+  "Over/Under|Over 1.5": { "sportybet": "Over 1.5" },
+  "Over/Under|Under 1.5": { "sportybet": "Under 1.5" },
+  "Over/Under|Over 2.5": { "sportybet": "Over 2.5" },
+  "Over/Under|Under 2.5": { "sportybet": "Under 2.5" },
+  "Over/Under|Over 3.5": { "sportybet": "Over 3.5" },
+  "Over/Under|Under 3.5": { "sportybet": "Under 3.5" },
+  "Over/Under|Over 4.5": { "sportybet": "Over 4.5" },
+  "Over/Under|Under 4.5": { "sportybet": "Under 4.5" },
+  "Over/Under|Over 5.5": { "sportybet": "Over 5.5" },
+  "Over/Under|Under 5.5": { "sportybet": "Under 5.5" },
+  "Over/Under|Over 6.5": { "sportybet": "Over 6.5" },
+  "Over/Under|Under 6.5": { "sportybet": "Under 6.5" },
+
+  "Corners - Over/Under|Over 2.5": { "sportybet": "Over 2.5" },
+  "Corners - Over/Under|Under 2.5": { "sportybet": "Under 2.5" },
+  "Corners - Over/Under|Over 5.5": { "sportybet": "Over 5.5" },
+  "Corners - Over/Under|Under 5.5": { "sportybet": "Under 5.5" },
+  "Corners - Over/Under|Over 9.5": { "sportybet": "Over 9.5" },
+  "Corners - Over/Under|Under 9.5": { "sportybet": "Under 9.5" },
+
+  "Cards - Over/Under|Over 4.5": { "sportybet": "Over 4.5" },
+  "Cards - Over/Under|Under 4.5": { "sportybet": "Under 4.5" }
 }
