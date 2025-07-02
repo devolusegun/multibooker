@@ -43,30 +43,26 @@ async def run():
         else:
             print("✅ Mapped:", json.dumps(mapped, indent=2))
 
-            # After mapping, before append:
+            # This uses the mapped fixture teams, not OCR values
             home, away = mapped["match"].split(" vs ")
-            sel = mapped["selection"]
+            stake_sel = bet["selection"].strip().lower()
 
-            if mapped["market"] == "Match Result":
-                # Use the real team name
-                if sel == "1":
-                    selection_for_site = home
-                elif sel == "2":
-                    selection_for_site = away
-                elif sel.upper() == "X":
-                    selection_for_site = "Draw"
-                else:
-                    selection_for_site = sel
+            if stake_sel == home.lower():
+                selection_for_site = home
+            elif stake_sel == away.lower():
+                selection_for_site = away
+            elif "draw" in stake_sel:
+                selection_for_site = "Draw"
             else:
-                selection_for_site = sel
+                selection_for_site = bet["selection"]
 
             mapped_selections.append({
                 "teams": [home, away],
                 "market": bet["market"],
-                "selection": selection_for_site,
+                "selection": selection_for_site,  # This matches exactly what is on the site!
                 "event_id": mapped["event_id"]
             })
-
+        
         print("-" * 50)
 
     print("DEBUG: mapped_selections =", mapped_selections)  # <-- ADD THIS LINE

@@ -17,9 +17,15 @@ def teams_match_logic(row_teams, target_teams):
     score2 = fuzz.ratio(row_norm[0], target_norm[1]) + fuzz.ratio(row_norm[1], target_norm[0])
     return max(score1, score2) > 150  # Each must be >75; tweak as needed
 
-def outcome_match_logic(cell_text, target_selection):
+#def outcome_match_logic(cell_text, target_selection):
     # Basic: does cell_text contain the selection string? (Case-insensitive)
-    return target_selection.strip().lower() in cell_text.strip().lower()
+    #return target_selection.strip().lower() in cell_text.strip().lower()
+
+def normalize(text):
+    return text.lower().strip()
+
+def outcome_match_logic(cell_text, target_selection):
+    return normalize(cell_text) == normalize(target_selection)
 
 async def generate_sportybet_code(selections=None) -> str:
     """
@@ -42,6 +48,20 @@ async def generate_sportybet_code(selections=None) -> str:
             await page.goto(SPORT_URL, timeout=60000)
             await page.wait_for_load_state('networkidle')
             await page.wait_for_selector(".m-table-row.m-sports-table", timeout=20000)
+
+            async def scroll_to_bottom(page, pause=500, max_tries=25):
+                # Scroll down until the page can't scroll any further
+                last_height = await page.evaluate("document.body.scrollHeight")
+                for _ in range(max_tries):
+                    await page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+                    await page.wait_for_timeout(pause)
+                    new_height = await page.evaluate("document.body.scrollHeight")
+                    if new_height == last_height:
+                        break
+                    last_height = new_height
+            
+            await scroll_to_bottom(page)
+            event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
 
             for sel in selections:
                 target_teams = sel.get("teams")  # This must be a 2-item list ["Home", "Away"] (adjust if needed)
