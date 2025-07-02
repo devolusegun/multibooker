@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 from app.services.mapper import map_to_bookie
 from app.services.generators.sportybet_gen import generate_sportybet_code
@@ -5,39 +6,32 @@ import asyncio
 
 sample_bets = [
     {
-        "match": "Sogndal IL vs Lyn 1896 FK",
-        "market": "Both Teams to Score",
-        "selection": "Yes",
-        "odd": 1.37,
-        "kickoff": 1719076800000  # Sun, Jun 22, 2025 4:00 PM WAT
+        "match": "Al Hikma vs AL Ansar SC",
+        "market": "Match Result",
+        "selection": "AL Ansar SC",
+        "odd": 1.24,
+        "kickoff": int(datetime(2025, 7, 2, 14, 30).timestamp() * 1000)  # Wed, Jul 02 2:30PM
     },
     {
-        "match": "Kalmar FF vs Orgryte IS",
-        "market": "Double Chance",
-        "selection": "Kalmar FF or Draw",
-        "odd": 1.14,
-        "kickoff": 1719076800000
+        "match": "Vaasan Palloseura vs FC Haka Valkeakoski",
+        "market": "Match Result",
+        "selection": "Vaasan Palloseura",
+        "odd": 1.91,
+        "kickoff": int(datetime(2025, 7, 2, 16, 0).timestamp() * 1000)   # Wed, Jul 02 4:00PM
     },
     {
-        "match": "Hamarkameratene vs Tromsoe IL",
-        "market": "Tromsoe IL Total",
-        "selection": "Over 0.5",
-        "odd": 1.20,
-        "kickoff": 1719076800000
+        "match": "Oulun Luistinseura vs KPV Kokkola",
+        "market": "Match Result",
+        "selection": "Oulun Luistinseura",
+        "odd": 1.60,
+        "kickoff": int(datetime(2025, 7, 2, 16, 30).timestamp() * 1000)  # Wed, Jul 02 4:30PM
     },
     {
-        "match": "Kristiansund BK vs Rosenborg BK",
-        "market": "Both Teams to Score",
-        "selection": "Yes",
-        "odd": 1.53,
-        "kickoff": 1719076800000
-    },
-    {
-        "match": "Denmark vs France",
-        "market": "Both Teams to Score",
-        "selection": "Yes",
-        "odd": 1.53,
-        "kickoff": 1719080400000  # Sun, Jun 22, 2025 5:00 PM WAT
+        "match": "FC Dila Gori vs FC Spaeri",
+        "market": "Match Result",
+        "selection": "FC Dila Gori",
+        "odd": 1.62,
+        "kickoff": int(datetime(2025, 7, 2, 17, 0).timestamp() * 1000)   # Wed, Jul 02 5:00PM
     }
 ]
 
@@ -56,12 +50,15 @@ async def run():
         else:
             print("✅ Mapped:", json.dumps(mapped, indent=2))
             mapped_selections.append({
-                "event_id": mapped.get("event_id", mapped.get("match")),
-                "market_id": mapped["market"],
-                "outcome_id": mapped["selection"]
+                "teams": mapped["match"].split(" vs "),
+                "market": bet["market"],
+                "selection": bet["selection"],
+                "event_id": mapped["event_id"]
             })
         print("-" * 50)
 
+    print("DEBUG: mapped_selections =", mapped_selections)  # <-- ADD THIS LINE
+    
     if not mapped_selections:
         print("⚠️ No valid selections were mapped, skipping code generation.")
         return

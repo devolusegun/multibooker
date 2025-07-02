@@ -164,14 +164,15 @@ def map_to_bookie(bet, bookie):
     raw_selection = bet.get("selection", "").strip()
     clean_selection = " ".join(raw_selection.split())
 
-    # First check selection map
-    selection_entry = selection_map.get(clean_selection)
+    # First check selection map using Market|Selection key
+    sel_map_key = f"{market_key}|{clean_selection}"
+    selection_entry = selection_map.get(sel_map_key)
     if selection_entry:
         mapped_selection = selection_entry.get(bookie)
         if mapped_selection:
             mapped["selection"] = mapped_selection
         else:
-            return {"error": f"Selection '{clean_selection}' not supported by {bookie}"}
+            return {"error": f"Selection '{clean_selection}' not supported by {bookie} (in market '{market_key}')"}
     else:
         market_data = matched_fixture.get("markets", {}).get(market, {})
         if not market_data:

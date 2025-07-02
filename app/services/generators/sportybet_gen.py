@@ -1,16 +1,21 @@
 import logging
 from playwright.async_api import async_playwright
 import time
+from rapidfuzz import fuzz
 
 logger = logging.getLogger(__name__)
 
 SPORT_URL = "https://www.sportybet.com/ng/m/sport/football/today?source=sport_menu&sort=0"
 
 def teams_match_logic(row_teams, target_teams):
-    # Basic lower/strip match, you can replace with your fuzzy/normalize logic!
-    row_teams_set = set(t.strip().lower() for t in row_teams)
-    target_teams_set = set(t.strip().lower() for t in target_teams)
-    return row_teams_set == target_teams_set
+    # Normalize: lower, remove fc/sc/bk etc.
+    def norm(t): return t.strip().lower().replace(' fc', '').replace(' sc', '').replace(' bk', '')
+    row_norm = [norm(t) for t in row_teams]
+    target_norm = [norm(t) for t in target_teams]
+    # Both [home, away]
+    score1 = fuzz.ratio(row_norm[0], target_norm[0]) + fuzz.ratio(row_norm[1], target_norm[1])
+    score2 = fuzz.ratio(row_norm[0], target_norm[1]) + fuzz.ratio(row_norm[1], target_norm[0])
+    return max(score1, score2) > 150  # Each must be >75; tweak as needed
 
 def outcome_match_logic(cell_text, target_selection):
     # Basic: does cell_text contain the selection string? (Case-insensitive)
@@ -51,6 +56,7 @@ async def generate_sportybet_code(selections=None) -> str:
                 for event in event_rows:
                     team_divs = await event.query_selector_all(".team")
                     row_teams = [await t.inner_text() for t in team_divs]
+                    print(f"Row teams: {row_teams}, Target teams: {target_teams}, Match: {teams_match_logic(row_teams, target_teams)}")
                     if teams_match_logic(row_teams, target_teams):
                         await event.click()  # open match detail
                         match_found = True
