@@ -6,25 +6,32 @@ import asyncio
 
 sample_bets = [
     {
-        "match": "Vaasan Palloseura vs FC Haka Valkeakoski",
+        "match": "Deportes Union La Calera vs Coquimbo Unido",
         "market": "Match Result",
-        "selection": "Vaasan Palloseura",
-        "odd": 1.91,
-        "kickoff": int(datetime(2025, 7, 2, 16, 0).timestamp() * 1000)   # Wed, Jul 02 4:00PM
+        "selection": "Deportes Union La Calera",
+        "odd": 3.40,
+        "kickoff": int(datetime(2025, 7, 2, 20, 0).timestamp() * 1000)  # Wed, Jul 02 8:00 PM
     },
     {
-        "match": "Oulun Luistinseura vs KPV Kokkola",
+        "match": "Juan Pablo II vs FBC Melgar",
         "market": "Match Result",
-        "selection": "Oulun Luistinseura",
-        "odd": 1.60,
-        "kickoff": int(datetime(2025, 7, 2, 16, 30).timestamp() * 1000)  # Wed, Jul 02 4:30PM
+        "selection": "FBC Melgar",
+        "odd": 1.95,
+        "kickoff": int(datetime(2025, 7, 2, 21, 0).timestamp() * 1000)  # Wed, Jul 02 9:00 PM
     },
     {
-        "match": "FC Dila Gori vs FC Spaeri",
+        "match": "Racing Club Avellaneda vs San Martin de San Juan",
         "market": "Match Result",
-        "selection": "FC Dila Gori",
+        "selection": "Racing Club Avellaneda",
         "odd": 1.62,
-        "kickoff": int(datetime(2025, 7, 2, 17, 0).timestamp() * 1000)   # Wed, Jul 02 5:00PM
+        "kickoff": int(datetime(2025, 7, 2, 22, 45).timestamp() * 1000)  # Wed, Jul 02 10:45 PM
+    },
+    {
+        "match": "Deportes La Serena vs San Luis de Quillota",
+        "market": "Match Result",
+        "selection": "Deportes La Serena",
+        "odd": 1.86,
+        "kickoff": int(datetime(2025, 7, 2, 23, 0).timestamp() * 1000)  # Wed, Jul 02 11:00 PM
     }
 ]
 
@@ -48,9 +55,9 @@ async def run():
             stake_sel = bet["selection"].strip().lower()
 
             if stake_sel == home.lower():
-                selection_for_site = home
+                selection_for_site = "Home"
             elif stake_sel == away.lower():
-                selection_for_site = away
+                selection_for_site = "Away"
             elif "draw" in stake_sel:
                 selection_for_site = "Draw"
             else:

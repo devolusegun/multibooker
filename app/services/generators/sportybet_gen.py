@@ -27,6 +27,16 @@ def normalize(text):
 def outcome_match_logic(cell_text, target_selection):
     return normalize(cell_text) == normalize(target_selection)
 
+async def robust_scroll(page, pause=800, max_tries=40):
+    last_event_count = 0
+    for _ in range(max_tries):
+        await page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+        await page.wait_for_timeout(pause)
+        event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
+        if len(event_rows) == last_event_count:
+            break
+        last_event_count = len(event_rows)
+
 async def generate_sportybet_code(selections=None) -> str:
     """
     Searches for matches and books odds using visible event list and selectors.
@@ -60,8 +70,18 @@ async def generate_sportybet_code(selections=None) -> str:
                         break
                     last_height = new_height
             
-            await scroll_to_bottom(page)
+            await robust_scroll(page)
             event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
+            for i, event in enumerate(event_rows[-5:]):  # Print last 5 loaded events
+                team_divs = await event.query_selector_all(".team")
+                row_teams = [await t.inner_text() for t in team_divs]
+                print(f"[Last Visible Row #{i}] {row_teams}")
+
+            # Print all events scraped from the page for debugging:
+            for event in event_rows:
+                team_divs = await event.query_selector_all(".team")
+                row_teams = [await t.inner_text() for t in team_divs]
+                print(f"SportyBet event row: {row_teams}")
 
             for sel in selections:
                 target_teams = sel.get("teams")  # This must be a 2-item list ["Home", "Away"] (adjust if needed)
