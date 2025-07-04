@@ -2,11 +2,12 @@ import logging
 from playwright.async_api import async_playwright
 import time
 from rapidfuzz import fuzz
+import unicodedata
 
 logger = logging.getLogger(__name__)
 
 SPORT_URL = "https://www.sportybet.com/ng/m/sport/football/today?source=sport_menu&sort=0"
-
+'''
 def teams_match_logic(row_teams, target_teams):
     # Normalize: lower, remove fc/sc/bk etc.
     def norm(t): return t.strip().lower().replace(' fc', '').replace(' sc', '').replace(' bk', '')
@@ -16,10 +17,21 @@ def teams_match_logic(row_teams, target_teams):
     score1 = fuzz.ratio(row_norm[0], target_norm[0]) + fuzz.ratio(row_norm[1], target_norm[1])
     score2 = fuzz.ratio(row_norm[0], target_norm[1]) + fuzz.ratio(row_norm[1], target_norm[0])
     return max(score1, score2) > 150  # Each must be >75; tweak as needed
+    '''
+def normalize_team_name(name):
+    # Lowercase, strip, and remove accents
+    name = name.lower().strip()
+    name = ''.join(
+        c for c in unicodedata.normalize('NFD', name)
+        if unicodedata.category(c) != 'Mn'
+    )
+    return name
 
-#def outcome_match_logic(cell_text, target_selection):
-    # Basic: does cell_text contain the selection string? (Case-insensitive)
-    #return target_selection.strip().lower() in cell_text.strip().lower()
+def teams_match_logic(row_teams, target_teams):
+    # Normalize both lists before compare
+    row_set = set(normalize_team_name(t) for t in row_teams)
+    target_set = set(normalize_team_name(t) for t in target_teams)
+    return row_set == target_set
 
 def normalize(text):
     return text.lower().strip()
@@ -59,8 +71,7 @@ async def generate_sportybet_code(selections=None) -> str:
             await page.wait_for_load_state('networkidle')
             await page.wait_for_selector(".m-table-row.m-sports-table", timeout=20000)
 
-            async def scroll_to_bottom(page, pause=500, max_tries=25):
-                # Scroll down until the page can't scroll any further
+            async def scroll_to_bottom(page, pause=800, max_tries=40):
                 last_height = await page.evaluate("document.body.scrollHeight")
                 for _ in range(max_tries):
                     await page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
@@ -69,19 +80,15 @@ async def generate_sportybet_code(selections=None) -> str:
                     if new_height == last_height:
                         break
                     last_height = new_height
+                print("[DEBUG] Finished scrolling, all events loaded.")
             
-            await robust_scroll(page)
-            event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
-            for i, event in enumerate(event_rows[-5:]):  # Print last 5 loaded events
-                team_divs = await event.query_selector_all(".team")
-                row_teams = [await t.inner_text() for t in team_divs]
-                print(f"[Last Visible Row #{i}] {row_teams}")
+            await scroll_to_bottom(page)  # Make sure all events load
+            event_rows = await page.query_selector_all('.m-table-row.m-sports-table')
 
-            # Print all events scraped from the page for debugging:
-            for event in event_rows:
+            for i, event in enumerate(event_rows):  # Debug print: List all visible matches on the page
                 team_divs = await event.query_selector_all(".team")
                 row_teams = [await t.inner_text() for t in team_divs]
-                print(f"SportyBet event row: {row_teams}")
+                print(f"[Visible Row #{i}] {row_teams}")
 
             for sel in selections:
                 target_teams = sel.get("teams")  # This must be a 2-item list ["Home", "Away"] (adjust if needed)
@@ -91,19 +98,21 @@ async def generate_sportybet_code(selections=None) -> str:
                 print(f"\n🔍 Searching for match: {target_teams} | Market: {target_market} | Selection: {target_selection}")
 
                 # 1. Find and click the event row
+                # Now, find and click your target match:
                 match_found = False
-                event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
                 for event in event_rows:
-                    team_divs = await event.query_selector_all(".team")
+                    team_divs = await event.query_selector_all('.team')
                     row_teams = [await t.inner_text() for t in team_divs]
                     print(f"Row teams: {row_teams}, Target teams: {target_teams}, Match: {teams_match_logic(row_teams, target_teams)}")
                     if teams_match_logic(row_teams, target_teams):
-                        await event.click()  # open match detail
+                        await event.click()
+                        print(f"✅ Found and clicked event: {row_teams}")
                         match_found = True
                         break
+
                 if not match_found:
                     print(f"❌ Could not find event for {target_teams}")
-                    continue
+                    return "ERROR: Match not found"
 
                 await page.wait_for_selector(".m-market", timeout=10000)
                 market_blocks = await page.query_selector_all(".m-market")
