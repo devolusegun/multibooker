@@ -6,32 +6,67 @@ import asyncio
 
 sample_bets = [
     {
-        "match": "Deportes Union La Calera vs Coquimbo Unido",
+        "match": "AA Internacional Limeira SP vs AA Francana SP",
         "market": "Match Result",
-        "selection": "Deportes Union La Calera",
-        "odd": 3.40,
-        "kickoff": int(datetime(2025, 7, 2, 20, 0).timestamp() * 1000)  # Wed, Jul 02 8:00 PM
+        "selection": "AA Francana SP",
+        "odd": 5.40,
+        "kickoff": int(datetime(2025, 7, 29, 23, 0).timestamp() * 1000)  # Tue, Jul 29, 11:00 PM
     },
     {
-        "match": "Juan Pablo II vs FBC Melgar",
+        "match": "Botafogo FR RJ vs Red Bull Bragantino SP",
         "market": "Match Result",
-        "selection": "FBC Melgar",
-        "odd": 1.95,
-        "kickoff": int(datetime(2025, 7, 2, 21, 0).timestamp() * 1000)  # Wed, Jul 02 9:00 PM
+        "selection": "Red Bull Bragantino SP",
+        "odd": 6.00,
+        "kickoff": int(datetime(2025, 7, 29, 23, 0).timestamp() * 1000)  # Tue, Jul 29, 11:00 PM
     },
     {
-        "match": "Racing Club Avellaneda vs San Martin de San Juan",
+        "match": "Independiente Santa Fe vs Internacional Fc De Palmira",
         "market": "Match Result",
-        "selection": "Racing Club Avellaneda",
-        "odd": 1.62,
-        "kickoff": int(datetime(2025, 7, 2, 22, 45).timestamp() * 1000)  # Wed, Jul 02 10:45 PM
+        "selection": "Internacional Fc De Palmira",
+        "odd": 5.60,
+        "kickoff": int(datetime(2025, 7, 30, 0, 0).timestamp() * 1000)  # Wed, Jul 30, 12:00 AM
     },
     {
-        "match": "Deportes La Serena vs San Luis de Quillota",
+        "match": "Atletico Nacional Medellin vs Cucuta Deportivo FC",
         "market": "Match Result",
-        "selection": "Deportes La Serena",
-        "odd": 1.86,
-        "kickoff": int(datetime(2025, 7, 2, 23, 0).timestamp() * 1000)  # Wed, Jul 02 11:00 PM
+        "selection": "Cucuta Deportivo FC",
+        "odd": 6.20,
+        "kickoff": int(datetime(2025, 7, 30, 0, 0).timestamp() * 1000)  # Wed, Jul 30, 12:00 AM
+    },
+    {
+        "match": "Criciuma EC SC vs Cuiaba Esporte Clube MT",
+        "market": "Match Result",
+        "selection": "Cuiaba Esporte Clube MT",
+        "odd": 4.90,
+        "kickoff": int(datetime(2025, 7, 30, 0, 30).timestamp() * 1000)  # Wed, Jul 30, 12:30 AM
+    },
+    {
+        "match": "Gremio FB Porto Alegrense RS vs Fortaleza EC CE",
+        "market": "Match Result",
+        "selection": "Fortaleza EC CE",
+        "odd": 4.00,
+        "kickoff": int(datetime(2025, 7, 30, 0, 30).timestamp() * 1000)  # Wed, Jul 30, 12:30 AM
+    },
+    {
+        "match": "San Antonio FC vs Vargas Torres",
+        "market": "Match Result",
+        "selection": "Vargas Torres",
+        "odd": 5.20,
+        "kickoff": int(datetime(2025, 7, 30, 1, 0).timestamp() * 1000)  # Wed, Jul 30, 1:00 AM
+    },
+    {
+        "match": "CD Junior FC vs CD Atletico Huila",
+        "market": "Match Result",
+        "selection": "CD Atletico Huila",
+        "odd": 8.20,
+        "kickoff": int(datetime(2025, 7, 30, 1, 30).timestamp() * 1000)  # Wed, Jul 30, 1:30 AM
+    },
+    {
+        "match": "Goias EC GO vs Clube Do Remo PA",
+        "market": "Match Result",
+        "selection": "Clube Do Remo PA",
+        "odd": 6.80,
+        "kickoff": int(datetime(2025, 7, 30, 1, 35).timestamp() * 1000)  # Wed, Jul 30, 1:35 AM
     }
 ]
 
