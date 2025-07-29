@@ -6,7 +6,7 @@ import unicodedata
 
 logger = logging.getLogger(__name__)
 
-SPORT_URL = "https://www.sportybet.com/ng/m/sport/football/today?source=sport_menu&sort=0"
+SPORT_URL = "https://www.sportybet.com/ng/m/sport/football?time=all&sort=1"
 '''
 def teams_match_logic(row_teams, target_teams):
     # Normalize: lower, remove fc/sc/bk etc.
@@ -90,26 +90,35 @@ async def generate_sportybet_code(selections=None) -> str:
                 row_teams = [await t.inner_text() for t in team_divs]
                 print(f"[Visible Row #{i}] {row_teams}")
 
+            # robust event search block
             for sel in selections:
-                target_teams = sel.get("teams")  # This must be a 2-item list ["Home", "Away"] (adjust if needed)
-                target_market = sel.get("market")  # E.g. "Double Chance", "Match Result"
-                target_selection = sel.get("selection")  # E.g. "Draw or Home", "2", etc.
+                target_teams = sel.get("teams")  # Must be ["Home", "Away"]
+                target_market = sel.get("market")
+                target_selection = sel.get("selection")
 
                 print(f"\n🔍 Searching for match: {target_teams} | Market: {target_market} | Selection: {target_selection}")
 
-                # 1. Find and click the event row
-                # Now, find and click your target match:
+                # Always fetch event rows after scrolling for the latest list
+                event_rows = await page.query_selector_all('.m-table-row.m-sports-table')
                 match_found = False
-                for event in event_rows:
+                for i, event in enumerate(event_rows):
                     team_divs = await event.query_selector_all('.team')
                     row_teams = [await t.inner_text() for t in team_divs]
-                    print(f"Row teams: {row_teams}, Target teams: {target_teams}, Match: {teams_match_logic(row_teams, target_teams)}")
-                    if teams_match_logic(row_teams, target_teams):
+                    # Normalize for matching (strip 'fc', 'sc', 'club', 'college' etc.)
+                    def norm(n):
+                        n = n.lower()
+                        for w in [' fc', ' sc', ' club', 'college', '.', ',', '-', '  ']:
+                            n = n.replace(w, ' ')
+                        return ' '.join(n.split()).strip()
+                    row_norm = set(norm(t) for t in row_teams)
+                    target_norm = set(norm(t) for t in target_teams)
+                    match_this = row_norm == target_norm
+                    print(f"[#{i}] Row teams: {row_teams} | Norm: {row_norm} | Target: {target_norm} | Match: {match_this}")
+                    if match_this:
                         await event.click()
                         print(f"✅ Found and clicked event: {row_teams}")
                         match_found = True
                         break
-
                 if not match_found:
                     print(f"❌ Could not find event for {target_teams}")
                     return "ERROR: Match not found"
@@ -122,11 +131,10 @@ async def generate_sportybet_code(selections=None) -> str:
                     if title:
                         title_text = await title.inner_text()
                         if target_market.lower() in title_text.lower():
-                            # Found desired market block
                             outcome_cells = await block.query_selector_all(".m-table-cell.m-outcome")
                             for oc in outcome_cells:
                                 txt = await oc.inner_text()
-                                if outcome_match_logic(txt, target_selection):
+                                if normalize(txt) == normalize(target_selection):
                                     await oc.click()
                                     print(f"✅ Clicked selection '{target_selection}' in market '{title_text}'")
                                     outcome_clicked = True
