@@ -45,15 +45,35 @@ def outcome_match_logic(cell_text, target_selection):
     return normalize(cell_text) == normalize(target_selection)
 
 
-async def robust_scroll(page, pause=800, max_tries=40):
-    last_event_count = 0
-    for _ in range(max_tries):
+async def collect_all_event_rows(page, pause=800, max_tries=40):
+    """
+    Scrolls the page, accumulating all unique event rows (even those that disappear from DOM after scrolling).
+    Returns a list of dicts: {teams: [...], row: element_handle}
+    """
+    all_fixtures = []
+    seen_keys = set()  # to avoid duplicates, e.g. ("team1", "team2")
+
+    for i in range(max_tries):
+        event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
+        for row in event_rows:
+            team_divs = await row.query_selector_all('.team')
+            row_teams = [await t.inner_text() for t in team_divs]
+            # Key by normalized tuple for uniqueness
+            key = tuple(sorted(t.strip().lower() for t in row_teams))
+            if key and key not in seen_keys and len(key) == 2:
+                all_fixtures.append({'teams': row_teams, 'row': row})
+                seen_keys.add(key)
+        # Scroll and wait
         await page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
         await page.wait_for_timeout(pause)
-        event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
-        if len(event_rows) == last_event_count:
+        # Stop early if no new fixtures seen
+        if i > 2 and len(seen_keys) == len(all_fixtures):
             break
-        last_event_count = len(event_rows)
+
+    print(f"[DEBUG] Finished scrolling. Total unique events loaded: {len(all_fixtures)}")
+    for i, f in enumerate(all_fixtures):
+        print(f"[#{i}] {f['teams']}")
+    return all_fixtures
 
 
 async def generate_sportybet_code(selections=None) -> str:
@@ -69,7 +89,7 @@ async def generate_sportybet_code(selections=None) -> str:
                 headless=False
             )  # For debug, set to True for production
             context = await browser.new_context(
-                viewport={"width": 375, "height": 812},
+                viewport={"width": 375, "height": 4000},
                 user_agent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_6_1 like Mac OS X)...",
                 is_mobile=True,
                 device_scale_factor=2,
@@ -80,27 +100,10 @@ async def generate_sportybet_code(selections=None) -> str:
             await page.wait_for_load_state("networkidle")
             await page.wait_for_selector(".m-table-row.m-sports-table", timeout=20000)
 
-            async def scroll_to_bottom(page, pause=1500, max_tries=100):
-                last_height = await page.evaluate("document.body.scrollHeight")
-                for _ in range(max_tries):
-                    await page.evaluate(
-                        "window.scrollBy(0, document.body.scrollHeight)"
-                    )
-                    await page.wait_for_timeout(pause)
-                    # Try scrolling up slightly too (to trigger lazy load)
-                    await page.evaluate("window.scrollBy(0, -100)")
-                    await page.wait_for_timeout(200)
-                    new_height = await page.evaluate("document.body.scrollHeight")
-                    if new_height == last_height:
-                        break
-                    last_height = new_height
-                print("[DEBUG] Finished scrolling, all events loaded.")
+            all_events = await collect_all_event_rows(page)
 
-            await scroll_to_bottom(page)  # Make sure all events load
-            event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
-
-            #await page.screenshot(path="playwright_output.png", full_page=True)
-            #print("Screenshot saved: playwright_output.png")
+            # await page.screenshot(path="playwright_output.png", full_page=True)
+            # print("Screenshot saved: playwright_output.png")
 
             for i, event in enumerate(
                 event_rows

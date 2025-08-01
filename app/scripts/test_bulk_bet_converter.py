@@ -6,27 +6,6 @@ import asyncio
 
 sample_bets = [
    {
-        "match": "Gremio FB Porto Alegrense RS vs Fortaleza EC CE",
-        "market": "Match Result",
-        "selection": "Fortaleza EC CE",
-        "odd": 4.00,
-        "kickoff": int(datetime(2025, 7, 30, 0, 30).timestamp() * 1000)  # Wed, Jul 30, 12:30 AM
-    },
-    {
-        "match": "San Antonio FC vs Vargas Torres",
-        "market": "Match Result",
-        "selection": "Vargas Torres",
-        "odd": 5.20,
-        "kickoff": int(datetime(2025, 7, 30, 1, 0).timestamp() * 1000)  # Wed, Jul 30, 1:00 AM
-    },
-    {
-        "match": "CD Junior FC vs CD Atletico Huila",
-        "market": "Match Result",
-        "selection": "CD Atletico Huila",
-        "odd": 8.20,
-        "kickoff": int(datetime(2025, 7, 30, 1, 30).timestamp() * 1000)  # Wed, Jul 30, 1:30 AM
-    },
-    {
         "match": "Goias EC GO vs Clube Do Remo PA",
         "market": "Match Result",
         "selection": "Clube Do Remo PA",
