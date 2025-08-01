@@ -6,11 +6,53 @@ import asyncio
 
 sample_bets = [
    {
-        "match": "Goias EC GO vs Clube Do Remo PA",
-        "market": "Match Result",
-        "selection": "Clube Do Remo PA",
-        "odd": 6.80,
-        "kickoff": int(datetime(2025, 7, 30, 1, 35).timestamp() * 1000)  # Wed, Jul 30, 1:35 AM
+        "teams": ["Racing Louisville FC", "Kansas City Nwsl"],
+        "market": "1x2",
+        "selection": "Kansas City Nwsl",
+        "odd": 1.62,
+        "kickoff": int(datetime(2025, 8, 2, 1, 0).timestamp() * 1000),
+    },
+    {
+        "teams": ["CD Cuenca", "CSD Macara"],
+        "market": "1x2",
+        "selection": "CD Cuenca",
+        "odd": 2.02,
+        "kickoff": int(datetime(2025, 8, 2, 1, 0).timestamp() * 1000),
+    },
+    {
+        "teams": ["Houston Dynamo", "Mazatlan FC"],
+        "market": "1x2",
+        "selection": "Houston Dynamo",
+        "odd": 1.89,
+        "kickoff": int(datetime(2025, 8, 2, 1, 30).timestamp() * 1000),
+    },
+    {
+        "teams": ["Operario Ferroviario EC PR", "Criciuma EC SC"],
+        "market": "1x2",
+        "selection": "Operario Ferroviario EC PR",
+        "odd": 1.93,
+        "kickoff": int(datetime(2025, 8, 2, 1, 30).timestamp() * 1000),
+    },
+    {
+        "teams": ["FC Tulsa", "Loudoun United FC"],
+        "market": "1x2",
+        "selection": "FC Tulsa",
+        "odd": 1.82,
+        "kickoff": int(datetime(2025, 8, 2, 1, 30).timestamp() * 1000),
+    },
+    {
+        "teams": ["Deportivo Toluca FC", "Montreal Impact"],
+        "market": "1x2",
+        "selection": "Deportivo Toluca FC",
+        "odd": 1.54,
+        "kickoff": int(datetime(2025, 8, 2, 2, 0).timestamp() * 1000),
+    },
+    {
+        "teams": ["Colorado Springs Switchbacks FC", "Lexington SC"],
+        "market": "1x2",
+        "selection": "Colorado Springs Switchbacks FC",
+        "odd": 1.77,
+        "kickoff": int(datetime(2025, 8, 2, 2, 0).timestamp() * 1000),
     }
 ]
 

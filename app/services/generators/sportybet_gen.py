@@ -8,42 +8,27 @@ logger = logging.getLogger(__name__)
 
 SPORT_URL = "https://www.sportybet.com/ng/m/sport/football?time=all&sort=1"
 
-"""
-def teams_match_logic(row_teams, target_teams):
-    # Normalize: lower, remove fc/sc/bk etc.
-    def norm(t): return t.strip().lower().replace(' fc', '').replace(' sc', '').replace(' bk', '')
-    row_norm = [norm(t) for t in row_teams]
-    target_norm = [norm(t) for t in target_teams]
-    # Both [home, away]
-    score1 = fuzz.ratio(row_norm[0], target_norm[0]) + fuzz.ratio(row_norm[1], target_norm[1])
-    score2 = fuzz.ratio(row_norm[0], target_norm[1]) + fuzz.ratio(row_norm[1], target_norm[0])
-    return max(score1, score2) > 150  # Each must be >75; tweak as needed
-    """
-
-
 def normalize_team_name(name):
-    # Lowercase, strip, and remove accents
+    # Lowercase, strip, remove accents, and strip out standard suffixes and punctuation
     name = name.lower().strip()
-    name = "".join(
-        c for c in unicodedata.normalize("NFD", name) if unicodedata.category(c) != "Mn"
+    name = ''.join(
+        c for c in unicodedata.normalize('NFD', name)
+        if unicodedata.category(c) != 'Mn'
     )
-    return name
-
+    for w in [" fc", " sc", " club", "college", ".", ",", "-", "  "]:
+        name = name.replace(w, " ")
+    return " ".join(name.split()).strip()
 
 def teams_match_logic(row_teams, target_teams):
-    # Normalize both lists before compare
     row_set = set(normalize_team_name(t) for t in row_teams)
     target_set = set(normalize_team_name(t) for t in target_teams)
     return row_set == target_set
 
-
 def normalize(text):
     return text.lower().strip()
 
-
 def outcome_match_logic(cell_text, target_selection):
     return normalize(cell_text) == normalize(target_selection)
-
 
 async def collect_all_event_rows(page, pause=800, max_tries=40):
     """
@@ -59,7 +44,7 @@ async def collect_all_event_rows(page, pause=800, max_tries=40):
             team_divs = await row.query_selector_all('.team')
             row_teams = [await t.inner_text() for t in team_divs]
             # Key by normalized tuple for uniqueness
-            key = tuple(sorted(t.strip().lower() for t in row_teams))
+            key = tuple(sorted(normalize_team_name(t) for t in row_teams))
             if key and key not in seen_keys and len(key) == 2:
                 all_fixtures.append({'teams': row_teams, 'row': row})
                 seen_keys.add(key)
@@ -74,7 +59,6 @@ async def collect_all_event_rows(page, pause=800, max_tries=40):
     for i, f in enumerate(all_fixtures):
         print(f"[#{i}] {f['teams']}")
     return all_fixtures
-
 
 async def generate_sportybet_code(selections=None) -> str:
     """
@@ -102,17 +86,6 @@ async def generate_sportybet_code(selections=None) -> str:
 
             all_events = await collect_all_event_rows(page)
 
-            # await page.screenshot(path="playwright_output.png", full_page=True)
-            # print("Screenshot saved: playwright_output.png")
-
-            for i, event in enumerate(
-                event_rows
-            ):  # Debug print: List all visible matches on the page
-                team_divs = await event.query_selector_all(".team")
-                row_teams = [await t.inner_text() for t in team_divs]
-                print(f"[Visible Row #{i}] {row_teams}")
-
-            # robust event search block
             for sel in selections:
                 target_teams = sel.get("teams")  # Must be ["Home", "Away"]
                 target_market = sel.get("market")
@@ -122,39 +95,14 @@ async def generate_sportybet_code(selections=None) -> str:
                     f"\n🔍 Searching for match: {target_teams} | Market: {target_market} | Selection: {target_selection}"
                 )
 
-                # Always fetch event rows after scrolling for the latest list
-                event_rows = await page.query_selector_all(
-                    ".m-table-row.m-sports-table"
-                )
                 match_found = False
-                for i, event in enumerate(event_rows):
-                    team_divs = await event.query_selector_all(".team")
-                    row_teams = [await t.inner_text() for t in team_divs]
-
-                    # Normalize for matching (strip 'fc', 'sc', 'club', 'college' etc.)
-                    def norm(n):
-                        n = n.lower()
-                        for w in [
-                            " fc",
-                            " sc",
-                            " club",
-                            "college",
-                            ".",
-                            ",",
-                            "-",
-                            "  ",
-                        ]:
-                            n = n.replace(w, " ")
-                        return " ".join(n.split()).strip()
-
-                    row_norm = set(norm(t) for t in row_teams)
-                    target_norm = set(norm(t) for t in target_teams)
-                    match_this = row_norm == target_norm
-                    print(
-                        f"[#{i}] Row teams: {row_teams} | Norm: {row_norm} | Target: {target_norm} | Match: {match_this}"
-                    )
-                    if match_this:
-                        await event.click()
+                for f in all_events:
+                    row_teams = f['teams']
+                    row = f['row']
+                    # Print debug info
+                    print(f"Row teams: {row_teams} | Norm: {set(normalize_team_name(t) for t in row_teams)} | Target: {set(normalize_team_name(t) for t in target_teams)} | Match: {teams_match_logic(row_teams, target_teams)}")
+                    if teams_match_logic(row_teams, target_teams):
+                        await row.click()
                         print(f"✅ Found and clicked event: {row_teams}")
                         match_found = True
                         break
