@@ -5,56 +5,28 @@ from app.services.generators.sportybet_gen import generate_sportybet_code
 import asyncio
 
 sample_bets = [
-   {
-        "teams": ["Racing Louisville FC", "Kansas City Nwsl"],
-        "market": "1x2",
-        "selection": "Kansas City Nwsl",
-        "odd": 1.62,
-        "kickoff": int(datetime(2025, 8, 2, 1, 0).timestamp() * 1000),
-    },
     {
-        "teams": ["CD Cuenca", "CSD Macara"],
-        "market": "1x2",
-        "selection": "CD Cuenca",
-        "odd": 2.02,
-        "kickoff": int(datetime(2025, 8, 2, 1, 0).timestamp() * 1000),
-    },
-    {
-        "teams": ["Houston Dynamo", "Mazatlan FC"],
-        "market": "1x2",
-        "selection": "Houston Dynamo",
-        "odd": 1.89,
-        "kickoff": int(datetime(2025, 8, 2, 1, 30).timestamp() * 1000),
-    },
-    {
-        "teams": ["Operario Ferroviario EC PR", "Criciuma EC SC"],
-        "market": "1x2",
-        "selection": "Operario Ferroviario EC PR",
-        "odd": 1.93,
-        "kickoff": int(datetime(2025, 8, 2, 1, 30).timestamp() * 1000),
-    },
-    {
-        "teams": ["FC Tulsa", "Loudoun United FC"],
-        "market": "1x2",
-        "selection": "FC Tulsa",
-        "odd": 1.82,
-        "kickoff": int(datetime(2025, 8, 2, 1, 30).timestamp() * 1000),
-    },
-    {
+        "match": "Deportivo Toluca FC vs Montreal Impact",
         "teams": ["Deportivo Toluca FC", "Montreal Impact"],
-        "market": "1x2",
+        "market": "Match Result",
         "selection": "Deportivo Toluca FC",
         "odd": 1.54,
         "kickoff": int(datetime(2025, 8, 2, 2, 0).timestamp() * 1000),
     },
     {
+        "match": "Colorado Springs Switchbacks FC vs Lexington SC",
         "teams": ["Colorado Springs Switchbacks FC", "Lexington SC"],
-        "market": "1x2",
+        "market": "Match Result",
         "selection": "Colorado Springs Switchbacks FC",
         "odd": 1.77,
         "kickoff": int(datetime(2025, 8, 2, 2, 0).timestamp() * 1000),
     }
 ]
+
+# ADD THIS BLOCK RIGHT HERE:
+for bet in sample_bets:
+    if "match" not in bet and "teams" in bet:
+        bet["match"] = " vs ".join(bet["teams"])
 
 BOOKIE = "sportybet"
 
@@ -63,7 +35,7 @@ async def run():
     mapped_selections = []
 
     for idx, bet in enumerate(sample_bets, 1):
-        print(f"📌 Bet #{idx}: {bet['match']} | {bet['market']} | {bet['selection']} @ {bet['odd']}")
+        print(f"📌 Bet #{idx}: {' vs '.join(bet['teams'])} | {bet['market']} | {bet['selection']} @ {bet['odd']}")
         mapped = map_to_bookie(bet, BOOKIE)
 
         if "error" in mapped:
