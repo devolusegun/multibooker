@@ -67,15 +67,18 @@ async def collect_all_event_rows(page, pause=800, max_tries=40):
 async def generate_sportybet_code(selections=None) -> str:
     """
     Searches for matches and books odds using visible event list and selectors.
+    SKIPS any bets not found, does not halt on errors.
     """
     if not selections or not isinstance(selections, list):
         return "ERROR: No selections provided"
 
+    found_count = 0
+    failed_matches = []
+    success_bets = []
+
     try:
         async with async_playwright() as p:
-            browser = await p.chromium.launch(
-                headless=False
-            )  # For debug, set to True for production
+            browser = await p.chromium.launch(headless=False)  # True for production
             context = await browser.new_context(
                 viewport={"width": 375, "height": 4000},
                 user_agent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_6_1 like Mac OS X)...",
@@ -87,7 +90,6 @@ async def generate_sportybet_code(selections=None) -> str:
             await page.goto(SPORT_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
             await page.wait_for_selector(".m-table-row.m-sports-table", timeout=20000)
-
             all_events = await collect_all_event_rows(page)
 
             for sel in selections:
@@ -102,12 +104,7 @@ async def generate_sportybet_code(selections=None) -> str:
                 for fixture in all_events:
                     row_teams = fixture['raw']
                     row_norm = fixture['norm']
-                    print(f"[DEBUG] raw row teams: {row_teams}")
-                    print(f"[DEBUG] normalized row: {row_norm}")
-                    print(f"[DEBUG] input teams: {target_teams}")
-                    print(f"[DEBUG] normalized input: {target_norm}")
                     if teams_match_logic(row_teams, target_teams):
-                        # Now: Find and click the DOM row that matches these teams (normalized)
                         event_rows = await page.query_selector_all(".m-table-row.m-sports-table")
                         for event in event_rows:
                             tds = await event.query_selector_all('.team')
@@ -119,9 +116,11 @@ async def generate_sportybet_code(selections=None) -> str:
                                 break
                         if match_found:
                             break
+
                 if not match_found:
-                    print(f"❌ Could not find event for {target_teams}")
-                    return "ERROR: Match not found"
+                    print(f"❌ Skipping: Could not find event for {target_teams}")
+                    failed_matches.append(sel)
+                    continue
 
                 await page.wait_for_selector(".m-market", timeout=10000)
                 market_blocks = await page.query_selector_all(".m-market")
@@ -131,47 +130,53 @@ async def generate_sportybet_code(selections=None) -> str:
                     if title:
                         title_text = await title.inner_text()
                         if target_market.lower() in title_text.lower():
-                            outcome_cells = await block.query_selector_all(
-                                ".m-table-cell.m-outcome"
-                            )
+                            outcome_cells = await block.query_selector_all(".m-table-cell.m-outcome")
                             for oc in outcome_cells:
                                 txt = await oc.inner_text()
                                 if normalize(txt) == normalize(target_selection):
                                     await oc.click()
-                                    print(
-                                        f"✅ Clicked selection '{target_selection}' in market '{title_text}'"
-                                    )
+                                    print(f"✅ Clicked selection '{target_selection}' in market '{title_text}'")
                                     outcome_clicked = True
                                     break
                         if outcome_clicked:
                             break
                 if not outcome_clicked:
-                    print(
-                        f"❌ Could not find outcome '{target_selection}' in market '{target_market}'"
-                    )
+                    print(f"❌ Skipping: Could not find outcome '{target_selection}' in market '{target_market}'")
+                    failed_matches.append(sel)
+                    await page.go_back()
                     continue
 
-                await page.go_back()  # Go back to event list for next bet
+                # Only count as success if both match and outcome found
+                found_count += 1
+                success_bets.append(sel)
+                await page.go_back()
 
-            # After all selections, open betslip and get booking code as before
-            try:
-                await page.wait_for_selector(
-                    "div[data-op='fast-betslip-wrap']", timeout=10000
-                )
-                await page.click("div[data-op='fast-betslip-wrap']")
-                await page.wait_for_selector(
-                    "span[data-cms-key='book_bet']", timeout=10000
-                )
-                await page.click("span[data-cms-key='book_bet']")
-                await page.wait_for_selector("#copyShareCode", timeout=10000)
-                code = await page.input_value("#copyShareCode")
+            # --- Book only if at least one selection succeeded ---
+            if found_count > 0:
+                try:
+                    await page.wait_for_selector("div[data-op='fast-betslip-wrap']", timeout=10000)
+                    await page.click("div[data-op='fast-betslip-wrap']")
+                    await page.wait_for_selector("span[data-cms-key='book_bet']", timeout=10000)
+                    await page.click("span[data-cms-key='book_bet']")
+                    await page.wait_for_selector("#copyShareCode", timeout=10000)
+                    code = await page.input_value("#copyShareCode")
+                    await browser.close()
+                    print(f"\n✅ BOOKED {found_count} bets. Skipped {len(failed_matches)} bets.")
+                    if failed_matches:
+                        print("❗ Skipped:")
+                        for f in failed_matches:
+                            print(f"  - {f.get('teams')} ({f.get('market')}, {f.get('selection')})")
+                    return code.strip() if code else "ERROR"
+                except Exception:
+                    print("❌ Failed to generate SportyBet code.")
+                    await browser.close()
+                    return "ERROR"
+            else:
                 await browser.close()
-                return code.strip() if code else "ERROR"
-            except Exception:
-                print("❌ Failed to generate SportyBet code.")
-                await browser.close()
-                return "ERROR"
+                print(f"❌ No valid bets to book. Skipped {len(failed_matches)} bets.")
+                return "ERROR: No valid bets booked."
 
     except Exception as e:
         print(f"❌ Global failure: {e}")
         return "ERROR"
+
