@@ -1,0 +1,3 @@
+multibooker-frontend/* linguist-documentation
+static/* linguist-documentation
+*.html linguist-detectable=false
