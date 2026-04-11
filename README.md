@@ -1,274 +1,235 @@
-Converting Stake bet slips (with bet selections, odds, markets, etc.) into equivalent bet codes or selections on other betting platforms—basically like a cross-platform bet translation.
+# multibooker — Cross-Platform Betting Slip Converter
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688?style=flat-square&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-D71F00?style=flat-square)
+![Alembic](https://img.shields.io/badge/Alembic-Migrations-6BA81E?style=flat-square)
+![JWT](https://img.shields.io/badge/Auth-JWT%20Stateless-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
+![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=flat-square&logo=render&logoColor=white)
+![Status](https://img.shields.io/badge/Status-In%20Development-orange?style=flat-square)
+
+> A FastAPI-powered backend service that converts sports betting slip codes across platforms — paste a Stake.com slip code and get a valid code for Bet9ja, Sportybet, 1xBet, and others in seconds.
+
+---
+
+## The Problem
+
+Across Nigeria and West Africa, millions of sports bettors use different platforms — Bet9ja, Sportybet, 1xBet, Stake.com, and others. Every day, tipsters share winning slip codes on Twitter, WhatsApp, and Telegram. The problem: a booking code is platform-specific. A Stake.com code is completely useless to a Bet9ja user.
+
+The only workaround is to manually re-enter every fixture — slow, error-prone, and often impossible before kick-off. No tool existed to solve this.
+
+**multibooker solves it.** It ingests a slip code from one platform, parses the fixtures and selections, maps them to the target platform's event database, and returns a valid booking code — automatically.
+
+---
+
+## Architecture Overview
+
+```
+┌─────────────────────────────────┐
+│        multibooker-frontend     │  HTML/CSS/JS — user interface
+│   (Jinja2 templates / static)   │
+└──────────────┬──────────────────┘
+               │ HTTP
+┌──────────────▼──────────────────┐
+│         FastAPI Application     │
+│                                 │
+│  ┌─────────┐  ┌──────────────┐  │
+│  │ routes/ │  │  schemas/    │  │  Pydantic request/response models
+│  └────┬────┘  └──────────────┘  │
+│       │                         │
+│  ┌────▼────────────────────┐    │
+│  │       services/         │    │  Core business logic
+│  │  ┌──────────────────┐   │    │
+│  │  │ event_matcher    │   │    │  Cross-platform fixture matching
+│  │  │ slip_converter   │   │    │  Slip ingestion & code generation
+│  │  │ platform_client  │   │    │  Per-platform API integrations
+│  │  └──────────────────┘   │    │
+│  └─────────────────────────┘    │
+│                                 │
+│  ┌──────────┐  ┌─────────────┐  │
+│  │ models/  │  │   utils/    │  │
+│  └────┬─────┘  └─────────────┘  │
+│       │                         │
+│  ┌────▼─────┐  ┌─────────────┐  │
+│  │database.py│ │  config.py  │  │
+│  └────┬─────┘  └─────────────┘  │
+└───────┼─────────────────────────┘
+        │ SQLAlchemy ORM
+┌───────▼──────────┐
+│   PostgreSQL DB  │
+└──────────────────┘
+        │ Alembic migrations
+```
+
+---
+
+## Tech Stack
+
+| Layer | Technology | Purpose |
+|---|---|---|
+| **API Framework** | FastAPI | High-performance async REST API |
+| **Database** | PostgreSQL | Primary data store |
+| **ORM** | SQLAlchemy | Database models and query layer |
+| **Migrations** | Alembic | Version-controlled schema migrations |
+| **Data Validation** | Pydantic (via FastAPI) | Request/response schema validation |
+| **Authentication** | JWT (stateless) | Secure, stateless user auth |
+| **Frontend** | HTML / CSS / JavaScript | User interface (served via static files) |
+| **Deployment** | Render | Cloud deployment (configured, pending launch) |
+| **Environment** | python-dotenv / `.env` | Configuration and secrets management |
+
+---
+
+## Key Features
+
+### Slip Conversion Engine
+- Accepts a booking code and source platform identifier
+- Fetches full slip data via the source platform's API
+- Parses fixture data: teams, kick-off times, market types, and selected outcomes
+- Maps fixtures to the target platform's event database using the event matching engine
+- Constructs a valid slip object conforming to the target platform's API schema
+- Returns a usable booking code for the target platform
+
+### Event Matching Engine (`services/`)
+The core technical challenge of this project. Each platform assigns its own internal IDs to the same real-world fixture. The event matching service resolves this using:
+- **Team name normalisation** — handles variations ("Man City" vs "Manchester City" vs "Manchester C.")
+- **Kick-off time alignment** — confirms fixture identity using match start time within a tolerance window
+- **Market type translation** — maps bet market names across platform naming conventions (e.g. "1X2" vs "Match Result" vs "Full Time Result")
+
+### Authentication (`routes/` + JWT)
+- Stateless JWT-based authentication
+- Token issuance, validation, and refresh handling
+- Protected routes requiring valid bearer tokens
+
+### Database Layer (`models/` + `database.py` + Alembic)
+- SQLAlchemy ORM models for users, slips, conversions, and platform data
+- Alembic migration history tracking schema changes across environments
+- PostgreSQL as the production database
+
+### API Design (`routes/` + `schemas/`)
+- RESTful endpoints with full Pydantic schema validation on request and response bodies
+- Automatic OpenAPI documentation generated by FastAPI (available at `/docs`)
+- Stateless design — no server-side session state
 
-A lot of users want to follow a tip or a slip someone shared on Stake, but they want to place the same bet on a different bookie—maybe due to better odds, regional availability, preferred UI, or bonuses.
+---
 
+## Project Structure
 
-User Interface (Web/App)
-     ↓
-Backend API (Python – FastAPI/Flask)
-     ↓
-Business Logic Layer (Match Parsing, Mapping, Validation)
-     ↓
-Bookmaker API Adapters (Stake, Bet9ja, 1xBet, Bet365, etc.)
-     ↓
-Database (Matches, Bookies, Mapping Rules, Logs)
-
-
-Layer	Technology
-Frontend	React.js / Vue.js / Next.js
-Backend	FastAPI or Flask (Python)
-Data Handling	Pandas, Regex, FuzzyWuzzy, etc.
-Async API Handling	httpx, aiohttp, asyncio
-Database	PostgreSQL / MongoDB (if flexible schema)
-Task Queue (Optional)	Celery + Redis (for background jobs)
-Auth / Security	JWT, OAuth2, HTTPS, Rate Limiting
-Hosting	Vercel/Netlify (frontend), Fly.io/Render/Heroku/DigitalOcean (backend)
-
-
-A. 🎫 Bet Slip Parser (Stake)
-B. 🔀 Mapper Engine
-C. 📡 Bookie Connectors (API Wrappers)
-D. 📚 Match Dictionary / Reference Table
-E. 🧪 Validation Layer
-F. 📊 Admin/Logging Dashboard
-
-
-A flow diagram mockup for Multibooker. It shows the journey from a Stake bet slip input to the generation of a matching bet code for another bookmaker: <a href="https://ibb.co/d4XBhqQZ"><img src="https://i.ibb.co/b5Y1fZrt/output.png" alt="output" border="0"></a>
-
-User Input: User provides a Stake bet code.
-
-Backend API: Receives the request and routes it.
-
-Parser: Decodes and normalizes the bet slip.
-
-Mapper: Translates bet formats into equivalent ones for other bookies.
-
-API Adapters: Interfaces with external bookie APIs to generate valid codes.
-
-Database: Stores match info, mappings, logs.
-
-Frontend: Communicates with backend, displays inputs/outputs.
-
-Output: Provides a valid, playable bet code on another platform.
-
-
-
-✅ Here’s how we can tackle that in steps:
-🧾 1. User Input
-Input field for:
-
-Stake bet URL (optional)
-
-Screenshot upload (primary source)
-
-🧠 2. OCR & Text Extraction
-Use Tesseract OCR (via Python pytesseract) or an API like Google Vision to extract raw text from screenshots.
-
-Preprocess the image:
-
-Resize, grayscale, denoise, threshold
-
-Crop modal area if possible (better OCR performance)
-
-🔍 3. Pattern Matching / Parsing
-Regex & NLP to identify:
-Match (e.g. Baez, Sebastian - Cobolli, Flavio)
-Market (e.g. To Win a Set)
-Selection (e.g. Yes)
-Odds (e.g. 1.22)
-
-We'll use dictionaries + fuzzy matching to generalize naming
-
-🧱 4. Normalize Output
-Here’s what we aim to extract:
-
-json
-Copy
-Edit
-[
-  {
-    "match": "Baez, Sebastian vs Cobolli, Flavio",
-    "market": "To Win a Set",
-    "selection": "Baez, Sebastian",
-    "odd": 1.22,
-    "status": "live",
-    "score": "3-5, 0-1"
-  },
-  {
-    "match": "Royal Antwerp FC vs Club Brugge",
-    "market": "Asian Total",
-    "selection": "Over 2",
-    "odd": 1.36,
-    "status": "live",
-    "minute": "49'"
-  },
-  {
-    "match": "Go Ahead Eagles vs FC Utrecht",
-    "market": "Asian Total",
-    "selection": "Over 1.75",
-    "odd": 1.25,
-    "status": "live",
-    "minute": "8'"
-  }
-]
-🔁 5. Pass to Mapper Module
-This structured data then gets mapped to other bookies’ formats.
-
-
-
-
-
-
-
-3. Allow uploading multiple screenshots (advanced)
-In future versions, users could upload multiple images, and you merge the parsed data.
-
-
-💼 A Real-World Production App with:
-🎯 Clean UX/UI — for slip uploads and conversion flow
-
-💰 Monetization hooks — like in-app Ads
-
-🔐 User accounts — login/registration for saved slips or premium features
-
-🧠 Usage tracking — e.g., analytics or conversion logs
---------------------------------------------------------------
-🧩 Let’s Break It into Phases:
-✅ Phase 1: UI Polish (MVP Look & Flow)
-Drag/drop upload zone or button
-
-Loading spinner / progress feedback
-
-Better error messages
-
-Show mapped results with clear layout
-
-Room for Ad banners (top, sidebar, or inline)
-
-🛠️ Phase 2: Add Auth System
-Basic Login/Register page
-
-Use Firebase Auth or Supabase (easy, free, secure)
-
-Store:
-
-Email/password login
-
-Save recent conversions (optional)
-
-Restrict frequent usage if needed
-
-💡 Why Auth Now?
-If you plan to:
-
-Monetize via usage limits or account tiers
-
-Log and display past conversion history
-
-Personalize ad experiences
-
-
-UI:
-🧱 Enhancements We Planned:
-🔐 User Authentication (Login/Register)
-
-📤 Support for Multi-image Uploads
-
-📦 Session & History Tracking
-
-💵 Ad Integration Placement
-
-🧪 Improve Parsing Accuracy + More Market Types
-
-📊 (Optional) Admin Panel or Analytics
-
-
-{
-  "full_name": "John Doe",
-  "email": "jd@multibooker.com",
-  "username": "jondo",
-  "phone": "08001568987766",
-  "dob": "2025-04-13",
-  "password": "1qaz2wsx"
-}
-
-{
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb25kbyIsImV4cCI6MTc0NDU3MjkzOH0.B7Bs6f0q-9NxiXfWSaObMZi2fcseTpkwm4y8cA3UhTk",
-  "token_type": "bearer",
-  "user": {
-    "id": 1,
-    "username": "jondo",
-    "email": "jd@multibooker.com"
-  }
-}
-
-
-
-
-🔧 What we’re doing right now:
-We are refining the generate_sportybet_code() scraper in sportybet_gen.py so that it:
-
-Loads https://www.sportybet.com/ng/
-
-[Later] Adds bets programmatically (currently skipped — placeholder)
-
-Waits for and clicks the “Book Bet” button (✅ you just showed the DOM)
-
-Waits for the booking modal
-
-Scrapes the booking code from the input field #copyShareCode
-
-Returns the code to /convert/from-ocr for full integration
-
-SportyBet APIs
-https://www.sportybet.com/api/ng/factsCenter/wapPopularAndSportOption?sportId=sr%3Asport%3A1&productId=3
-
-
-
-
-🔭 Coming Up Next
-For Phase 4+:
-
-🧠 Implement bet slip matcher (Stake vs SportyBet/Bet9ja).
-
-🎯 Improve fuzzy matching + confidence score.
-
-🎫 Generate actual bet codes using your code generator (already started for SportyBet).
-
-📸 Add OCR-powered upload entry point (already solid with Google Vision OCR).
-
-📁 Add cache + retry system to avoid re-fetching identical fixtures daily.
-
-
-✅ Phase 4 – Bet Mapping & Conversion
-This is the heart of Multibooker: matching a Stake slip to equivalent fixtures and markets from other bookies (SportyBet, Bet9ja), and generating a playable bet code.
-
-🧠 Step-by-step breakdown:
-Input: A normalized Stake slip (either from OCR or preprocessed JSON).
-
-Fixture Matching:
-
-Fuzzy match the match name (e.g. "Chelsea vs Arsenal") to a SportyBet fixture.
-
-Ensure date/time proximity to reduce mismatches.
-
-Market + Selection Mapping:
-
-Map “Match Result”, “BTTS”, “Over/Under” etc. to SportyBet/Bet9ja internal keys.
-
-Match user selection ("Home", "Over 2.5", etc.).
-
-Generate Playable Code:
-
-Use scraping or simulated form-filling to get the betslip code.
-
-Start with SportyBet.
-
-
-------------------------------------------------
-🚀 2. Phase 5: Event Matching + Search (Real Odds, Real Fixture)
-Goals:
-
-Match incoming Stake slips against normalized_outcomes_fixtures.json by both name and kickoff time.
-
-Ensure the right event_id is used when generating a code — avoiding accidental booking of wrong matches.
+```
+multibooker/
+├── app/
+│   ├── models/             # SQLAlchemy ORM models
+│   ├── routes/             # FastAPI route handlers (API endpoints)
+│   ├── schemas/            # Pydantic request/response schemas
+│   ├── scripts/            # Utility and data scripts
+│   ├── services/           # Business logic (event matching, conversion)
+│   ├── utils/              # Helper functions and shared utilities
+│   ├── config.py           # Application configuration (env-based)
+│   ├── database.py         # SQLAlchemy engine and session setup
+│   └── main.py             # FastAPI app entry point
+├── multibooker-frontend/   # Frontend HTML/CSS/JS application
+├── static/                 # Static assets
+├── alembic/                # Database migration files
+├── .env                    # Environment variables (not committed)
+├── .gitignore
+└── .render-build.sh        # Render deployment build script
+```
+
+---
+
+## Supported Platforms
+
+| Platform | As Source | As Target |
+|---|---|---|
+| Stake.com | ✅ | — |
+| Bet9ja | — | ✅ |
+| Sportybet | — | 🔄 Planned |
+| 1xBet | — | 🔄 Planned |
+| Msport | — | 🔄 Planned |
+| Betway | — | 🔄 Planned |
+
+---
+
+## API Endpoints
+
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `POST` | `/auth/register` | User registration | Public |
+| `POST` | `/auth/login` | Login, returns JWT | Public |
+| `POST` | `/convert` | Convert slip code | Required |
+| `GET` | `/convert/{id}` | Get conversion result | Required |
+| `GET` | `/platforms` | List supported platforms | Public |
+| `GET` | `/docs` | Auto-generated OpenAPI docs | Public |
+
+---
+
+## Local Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/devolusegun/multibooker.git
+cd multibooker
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your PostgreSQL credentials and JWT secret
+
+# Run database migrations
+alembic upgrade head
+
+# Start the development server
+uvicorn app.main:app --reload
+```
+
+The API will be available at `http://localhost:8000`
+Interactive API docs at `http://localhost:8000/docs`
+
+---
+
+## Engineering Challenges
+
+**Cross-platform fixture identity**
+No two platforms share fixture IDs. Resolving "Manchester City vs Arsenal" across Stake.com and Bet9ja requires normalising team names, validating against kick-off times, and handling edge cases where platform data lags or uses different naming conventions for the same club.
+
+**Undocumented APIs**
+Betting platform APIs are largely undocumented, rate-limited, and change without notice. The services layer is designed so each platform integration is isolated — a breaking change on one platform's API doesn't affect others.
+
+**Stateless architecture**
+JWT-based stateless authentication ensures the API can be horizontally scaled without shared session state — a deliberate architectural choice for future scalability on Render or similar platforms.
+
+**Schema-first design**
+Using Pydantic schemas for every API input and output means validation errors are caught at the boundary before reaching business logic, keeping the services layer clean and testable.
+
+---
+
+## Roadmap
+
+- [x] FastAPI application structure
+- [x] PostgreSQL + SQLAlchemy + Alembic setup
+- [x] JWT stateless authentication
+- [x] Pydantic schemas for all endpoints
+- [x] Event matching engine (core logic)
+- [x] Stake.com slip ingestion
+- [x] Bet9ja conversion service
+- [x] Frontend interface (multibooker-frontend)
+- [ ] Sportybet conversion
+- [ ] 1xBet conversion
+- [ ] Rate limiting middleware
+- [ ] Redis caching layer for frequent fixture lookups
+- [ ] Full test suite (pytest)
+- [ ] Render deployment launch
+
+---
+
+## Author
+
+**Abioye Solomon Olusegun**
+Full-Stack Developer · FastAPI · PHP · PostgreSQL · AWS
+[github.com/devolusegun](https://github.com/devolusegun) · [linkedin.com/in/kidolu](https://linkedin.com/in/kidolu) · [Portfolio](https://devolusegun.github.io/portfolio/)
